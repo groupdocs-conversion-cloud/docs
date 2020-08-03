@@ -29,7 +29,7 @@ install:
 
 script:
 - cp -r content/* $ROOT_DIR/content/
-- hugo --source $ROOT_DIR --minify --config config.toml,ignore-total-config.toml
+- hugo --source $ROOT_DIR --minify --config config.toml
 
 after_success:
 - scp -i ./deploy_key -r $SRC_DIR/$PRODUCT $USER@$HOST:$DEST_DIR
