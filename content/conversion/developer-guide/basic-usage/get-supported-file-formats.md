@@ -5051,7 +5051,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" -H  "accept: a
 
 ## SDKs ##
 
-The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-viewer-cloud).
+The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
 ### Get List of Supported File Formats ###
 
@@ -5228,7 +5228,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?FilePath#conver
 
 ## SDKs ##
 
-The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-viewer-cloud).
+The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
 ### Get All Supported Formats For Provided Document ###
 
@@ -5406,7 +5406,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" -H
 
 ## SDKs ##
 
-The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-viewer-cloud).
+The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
 ### Get All Supported Formats For Provided Document Extension ###
 

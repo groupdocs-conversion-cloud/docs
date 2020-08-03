@@ -320,7 +320,7 @@ This API allows you to delete specific file from [GroupDocs Cloud Storage](htt
 
 ## API Explorer ##
 
-[GroupDocs.Conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Delete a File](https://apireference.groupdocs.cloud/viewer/#/File/DeleteFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs exposes.
+[GroupDocs.Conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Delete a File](https://apireference.groupdocs.cloud/conversion/#/File/DeleteFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs exposes.
 |---|---|---|---
 
 

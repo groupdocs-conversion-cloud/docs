@@ -36,5 +36,4 @@ The difference of V2 version from V1 is more simplified API with less methods an
 
 ## Public API Examples ##
 
-* [GroupDocs Conversion Cloud v2.0 API Examples and documentation]({{< ref "viewer/getting-started/_index.md" >}}))
-|---|---
+* [GroupDocs Conversion Cloud v2.0 API Examples and documentation]({{< ref "conversion/getting-started/_index.md" >}}))
