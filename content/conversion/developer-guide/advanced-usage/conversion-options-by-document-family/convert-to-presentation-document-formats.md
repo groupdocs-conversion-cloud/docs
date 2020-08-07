@@ -33,23 +33,23 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \"converted/toslides\"}"
 
 
- ```
+```
 
 
  Response
 
-```html 
+```html
   {
     "name": "sample.pptx",
     "size": 68540,
     "url": "MyStorage:converted/toslides/sample.pptx"
   }
 
- ```
+```
 
 
 
@@ -123,16 +123,16 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \""}"
 
 
- ```
+```
 
 
  Response
 
-```html 
+```html
 Code : 200
 {
 Download file
@@ -141,7 +141,7 @@ content-type: application/octet-stream
 
 
 
- ```
+```
 
 
 
@@ -216,7 +216,7 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
 |
 |---
-HTTP POST ~~/conversion
+HTTP POST ~/conversion
 
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
@@ -226,7 +226,7 @@ HTTP POST ~~/conversion
 
  Request
 
-```html 
+```html
 
 * First get JSON Web Token
 * Please get your App Key and App SID from https://dashboard.groupdocs.cloud/#/apps. Kindly place App Key in "client_secret" and App SID in "client_id" argument.
@@ -252,12 +252,12 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
         'OutputPath': 'Output'
     }"
 
- ```
+```
 
 
  Response
 
-```html 
+```html
 
 [
   {
@@ -268,7 +268,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 
- ```
+```
 
 
 

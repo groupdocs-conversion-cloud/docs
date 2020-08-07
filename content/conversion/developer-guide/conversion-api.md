@@ -7,55 +7,39 @@ weight: 5
 description: ""
 keywords: ""
 ---
-
-
-
-
-
- 
-
-## Document Conversion API ##
-
-This API intended for convert the document to specified target format. 
+This API intended for convert the document to specified target format.
 
 #### URI ####
 
-```html 
-
+```html
 ~/
-
- ```
+```
 
 #### HTTP POST ####
 
 #### Example 2 (Convert document) ####
 
-Takes  as input and returns .
+Takes  as input and returns.
 
-###### Example URL ######
+##### Example URL #####
 
-```html 
-
+```html
 https://api.groupdocs.cloud/v2.0/conversion
+```
 
- ```
+###### Example Request ######
 
-###### Example Request  ######
-
-```html 
-
+```html
 {
   "FilePath": "/words/docx/one-page.docx",
   "Format": "pdf",
   "OutputPath": "converted"
 }
-
- ```
+```
 
 ###### Example Response ######
 
-```html 
-
+```html
 [
   {
     "name": "one-page.pdf",
@@ -63,5 +47,4 @@ https://api.groupdocs.cloud/v2.0/conversion
     "url": "converted/one-page.pdf"
   }
 ]
-
- ```
+```

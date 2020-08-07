@@ -1,22 +1,17 @@
 ---
 id: "conversionresult"
 url: "conversion/conversionresult"
-title: "4. ConversionResult"
+title: "ConversionResult"
 productName: "GroupDocs.Conversion Cloud"
 weight: 1
 description: ""
 keywords: ""
 ---
-
-# ConversionResult #
-
-ConversionResult data structure returned by  [Document Conversion API]({{< ref "conversion/developer-guide/conversion-api.md" >}})) as output result
-|---|---
+ConversionResult data structure returned by  [Document Conversion API]({{< ref "conversion/developer-guide/conversion-api.md" >}}) as output result
 
 ##### ConversionResult example #####
 
-```html 
-
+```html
 [
   {
     "name": "one-page.pdf",
@@ -25,8 +20,7 @@ ConversionResult data structure returned by  [Document Conversion API]({{< ref 
   },
   ...
 ]
-
- ```
+```
 
 ##### ViewResult fields #####
 
@@ -34,5 +28,4 @@ ConversionResult data structure returned by  [Document Conversion API]({{< ref 
 |---|---
 |name|Name of the converted document
 |size|Size of the converted document
-|url|Page file path in the cloud storage. Use this value to download page using [ File API]({{< ref "conversion/developer-guide/working-with-file-api.md" >}}))
-
+|url|Page file path in the cloud storage. Use this value to download page using [ File API]({{< ref "conversion/developer-guide/working-with-file-api.md" >}})

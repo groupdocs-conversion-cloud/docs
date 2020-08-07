@@ -40,14 +40,14 @@ This page contains release notes for GroupDocs.Conversion Cloud 19.5
 
 
 
-```html 
+```html
 
 ### Get document metadata
 curl -X GET "https://api-qa.groupdocs.cloud/v2.0/conversion/info?FilePath#words%2Fdocx%2Ffour-pages.docx" -H "accept: application/json" -H "authorization: Bearer [AccessToken]"
 
- ```
+```
 
-```html 
+```html
 
 Content-type: application/json
 {
@@ -67,7 +67,7 @@ Content-type: application/json
   "isPasswordProtected": false
 }
 
- ```
+```
 
  
 

@@ -42,25 +42,25 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -v "https://api.groupdocs.cloud/v1.0/conversion/quick?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX" 
 -H "content-type: application/json" 
 -X POST -d "{'format':'pdf','sourceFile':{'folder':'conversions','name':'sample.docx'}}"
- ```
+```
 
 
 
 
  Response
 
-```html 
+```html
 Â {
   "href": "https://api.groupdocs.cloud/v1.0/conversion/storage/file/conversions/sample.pdf",
   "rel": "self",
   "type": null,
   "title": null
 }
- ```
+```
 
 
 
@@ -121,20 +121,20 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -v "https://api.groupdocs.cloud/v1.0/conversion/quick/stream?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX" 
 -H "content-type: application/json" 
 -X POST -d "{'format':'pdf','sourceFile':{'folder':'conversions','name':'sample.docx'}}"
- ```
+```
 
 
 
 
  Response
 
-```html 
+```html
 Â Stream of document or Array of Stream Images.
- ```
+```
 
 
 

@@ -7,14 +7,6 @@ weight: 2
 description: ""
 keywords: ""
 ---
-
-
-
-
-
-
-# Get Supported File Formats #
-
 GroupDocs.conversion Cloud REST APIs support document conversion tools to convert files from 65+ supported formats to get high-quality output in quickly and reliably. To get a list of supported formats, You can use the below API.
 
 ## Resource ##
@@ -23,23 +15,15 @@ The following GroupDocs.conversion Cloud REST API resource has been used in the 
 
 ## cURL Example ##
 
+Request
 
-
-
-
- Request
-
-```html 
+```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
+```
 
- ```
+Response
 
-
-
-
- Response
-
-```html 
+```html
 [
   {
     "sourceFormat": "doc",
@@ -5040,14 +5024,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" -H  "accept: a
     ]
   }
 ]
-
-
- ```
-
-
-
-
-
+```
 
 ## SDKs ##
 
@@ -5055,90 +5032,45 @@ The API is completely independent of your operating system, database system or d
 
 ### Get List of Supported File Formats ###
 
-
- C#
-
-
-
+#### C# ####
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Supported_Formats.cs >}}
 
+#### C# ####
 
-
-
-
- C#
 ```csharp 
 
-* For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
-string MyAppKey # ""; * Get AppKey and AppSID from https://dashboard.groupdocs.cloud
-string MyAppSid # ""; * Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
+string MyAppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+string MyAppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
   
-var configuration # new Configuration(MyAppSid, MyAppKey);
+var configuration = new Configuration(MyAppSid, MyAppKey);
   
-var apiInstance # new InfoApi(configuration);
-var response # apiInstance.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
+var apiInstance = new InfoApi(configuration);
+var response = apiInstance.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
+```
 
- ```
-
-
- PHP
-
-
-
+#### PHP ####
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Supported_Formats.php >}}
 
-
-
-
-
- Java
-
-
-
+#### Java ####
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Supported_Formats.java >}}
 
-
-
-
-
- Ruby
-
-
-
+#### Ruby ####
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_All_Supported_Formats.rb >}}
 
-
-
-
-
- Node.Js
-
-
-
+#### Node.Js ####
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_All_Supported_Formats.js >}}
 
-
-
-
-
- Python
-
-
-
+#### Python ####
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_All_Supported_Formats.py >}}
 
-
-
-
-
-
-# Get All Supported Formats For Provided Document #
+## Get All Supported Formats For Provided Document ##
 
 GroupDocs.Conversion Cloud supports functinality to get a list of supported formats from provided document, You can use the below API.
 
@@ -5148,23 +5080,15 @@ The following GroupDocs.conversion Cloud REST API resource has been used in the 
 
 ## cURL Example ##
 
+Request
 
-
-
-
- Request
-
-```html 
+```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?FilePath#conversions%2Fsample.docx&#x26;Storage#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
+```
 
- ```
+Response
 
-
-
-
- Response
-
-```html 
+```html
 [
   {
     "sourceFormat": "docx",
@@ -5218,13 +5142,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?FilePath#conver
     ]
   }
 ]
-
- ```
-
-
-
-
-
+```
 
 ## SDKs ##
 
@@ -5232,91 +5150,31 @@ The API is completely independent of your operating system, database system or d
 
 ### Get All Supported Formats For Provided Document ###
 
-
-
-
-
- C#
-
-
-
+#### C# ####
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Supported_Formats_For_Document.cs >}}
 
-
-
-
-
-
-
- PHP
-
-
-
+#### PHP ####
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Supported_Formats_For_Document.php >}}
 
-
-
-
-
-
-
- Java
-
-
-
+#### Java ####
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Supported_Formats_For_Document.java >}}
 
-
-
-
-
-
-
- Ruby
-
-
-
+#### Ruby ####
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_All_Supported_Formats_For_Document.rb >}}
 
-
-
-
-
-
-
- Node.Js
-
-
-
+#### Node.Js ####
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_All_Supported_Formats_For_Document.js >}}
 
-
-
-
-
-
-
- Python
-
-
-
+#### Python ####
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_All_Supported_Formats_For_Document.py >}}
 
-
-
-
-
-
-
-
-
-# Get All Supported Formats For Provided Document Extension #
+## Get All Supported Formats For Provided Document Extension ##
 
 GroupDocs.Conversion Cloud supports functinality to get a list of supported formats from provided document extension, You can use the below API.
 
@@ -5326,23 +5184,15 @@ The following GroupDocs.conversion Cloud REST API resource has been used in the 
 
 ## cURL Example ##
 
+Request
 
-
-
-
- Request
-
-```html 
+```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
+```
 
- ```
+Response
 
-
-
-
- Response
-
-```html 
+```html
 [
   {
     "sourceFormat": "docx",
@@ -5396,13 +5246,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" -H
     ]
   }
 ]
-
- ```
-
-
-
-
-
+```
 
 ## SDKs ##
 
@@ -5410,84 +5254,26 @@ The API is completely independent of your operating system, database system or d
 
 ### Get All Supported Formats For Provided Document Extension ###
 
-
-
-
-
- C#
-
-
-
+#### C# ####
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Supported_Formats_For_Extension.cs >}}
 
-
-
-
-
-
-
- PHP
-
-
-
+#### PHP ####
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Supported_Formats_For_Extension.php >}}
 
-
-
-
-
-
-
- Java
-
-
-
+#### Java ####
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Supported_Formats_Extension.java >}}
 
-
-
-
-
-
-
- Ruby
-
-
-
+#### Ruby ####
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_All_Supported_Formats_For_Extension.rb >}}
 
-
-
-
-
-
-
- Node.Js
-
-
-
+#### Node.Js ####
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_All_Supported_Formats_For_Extension.js >}}
 
-
-
-
-
-
-
- Python
-
-
-
+#### Python ####
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_All_Supported_Formats_For_Extension.py >}}
-
-
-
-
-
-

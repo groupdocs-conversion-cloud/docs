@@ -37,7 +37,7 @@ This page contains release notes for GroupDocs.Conversion Cloud 19.4
 
 
 
-```html 
+```html
 ### Get supported conversions
 curl -X GET "https://api-qa.groupdocs.cloud/v2.0/conversion/formats?FilePath#source.docx&#x26;StorageName#firstStorage" -H "accept: application/json" -H "authorization: Bearer [AccessToken]"
  
@@ -49,7 +49,7 @@ curl -X POST "https://api-qa.groupdocs.cloud/v2.0/conversion"
 -d "{ \"StorageName\": \"firstStorage\", \"FilePath\": \"source.docx\", \"Format\": \"pdf\", \"OutputPath\": \"converted\"}"
 
 
- ```
+```
 
 
 
@@ -59,7 +59,7 @@ curl -X POST "https://api-qa.groupdocs.cloud/v2.0/conversion"
 
 
 
-```html 
+```html
 ### Convert
 curl -X POST "https://api-qa.groupdocs.cloud/v2.0/conversion" 
 -H "accept: application/json" 
@@ -80,7 +80,7 @@ curl -X POST "https://api-qa.groupdocs.cloud/v2.0/conversion"
 ]
 
 
- ```
+```
 
 
 
@@ -90,7 +90,7 @@ curl -X POST "https://api-qa.groupdocs.cloud/v2.0/conversion"
 
 
 
-```html 
+```html
 ### Convert
 curl -X POST "https://api-qa.groupdocs.cloud/v2.0/conversion" 
 -H "accept: application/json" 
@@ -104,5 +104,5 @@ curl -X POST "https://api-qa.groupdocs.cloud/v2.0/conversion"
 content-type: application/octet-stream 
 
 
- ```
+```
 

@@ -33,23 +33,23 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"xlsx\",  \"LoadOptions\": {\"Password\": \"password\"},  \"ConvertOptions\": {     \"FromPage\": \"1\",     \"PagesCount\": \"1\",     \"UsePdf\": \"false\"  },  \"OutputPath\": \"converted/tocells\"}"
 
 
- ```
+```
 
 
  Response
 
-```html 
+```html
   {
     "name": "password-protected.xlsx",
     "size": 7265,
     "url": "MyStorage:converted/tocells/password-protected.xlsx"
   }
 
- ```
+```
 
 
 
@@ -126,23 +126,23 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"xlsx\",  \"LoadOptions\": {\"Password\": \"password\"},  \"ConvertOptions\": {     \"FromPage\": \"1\",     \"PagesCount\": \"1\",     \"UsePdf\": \"false\"  },  \"OutputPath\": \""}"
 
 
- ```
+```
 
 
  Response
 
-```html 
+```html
 Code : 200
 {
 Download file
 }  
 content-type: application/octet-stream
 
- ```
+```
 
 
 
@@ -226,7 +226,7 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
 ## Resource ##
 
-|HTTP POST ~~/conversion
+|HTTP POST ~/conversion
 |---
 
 
@@ -237,7 +237,7 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
  Request
 
-```html 
+```html
 
 * First get JSON Web Token
 * Please get your App Key and App SID from https://dashboard.groupdocs.cloud/#/apps. Kindly place App Key in "client_secret" and App SID in "client_id" argument.
@@ -264,12 +264,12 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
         'OutputPath': 'Output'
     }"
 
- ```
+```
 
 
  Response
 
-```html 
+```html
 
 [
   {
@@ -280,7 +280,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 
- ```
+```
 
 
 

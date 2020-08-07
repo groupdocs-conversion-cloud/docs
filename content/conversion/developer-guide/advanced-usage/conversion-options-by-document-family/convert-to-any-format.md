@@ -28,26 +28,26 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" 
 -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \"converted/topAny Format\"}"
 
 
- ```
+```
 
 
 
 
  Response
 
-```html 
+```html
   {
     "name": "sample.txt",
     "size": 2141,
     "url": "MyStorage:converted/topAny Format/sample.txt"
   }
 
- ```
+```
 
 
 
@@ -160,19 +160,19 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" 
 -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \""}"
 
 
- ```
+```
 
 
 
 
  Response
 
-```html 
+```html
 Code : 200
 {
 Download file
@@ -180,7 +180,7 @@ Download file
 content-type: application/octet-stream
 
 
- ```
+```
 
 
 

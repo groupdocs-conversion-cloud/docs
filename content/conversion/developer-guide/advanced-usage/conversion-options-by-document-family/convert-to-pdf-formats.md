@@ -33,23 +33,23 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \"converted/topdf\"}"
 
 
- ```
+```
 
 
  Response
 
-```html 
+```html
   {
     "name": "sample.pptx",
     "size": 68540,
     "url": "MyStorage:converted/topdf/password-protected.pdf"
   }
 
- ```
+```
 
 
 
@@ -147,16 +147,16 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \""}"
 
 
- ```
+```
 
 
  Response
 
-```html 
+```html
   Code : 200
 {
 Download file
@@ -165,7 +165,7 @@ content-type: application/octet-stream
 
 
 
- ```
+```
 
 
 
@@ -264,7 +264,7 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
 |
 |---
-HTTP POST ~~/conversion
+HTTP POST ~/conversion
 
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
@@ -274,7 +274,7 @@ HTTP POST ~~/conversion
 
  Request
 
-```html 
+```html
 
 * First get JSON Web Token
 * Please get your App Key and App SID from https://dashboard.groupdocs.cloud/#/apps. Kindly place App Key in "client_secret" and App SID in "client_id" argument.
@@ -302,12 +302,12 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
         'OutputPath': 'Output'
     }"
 
- ```
+```
 
 
  Response
 
-```html 
+```html
 
 [
   {
@@ -318,7 +318,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 
- ```
+```
 
 
 

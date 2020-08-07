@@ -42,26 +42,26 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 Â curl -v "https://api.groupdocs.cloud/v1.0/conversion/html?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX" 
 -H "content-type: application/json" 
 -X POST -d "{'options':{'showGridLines': false,'showHiddenSheets': false,'hideWordTrackedChanges': false,'hidePdfAnnotations': false,'hideComments': false},'sourceFile':{'folder':'conversions','name':'sample.docx'}}"
 
- ```
+```
 
 
 
 
  Response
 
-```html 
+```html
 Â {
   "href": "https://api.groupdocs.cloud/v1.0/conversion/storage/file/conversions/sample.html",
   "rel": "self",
   "type": null,
   "title": null
 }
- ```
+```
 
 
 
@@ -122,21 +122,21 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 Â curl -v "https://api.groupdocs.cloud/v1.0/conversion/html/stream?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX" 
 -H "content-type: application/json" 
 -X POST -d "{'options':{'showGridLines': false,'showHiddenSheets': false,'hideWordTrackedChanges': false,'hidePdfAnnotations': false,'hideComments': false},'sourceFile':{'folder':'conversions','name':'sample.docx'}}"
 
- ```
+```
 
 
 
 
  Response
 
-```html 
+```html
 Stream of document.
- ```
+```
 
 
 

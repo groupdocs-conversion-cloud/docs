@@ -38,7 +38,7 @@ Swagger UI lets you call this REST API directly from the browser. 
 
  Request
 
-```html 
+```html
 * First get JSON Web Token
 * Please get your App Key and App SID from https://dashboard.groupdocs.cloud/#/apps. Kindly place App Key in "client_secret" and App SID in "client_id" argument.
 curl -v "https://api.groupdocs.cloud/connect/token" \
@@ -63,12 +63,12 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
         'OutputPath': 'Output'
     }"
 
- ```
+```
 
 
  Response
 
-```html 
+```html
 [
   {
     "name": "Sample.pdf",
@@ -79,7 +79,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ]
 
 
- ```
+```
 
 
 

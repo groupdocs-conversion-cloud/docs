@@ -6,12 +6,7 @@ productName: "GroupDocs.Conversion Cloud"
 description: ""
 keywords: ""
 ---
-
-
-
-
-
-# Introduction #
+## Introduction ##
 
 This example demonstrates how to convert consecutive pages from word processing documents into pdf documents.
 
@@ -21,30 +16,25 @@ There are steps that usage of GroupDocs.Conversion Cloud consists of:
 1. Convert document
 1. Download converted document from storage
 
-Steps 1 and 3 are storage operations, please refer to this for usage details.
-
+Steps 1 and 3 are storage operations, please refer to this for usage details.  
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 
-|#Name|#Description|#Comment
+| Name | Description | Comment
 |FileInfo.FilePath|The path of the document, located in the storage.|Required.
 |FileInfo.StorageName|Storage name|It could be omitted for default storage.
 |FileInfo.Password|The password to open file|It should be specified only for password-protected documents.
 
 ## Resource URI ##
 
+```HTTP POST ~/conversion```
 
-
-HTTP POST ~~/conversion
-
-
-[Swagger UI](https://apireference.groupdocs.cloud/watermark/#/Info/GetInfo) lets you call this REST API directly from the browser. 
+[Swagger UI](https://apireference.groupdocs.cloud/watermark/#/Info/GetInfo) lets you call this REST API directly from the browser.
 
 ## cURL Example ##
 
+Request
 
- Request
-```html 
-
+```html
 * First get JSON Web Token
 * Please get your App Key and App SID from https://dashboard.groupdocs.cloud/#/apps. Kindly place App Key in "client_secret" and App SID in "client_id" argument.
 curl -v "https://api.groupdocs.cloud/connect/token" \
@@ -69,13 +59,11 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
         'OutputPath': 'Output/two-pages.pdf'
     }"
 
- ```
+```
 
+Response
 
- Response
-
-```html 
-
+```html
 [
   {
     "name": "two-pages.pdf",
@@ -84,9 +72,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
     "url": "https://api-qa.groupdocs.cloud/v2.0/conversion/storage/file/Output/two-pages.pdf"
   }
 ]
-
-
-
+```
 
 ## SDKs ##
 
@@ -94,46 +80,26 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-
- C#
+#### C# ####
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Common_NPages.cs >}}
 
-
-
-
- PHP
+#### PHP ####
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Common_NPages.php >}}
 
-
-
-
- Java
+#### Java ####
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Common_NPages.java >}}
 
-
-
-
- Ruby
+#### Ruby ####
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Common_NPages.rb >}}
 
-
-
-
- Node.Js
+#### Node.Js ####
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Common_NPages.js >}}
 
-
-
-
- Python
+#### Python ####
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Common_NPages.py >}}
-
-
-
-

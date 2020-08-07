@@ -1,37 +1,19 @@
 ---
 id: "convertoptions"
 url: "conversion/convertoptions"
-title: "3. ConvertOptions"
+title: "ConvertOptions"
 productName: "GroupDocs.Conversion Cloud"
 weight: 1
 description: ""
 keywords: ""
 ---
-
 ## Format specific convert options ##
 
-|Format|Properties|Description|Json
-|---|---|---|---
-|**xls**
-**~ xlsx**
-**~ xlsx**
-**~ xlsm**
-**~ xlsb**
-**~ xlsb**
-**~ ods**
-**~ xltx**
-**~ xltm**
-**~ tsv**
-|format|Convert format|{
-   "format": "{format}",
-   "password": "Pass123",
-   "zoom": 100,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions")
- }
+### xls, xlsx, xlsx, xlsm, xlsb, xlsb, ods, xltx, xltm, tsv ###
+
+|Properties|Description  
+|---|---|---  
+|format|Convert format
 |password|Document password
 |zoom|Document zoom
 |fromPage|Start conversion from specified page number
@@ -39,30 +21,46 @@ keywords: ""
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|csv
-|format|Convert format|{
-   "format": "{format}",
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions")
- }
+
+```json
+{
+  "format": "{format}",
+  "password": "Pass123",
+  "zoom": 100,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}]
+}
+```
+
+### csv ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |fromPage|Start conversion from specified page number
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
-|html
-|format|Convert format|{
-   "format": "{format}",
-   "fixedLayout": true,
-   "zoom": 100,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions")
- }
+
+```json
+{
+  "format": "{format}",
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}]
+}
+```
+
+### html ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |fixedLayout|Document password
 |zoom|Document zoom
 |fromPage|Start conversion from specified page number
@@ -70,24 +68,25 @@ keywords: ""
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|png
-gif
- bmp
- ico
-|format|Convert format|{
-   "format": "{format}",
-   "width": 1920,
-   "height": 1080,
-   "horizontalResolution":96,
-   "verticalResolution": 72,
-   "grayscale": false,
-   "rotateAngle": 0,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions")
- }
+
+```json
+{
+  "format": "{format}",
+  "fixedLayout": true,
+  "zoom": 100,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}]
+}
+```
+
+### png, gif, bmp, ico ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |horizontalResolution|Desired image horizontal resolution after conversion.
@@ -99,24 +98,29 @@ gif
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|jpg
- jpeg
-jp2
-|format|Convert format|{
-   "format": "{format}",
-   "width": 1920,
-   "height": 1080,
-   "horizontalResolution":96,
-   "verticalResolution": 72,
-   "quality": 95,
-   "grayscale": false,
-   "rotateAngle": 0,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "{format}",
+  "width": 1920,
+  "height": 1080,
+  "horizontalResolution":96,
+  "verticalResolution": 72,
+  "grayscale": false,
+  "rotateAngle": 0,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}]
+}
+```
+
+### jpg, jpeg, jp2 ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |horizontalResolution|Desired image horizontal resolution after conversion.
@@ -129,23 +133,30 @@ jp2
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|tiff
-tif
-|format|Convert format|{
-   "format": "{format}",
-    "width": 1920,
-   "height": 1080,
-   "horizontalResolution":96,
-   "verticalResolution": 72,
-   "compression": "lzw",
-   "grayscale": false,
-   "rotateAngle": 0,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "{format}",
+  "width": 1920,
+  "height": 1080,
+  "horizontalResolution":96,
+  "verticalResolution": 72,
+  "quality": 95,
+  "grayscale": false,
+  "rotateAngle": 0,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### tiff, tif ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |horizontalResolution|Desired image horizontal resolution after conversion.
@@ -158,26 +169,30 @@ tif
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|psd
-|format|Convert format|{
-   "format": "psd",
-   "width": 1920,
-   "height": 1080,
-   "horizontalResolution":96,
-   "verticalResolution": 72,
-   "channelBitCount": 32,
-   "channelsCount": 3,
-   "colorMode": "rgb",
-   "compressionMethod": "rle",
-   "version": 12,
-   "grayscale": false,
-   "rotateAngle": 0,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "{format}",
+  "width": 1920,
+  "height": 1080,
+  "horizontalResolution":96,
+  "verticalResolution": 72,
+  "compression": "lzw",
+  "grayscale": false,
+  "rotateAngle": 0,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### psd ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |horizontalResolution|Desired image horizontal resolution after conversion.
@@ -194,22 +209,34 @@ tif
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|webp
-|format|Convert format|{
-   "format": "webp",
-   "width": 1920,
-   "height": 1080,
-   "horizontalResolution":96,
-   "verticalResolution": 72,
-   "lossless": true,
-   "grayscale": false,
-   "rotateAngle": 0,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "psd",
+  "width": 1920,
+  "height": 1080,
+  "horizontalResolution":96,
+  "verticalResolution": 72,
+  "channelBitCount": 32,
+  "channelsCount": 3,
+  "colorMode": "rgb",
+  "compressionMethod": "rle",
+  "version": 12,
+  "grayscale": false,
+  "rotateAngle": 0,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### webp ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |horizontalResolution|Desired image horizontal resolution after conversion.
@@ -222,19 +249,30 @@ tif
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|svg
-|format|Convert format|{
-   "format": "svg",
-   "width": 1920,
-   "height": 1080,
-   "grayscale": false,
-   "rotateAngle": 0,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "webp",
+  "width": 1920,
+  "height": 1080,
+  "horizontalResolution":96,
+  "verticalResolution": 72,
+  "lossless": true,
+  "grayscale": false,
+  "rotateAngle": 0,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### svg ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |grayscale|Convert to grayscale image
@@ -244,34 +282,27 @@ tif
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|pdf
-|format|Convert format|{
-   "format": "pdf",
-   "width": 1920,
-   "height": 1080,
-   "dpi": 96,
-   "password": "Pass123",
-   "marginTop": 0,
-   "marginBottom": 0,
-   "marginLeft": 0,
-   "marginRight: 0,
-   "pdfFormat": "v1.3",
-   "removePdfACompliance": false,
-   "zoom": 100,
-   "linearize": true,
-   "linkDuplicateStreams": true,
-   "removeUnusedObjects": true,
-   "removeUnusedStreams": true,
-   "compressImages": true,
-   "imageQuality": 80,
-   "unembedFonts": false,
-   "grayscale": false,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "svg",
+  "width": 1920,
+  "height": 1080,
+  "grayscale": false,
+  "rotateAngle": 0,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### pdf ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |dpi|Document DPI
@@ -296,25 +327,42 @@ tif
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|
-epub
- xps
-|format|Convert format|{
-   "format": "{format}",
-   "width": 1920,
-   "height": 1080,
-   "dpi": 96,
-   "password": "Pass123",
-   "marginTop": 0,
-   "marginBottom": 0,
-   "marginLeft": 0,
-   "marginRight: 0,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "pdf",
+  "width": 1920,
+  "height": 1080,
+  "dpi": 96,
+  "password": "Pass123",
+  "marginTop": 0,
+  "marginBottom": 0,
+  "marginLeft": 0,
+  "marginRight: 0,
+  "pdfFormat": "v1.3",
+  "removePdfACompliance": false,
+  "zoom": 100,
+  "linearize": true,
+  "linkDuplicateStreams": true,
+  "removeUnusedObjects": true,
+  "removeUnusedStreams": true,
+  "compressImages": true,
+  "imageQuality": 80,
+  "unembedFonts": false,
+  "grayscale": false,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### epub, xps ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Width of image after conversion
 |height|Height of image after conversion
 |dpi|Document DPI
@@ -328,25 +376,31 @@ epub
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|ppt
- pps
- pptx
- ppsx
-odp
- potx
- potm
- pptm
- ppsm
-|format|Convert format|{
-   "format": "{format}",
-   "password": "Pass123",
-   "zoom": 100,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "{format}",
+  "width": 1920,
+  "height": 1080,
+  "dpi": 96,
+  "password": "Pass123",
+  "marginTop": 0,
+  "marginBottom": 0,
+  "marginLeft": 0,
+  "marginRight: 0,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### ppt, pps, pptx, ppsx, odp, potx, potm, pptm, ppsm ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |password|Document password
 |zoom|Document zoom
 |fromPage|Start conversion from specified page number
@@ -354,27 +408,25 @@ odp
 |pages|An array with set of pages to be converted
 |usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
-|doc
- docm
- docx
-dot
- dotm
- dotx
- odt
- ott
-|format|Convert format|{
-   "format": "{format}",
-   "width": 1920,
-   "height": 1080,
-   "dpi": 96,
-   "password": "Pass123",
-   "zoom": 100,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "{format}",
+  "password": "Pass123",
+  "zoom": 100,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### doc, docm, docx, dot, dotm, dotx, odt, ott ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Document page width
 |height|Document page height
 |dpi|Document page DPI
@@ -384,22 +436,28 @@ dot
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
 |watermarkOptions|Watermark options to be applied during conversion
-|
-rtf
-|format|Convert format|{
-   "format": "rtf",
-   "width": 1920,
-   "height": 1080,
-   "dpi": 96,
-   "password": "Pass123",
-   "exportImagesForOldReaders: false,
-   "zoom": 100,
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
-   "watermarkOptions": [{options}]("watermarkOptions") 
- }
+
+```json
+{
+  "format": "{format}",
+  "width": 1920,
+  "height": 1080,
+  "dpi": 96,
+  "password": "Pass123",
+  "zoom": 100,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### rtf ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |width|Document page width
 |height|Document page height
 |dpi|Document page DPI
@@ -410,41 +468,48 @@ rtf
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
 |watermarkOptions|Watermark options to be applied during conversion
-|
-txt
-|format|Convert format|{
-   "format": "txt",
-   "fromPage": 1,
-   "pagesCount": 10,
-   "pages": [2,4,6],
-   "usePdf": false,
- }
+
+```json
+{
+  "format": "rtf",
+  "width": 1920,
+  "height": 1080,
+  "dpi": 96,
+  "password": "Pass123",
+  "exportImagesForOldReaders: false,
+  "zoom": 100,
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+  "watermarkOptions": [{options}] 
+}
+```
+
+### txt ###
+
+|Properties|Description  
+|---|---|---
+|format|Convert format
 |fromPage|Start conversion from specified page number
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
 
+```json
+{
+  "format": "txt",
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "usePdf": false,
+}
+```
 
- 
-
-###  ###
-
-{{id name#"watermarkOptions"/}}watermarkOptions
+### watermarkOptions
 
 |Property|Description|Json
 |---|---|---
-|text|Watermark text|{
-   "text": "Watermark",
-   "font": "Arial",
-   "color": "red",
-   "width": 1920,
-   "height": 1080,
-   "top": 0,
-   "left: 0,
-   "rotationAngle": 45,
-   "transparency": 0.5,
-   "background": true,
-   "image":  null
- }
+|text|Watermark text
 |font|Watermark font name
 |color|Watermark color
 |width|Watermark width
@@ -456,3 +521,18 @@ txt
 |background|Indicates that the watermark is stamped as background.
 |image|Image watermark
 
+```json
+{
+  "text": "Watermark",
+  "font": "Arial",
+  "color": "red",
+  "width": 1920,
+  "height": 1080,
+  "top": 0,
+  "left: 0,
+  "rotationAngle": 45,
+  "transparency": 0.5,
+  "background": true,
+  "image":  null
+}
+```

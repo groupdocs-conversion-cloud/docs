@@ -38,17 +38,17 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
  Request
 
-```html 
+```html
 curl -v  "https://api.groupdocs.cloud/v1.0/conversion/formats?appsid#XXXX&#x26;signature#XXX-XX"  
 -H "Content-Type: application/json" -X POST -d "{}"
- ```
+```
 
 
 
 
  Response
 
-```html 
+```html
 [
   {
     "sourceFileType": "doc",
@@ -4069,7 +4069,7 @@ curl -v  "https://api.groupdocs.cloud/v1.0/conversion/formats?appsid#XXXX&#x26;s
     ]
   }
 ] 
- ```
+```
 
 
 
