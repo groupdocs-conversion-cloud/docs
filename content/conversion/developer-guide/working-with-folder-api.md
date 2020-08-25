@@ -24,13 +24,13 @@ This API allows you to get a list of all files of a specific folder from the 
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/conversiondocs?storageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
@@ -93,7 +93,7 @@ Response
     }
   ]
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -142,20 +142,20 @@ This API allows you to create a new Folder in the specified Cloud Storage. If yo
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/conversiondocs3?storageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "code": 200,
   "status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -204,20 +204,20 @@ This API allows you to delete a particular Folder in the specified Cloud Storage
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="3" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/conversiondocs3?storageName#MyStorage&#x26;recursive#true" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "code": 200,
   "status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -268,20 +268,20 @@ This API allows you to copy a Folder to another location in the GroupDocs Cloud 
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="4" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/copy/conversiondocs?destPath#conversiondocs1&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "code": 200,
   "status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -332,20 +332,20 @@ This API allows you to move a Folder to another location in the GroupDocs Cloud 
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="5" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/move/conversiondocs?destPath#conversiondocs1&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "code": 200,
   "status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

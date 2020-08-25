@@ -22,14 +22,14 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \"converted/topjpg\"}"
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
   {
@@ -43,7 +43,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "url": "MyStorage:converted/topjpg/sample-page-2.jpg"
   }
 
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -85,14 +85,14 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \""}"
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
   Code : 200
@@ -101,7 +101,7 @@ Download file
 }
 content-type: application/octet-stream
 
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -155,7 +155,7 @@ HTTP POST ~/conversion
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="3" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 
@@ -185,7 +185,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 
@@ -204,7 +204,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

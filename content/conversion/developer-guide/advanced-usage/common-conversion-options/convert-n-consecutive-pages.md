@@ -33,7 +33,7 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 * First get JSON Web Token
@@ -62,7 +62,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 [
@@ -73,7 +73,7 @@ Response
     "url": "https://api-qa.groupdocs.cloud/v2.0/conversion/storage/file/Output/two-pages.pdf"
   }
 ]
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

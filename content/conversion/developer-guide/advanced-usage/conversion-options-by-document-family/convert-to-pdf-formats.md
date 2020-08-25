@@ -22,14 +22,14 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \"converted/topdf\"}"
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
   {
@@ -38,7 +38,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "url": "MyStorage:converted/topdf/password-protected.pdf"
   }
 
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -80,14 +80,14 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \""}"
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
   Code : 200
@@ -96,7 +96,7 @@ Download file
 }
 content-type: application/octet-stream
 
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -150,7 +150,7 @@ HTTP POST ~/conversion
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="3" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 
@@ -182,7 +182,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 
@@ -195,7 +195,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

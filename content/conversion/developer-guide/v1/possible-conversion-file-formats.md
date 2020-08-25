@@ -23,14 +23,14 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -v  "https://api.groupdocs.cloud/v1.0/conversion/formats?appsid#XXXX&#x26;signature#XXX-XX"
 -H "Content-Type: application/json" -X POST -d "{}"
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 [
@@ -85,7 +85,7 @@ curl -v  "https://api.groupdocs.cloud/v1.0/conversion/formats?appsid#XXXX&#x26;s
   },
 ...
 ]
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

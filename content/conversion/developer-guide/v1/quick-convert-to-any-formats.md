@@ -27,7 +27,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -v "https://api.groupdocs.cloud/v1.0/conversion/quick?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX"
@@ -35,7 +35,7 @@ curl -v "https://api.groupdocs.cloud/v1.0/conversion/quick?outPath#conversions%2
 -X POST -d "{'format':'pdf','sourceFile':{'folder':'conversions','name':'sample.docx'}}"
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 Â {
@@ -44,7 +44,7 @@ curl -v "https://api.groupdocs.cloud/v1.0/conversion/quick?outPath#conversions%2
   "type": null,
   "title": null
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -72,7 +72,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -v "https://api.groupdocs.cloud/v1.0/conversion/quick/stream?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX"
@@ -80,11 +80,11 @@ curl -v "https://api.groupdocs.cloud/v1.0/conversion/quick/stream?outPath#conver
 -X POST -d "{'format':'pdf','sourceFile':{'folder':'conversions','name':'sample.docx'}}"
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 Â Stream of document or Array of Stream Images.
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

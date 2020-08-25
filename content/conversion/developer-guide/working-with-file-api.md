@@ -23,20 +23,20 @@ This API allows you to download a file from [GroupDocs Cloud Storage](https://da
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/file/one-page.docx?storageName#MyStorage" -H  "accept: multipart/form-data" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "Code": 200,
   "Status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -86,13 +86,13 @@ This API allows you to upload files to the [GroupDocs Cloud Storage](https://
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion/storage/file/conversiondocs%2Fone-page2.docx?storageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 Http status code: 200 (Returns OK and list of errors, which is empty if success.)
@@ -112,7 +112,7 @@ Http status code: 200 (Returns OK and list of errors, which is empty if success.
     }
   ]
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -161,20 +161,20 @@ This API allows you to delete specific file from [GroupDocs Cloud Storage](htt
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="3" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/file/conversiondocs1%2Fone-page1.docx?storageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "Code": 200,
   "Status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -226,20 +226,20 @@ This API allows you to copy specific file from [GroupDocs Cloud Storage](https
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="4" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/copy/conversiondocs%2Fone-page1.docx?destPath#conversiondocs1%2Fone-page1.docx'&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "Code": 200,
   "Status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -291,20 +291,20 @@ This API allows you to copy specific file from [GroupDocs Cloud Storage](https:
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="5" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/move/conversiondocs%2Fone-page1.docx?destPath#conversiondocs1%2Fone-page1.docx'&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "Code": 200,
   "Status": "OK"
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

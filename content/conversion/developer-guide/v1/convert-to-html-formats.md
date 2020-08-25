@@ -27,7 +27,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 Â curl -v "https://api.groupdocs.cloud/v1.0/conversion/html?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX"
@@ -36,7 +36,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 Â {
@@ -45,7 +45,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
   "type": null,
   "title": null
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -73,7 +73,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ## cURL Example ##
 
- Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 Â curl -v "https://api.groupdocs.cloud/v1.0/conversion/html/stream?outPath#conversions%2F&#x26;appsid#XXXX&#x26;signature#XXX-XX"
@@ -82,11 +82,11 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ```
 
- Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 Stream of document.
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

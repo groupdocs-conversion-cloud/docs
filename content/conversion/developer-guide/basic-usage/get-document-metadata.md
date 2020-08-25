@@ -15,13 +15,13 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in the 
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/info?FilePath#words/four-pages.docx" -H "accept: application/json" -H "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 Content-type: application/json
@@ -41,7 +41,7 @@ Content-type: application/json
   "layers": null,
   "isPasswordProtected": false
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

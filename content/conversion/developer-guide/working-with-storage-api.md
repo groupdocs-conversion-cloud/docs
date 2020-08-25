@@ -23,19 +23,19 @@ This API intended for checking existence of cloud storage with given name from [
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/MyStorage/exist" -H  "accept: application/json" -H  "authorization: Bearer  [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "exists": true
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -87,20 +87,20 @@ Required. Can be passed as query string parameter or as part of the URL
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/exist/conversiondocs?storageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "exists": true,
   "isFolder": true
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -148,20 +148,20 @@ This API intended for getting total and used space of the[GroupDocs Cloud Storag
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="3" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/disc?storageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
   "usedSize": 31032368,
   "totalSize": 3221225472
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -210,13 +210,13 @@ This API intended for getting the list of file versions, stored in the [GroupDoc
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="4" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/version/one-page.docx?storageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 {
@@ -232,7 +232,7 @@ Response
     }
   ]
 }
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 

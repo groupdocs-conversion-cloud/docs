@@ -15,13 +15,13 @@ The following GroupDocs.conversion Cloud REST API resource has been used in the 
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 [
@@ -78,7 +78,7 @@ Response
   },
   ...
 ]
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
@@ -120,13 +120,13 @@ The following GroupDocs.conversion Cloud REST API resource has been used in the 
 
 ## cURL Example ##
 
-Request
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
-Response
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 [
@@ -182,7 +182,7 @@ Response
     ]
   }
 ]
-```
+{{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
