@@ -80,19 +80,19 @@ Using an SDK (API client) is the quickest way for a developer to speed up the de
 
 ###Convert Text Document with Load Options ###
 
- C#
+{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Load_Options_Text.cs >}}
 
- PHP
+{{< /tab >}} {{< tab tabNum="3" >}}
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Load_Options_Text.php >}}
 
- Java
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Load_Options_Text.java >}}
 
- Ruby
+{{< /tab >}} {{< tab tabNum="6" >}}
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Load_Options_Text.rb >}}
 
@@ -100,7 +100,7 @@ Using an SDK (API client) is the quickest way for a developer to speed up the de
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Load_Options_Text.js >}}
 
- Python
+{{< /tab >}} {{< tab tabNum="5" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Load_Options_Text.py >}}
 

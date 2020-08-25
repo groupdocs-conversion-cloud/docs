@@ -73,7 +73,7 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
- C#
+{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
@@ -97,7 +97,7 @@ var settings = new ConvertSettings
 var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings));
 ```
 
- Java
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
@@ -118,7 +118,7 @@ settings.setOutputPath("converted");
 List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
 ```
 
- PHP
+{{< /tab >}} {{< tab tabNum="3" >}}
 
 ```php
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
@@ -144,7 +144,7 @@ $settings->setOutputPath("converted");
 $result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($settings));
 ```
 
- Node
+{{< /tab >}} {{< tab tabNum="4" >}}
 
 ```node
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
@@ -163,7 +163,7 @@ settings.outputPath = "converted";
 let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocumentRequest(settings));
 ```
 
- Python
+{{< /tab >}} {{< tab tabNum="5" >}}
 
 ```python
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
@@ -185,7 +185,7 @@ settings.output_path = "converted"
 result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocumentRequest(settings))
 ```
 
- Ruby
+{{< /tab >}} {{< tab tabNum="6" >}}
 
 ```ruby
 
@@ -207,3 +207,5 @@ settings.output_path = "converted"
 # Convert
 result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentRequest.new(settings))
 ```
+
+{{< /tab >}} {{< /tabs >}}

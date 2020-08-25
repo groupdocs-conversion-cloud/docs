@@ -79,7 +79,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Check out our [GitHub repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion Cloud SDKs along with working examples, to get you started in no time. Please check [Available SDKs>>path:/conversioncloud/getting-started/available-sdks/) article to learn how to add an SDK to your project.
 
- C#
+{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
 
 ```csharp
 
@@ -110,7 +110,7 @@ var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings))
 
 ```
 
- Java
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```java
 
@@ -138,7 +138,7 @@ List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocu
 
 ```
 
- PHP
+{{< /tab >}} {{< tab tabNum="3" >}}
 
 ```php
 
@@ -172,7 +172,7 @@ $result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($set
 
 ```
 
- Node
+{{< /tab >}} {{< tab tabNum="4" >}}
 
 ```javascript
 
@@ -198,7 +198,7 @@ let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocume
 
 ```
 
- Python
+{{< /tab >}} {{< tab tabNum="5" >}}
 
 ```python
 
@@ -227,7 +227,7 @@ result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocument
 
 ```
 
- Ruby
+{{< /tab >}} {{< tab tabNum="6" >}}
 
 ```ruby
 
@@ -255,3 +255,5 @@ settings.output_path = "converted"
 result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentRequest.new(settings))
 
 ```
+
+{{< /tab >}} {{< /tabs >}}

@@ -27,7 +27,7 @@ Takes  as input and returns.
 https://api.groupdocs.cloud/v2.0/conversion
 ```
 
-###### Example Request ######
+{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
 
 ```html
 {
@@ -37,7 +37,7 @@ https://api.groupdocs.cloud/v2.0/conversion
 }
 ```
 
-###### Example Response ######
+{{< /tab >}} {{< tab tabNum="2" >}}
 
 ```html
 [
@@ -48,3 +48,5 @@ https://api.groupdocs.cloud/v2.0/conversion
   }
 ]
 ```
+
+{{< /tab >}} {{< /tabs >}}
