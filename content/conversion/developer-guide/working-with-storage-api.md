@@ -26,7 +26,7 @@ This API intended for checking existence of cloud storage with given name from [
 Request
 
 ```html
-curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/MyStorage/exist" -H  "accept: application/json" -H  "authorization: Bearer  [Access Token]"  
+curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/MyStorage/exist" -H  "accept: application/json" -H  "authorization: Bearer  [Access Token]"
 ```
 
 Response
@@ -39,31 +39,31 @@ Response
 
 ## SDKs ##
 
-Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Storage existence](https://apireference.groupdocs.cloud/conversion/#/Storage/StorageExists) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.  
+Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Storage existence](https://apireference.groupdocs.cloud/conversion/#/Storage/StorageExists) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Storage_Exist.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Storage_Exist.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Storage_Exist.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Storage_Exist.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Storage_Exist.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Storage_Exist.py >}}
 
@@ -108,27 +108,27 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Object_Exists.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Object_Exists.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Object_Exists.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Object_Exists.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Object_Exists.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Object_Exists.py >}}
 
@@ -169,27 +169,27 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Disc_Usage.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Disc_Usage.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Disc_Usage.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Disc_Usage.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Object_Exists.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Object_Exists.py >}}
 
@@ -240,26 +240,26 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_File_Versions.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_File_Versions.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Disc_Usage.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Disc_Usage.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_Disc_Usage.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Disc_Usage.py >}}

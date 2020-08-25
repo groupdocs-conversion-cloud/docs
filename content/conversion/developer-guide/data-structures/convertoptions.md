@@ -11,8 +11,8 @@ keywords: ""
 
 ### xls, xlsx, xlsx, xlsm, xlsb, xlsb, ods, xltx, xltm, tsv ###
 
-|Properties|Description  
-|---|---|---  
+|Properties|Description
+|---|---|---
 |format|Convert format
 |password|Document password
 |zoom|Document zoom
@@ -37,7 +37,7 @@ keywords: ""
 
 ### csv ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |fromPage|Start conversion from specified page number
@@ -58,7 +58,7 @@ keywords: ""
 
 ### html ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |fixedLayout|Document password
@@ -84,7 +84,7 @@ keywords: ""
 
 ### png, gif, bmp, ico ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -118,7 +118,7 @@ keywords: ""
 
 ### jpg, jpeg, jp2 ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -148,13 +148,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### tiff, tif ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -184,13 +184,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### psd ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -228,13 +228,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### webp ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -264,13 +264,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### svg ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -294,13 +294,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### pdf ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -354,13 +354,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### epub, xps ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Width of image after conversion
@@ -392,13 +392,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### ppt, pps, pptx, ppsx, odp, potx, potm, pptm, ppsm ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |password|Document password
@@ -418,13 +418,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### doc, docm, docx, dot, dotm, dotx, odt, ott ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Document page width
@@ -449,13 +449,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### rtf ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |width|Document page width
@@ -463,7 +463,7 @@ keywords: ""
 |dpi|Document page DPI
 |password|Document password
 |exportImagesForOldReader|Export images for old reader
-|zoom|Document zoom  
+|zoom|Document zoom 
 |fromPage|Start conversion from specified page number
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
@@ -482,13 +482,13 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}] 
+  "watermarkOptions": [{options}]
 }
 ```
 
 ### txt ###
 
-|Properties|Description  
+|Properties|Description
 |---|---|---
 |format|Convert format
 |fromPage|Start conversion from specified page number

@@ -8,23 +8,20 @@ description: ""
 keywords: ""
 ---
 
-
-
 This page contains release notes for GroupDocs.Conversion Cloud 20.2
-
 
 ## Major Features ##
 
 * Added support of new source conversion formats: DIB, XLT, POT, XLAM, MPX, JPC, DWT, JPEG-LS
 * Added support of new target conversion formats: WMF, EMF, XLAM
-* Added support of new conversion options 
-** Encoding for source CSV and TXT documents;
-** TimeZoneOffset, ConvertAttachments  for source Email documents;
+* Added support of new conversion options
+* Encoding for source CSV and TXT documents
+* TimeZoneOffset, ConvertAttachments  for source Email documents
 
 ## Full List of Issues Covering all Changes in this Release ##
 
-
-|#Key|#Category|#Summary
+|Key|Category|Summary
+|---|---|---
 |CONVERSIONCLOUD-349|Feature |Implement conversion from Dib
 |CONVERSIONCLOUD-350|Feature |Implement conversion from Xlt
 |CONVERSIONCLOUD-351|Feature |Implement conversion to Wmf
@@ -44,6 +41,5 @@ This page contains release notes for GroupDocs.Conversion Cloud 20.2
 ## Public API Examples ##
 
 [List of changes in GroupDocs.Conversion Cloud 20.2]({{< ref "conversion/developer-guide/_index.md" >}}))
-
 
  

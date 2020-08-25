@@ -8,18 +8,13 @@ description: ""
 keywords: ""
 ---
 
+## Introduction ##
 
-
-
-
-
-# Introduction #
-
-This example demonstrates how to convert cad document into pdf document with load options. 
+This example demonstrates how to convert cad document into pdf document with load options.
 
 There are steps that usage of GroupDocs.Conversion Cloud consists of:
 
-   ~1. Upload input document into cloud storage
+   1. Upload input document into cloud storage
    2. Convert document
    3. Download converted document from storage
 
@@ -31,10 +26,9 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
 HTTP POST /conversion
 
-Swagger UI lets you call this REST API directly from the browser.  
+Swagger UI lets you call this REST API directly from the browser. 
 
 ## cURL Example ##
-
 
  Request
 
@@ -46,7 +40,7 @@ curl -v "https://api.groupdocs.cloud/connect/token" \
 -d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
 -H "Content-Type: application/x-www-form-urlencoded" \
 -H "Accept: application/json"
-  
+
 * cURL example to convert document
 curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 -X POST \
@@ -65,7 +59,6 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 ```
 
-
  Response
 
 ```html
@@ -78,11 +71,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 
-
 ```
-
-
-
 
 ## SDKs ##
 
@@ -90,45 +79,26 @@ Using an SDK (API client) is the quickest way for a developer to speed up the de
 
 ### Convert CAD Document with Load Options ###
 
-
  C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Load_Options_CAD.cs >}}
-
-
-
 
  PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Load_Options_CAD.php >}}
 
-
-
-
  Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Load_Options_CAD.java >}}
-
-
-
 
  Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Load_Options_CAD.rb >}}
 
-
-
-
  Node.Js
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Load_Options_CAD.js >}}
 
-
-
-
  Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Load_Options_CAD.py >}}
-
-
-

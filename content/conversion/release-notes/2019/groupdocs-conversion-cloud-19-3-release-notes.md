@@ -27,7 +27,6 @@ The difference of V2 version from V1 is more simplified API with less methods an
 |Folder API|Methods for create, copy, move, delete folders in the cloud storage
 |Storage API|Methods for getting storage information and file information
 
-
 ## Major Features ##
 
 * This is a first release of a complete new version of the API GroupDocs.Conversion.Cloud v2.0

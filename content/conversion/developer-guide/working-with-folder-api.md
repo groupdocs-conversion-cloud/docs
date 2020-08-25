@@ -9,7 +9,7 @@ keywords: ""
 ---
 ## Get the File Listing of a Specific Folder ##
 
-This API allows you to get a list of all files of a specific folder from the specified Cloud Storage. If you do not pass storage name API will find folder in GroupDocs Cloud Storage. 
+This API allows you to get a list of all files of a specific folder from the specified Cloud Storage. If you do not pass storage name API will find folder in GroupDocs Cloud Storage.
 
 ## API Explorer ##
 
@@ -101,27 +101,27 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Files_List.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Files_List.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Files_List.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Files_List.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_Files_List.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Files_List.py >}}
 
@@ -151,7 +151,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/convers
 Response
 
 ```html
-{  
+{
   "code": 200,
   "status": "OK"
 }
@@ -159,31 +159,31 @@ Response
 
 ## SDKs ##
 
-Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.  
+Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Create_Folder.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Create_Folder.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Create_Folder.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Create_Folder.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Create_Folder.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Create_Folder.py >}}
 
@@ -213,7 +213,7 @@ curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/conve
 Response
 
 ```html
-{  
+{
   "code": 200,
   "status": "OK"
 }
@@ -221,31 +221,31 @@ Response
 
 ## SDKs ##
 
-Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Delete Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/DeleteFolder) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.  
+Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Delete Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/DeleteFolder) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Delete_Folder.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Delete_Folder.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Delete_Folder.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Delete_Folder.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Delete_Folder.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Delete_Folder.py >}}
 
@@ -277,7 +277,7 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/copy/con
 Response
 
 ```html
-{  
+{
   "code": 200,
   "status": "OK"
 }
@@ -289,27 +289,27 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Copy_Folder.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Copy_Folder.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Copy_Folder.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Copy_Folder.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Copy_Folder.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Copy_Folder.py >}}
 
@@ -319,7 +319,7 @@ This API allows you to move a Folder to another location in the GroupDocs Cloud 
 
 ## API Explorer ##
 
-[GroupDocs.conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Move a Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/MoveFolder) right away in your browser. It allows you to effortlessly interact and try out every single operation that our APIs exposes. 
+[GroupDocs.conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Move a Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/MoveFolder) right away in your browser. It allows you to effortlessly interact and try out every single operation that our APIs exposes.
 
 ### Request parameters ###
 
@@ -335,13 +335,13 @@ This API allows you to move a Folder to another location in the GroupDocs Cloud 
 Request
 
 ```html
-curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/move/conversiondocs?destPath#conversiondocs1&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"  
+curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/move/conversiondocs?destPath#conversiondocs1&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 ```
 
 Response
 
 ```html
-{  
+{
   "code": 200,
   "status": "OK"
 }
@@ -353,26 +353,26 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Move_Folder.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Move_Folder.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Move_Folder.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Move_Folder.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Move_Folder.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Move_Folder.py >}}

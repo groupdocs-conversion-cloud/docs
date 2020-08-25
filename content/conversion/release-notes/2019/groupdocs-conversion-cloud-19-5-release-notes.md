@@ -20,7 +20,7 @@ This page contains release notes for GroupDocs.Conversion Cloud 19.5
 
 ## Full List of Issues Covering all Changes in this Release ##
 
- 
+
 
 |Key|Summary|Category
 |---|---|---
@@ -31,14 +31,9 @@ This page contains release notes for GroupDocs.Conversion Cloud 19.5
 |CONVERSIONCLOUD-318|Conversions from cmx|Feature
 |CONVERSIONCLOUD-313|File API methods throw error on path with front slash|Bug
 
-
-##  Public API Examples ##
+## Public API Examples ##
 
 #### Retrieve document metadata ####
-
-
-
-
 
 ```html
 
@@ -69,9 +64,7 @@ Content-type: application/json
 
 ```
 
- 
 
- 
 
 
 

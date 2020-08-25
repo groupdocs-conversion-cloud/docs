@@ -11,7 +11,7 @@ keywords: ""
 
 Properties | Description
 |---|---
-| width | Page width for converting CAD document  
+| width | Page width for converting CAD document
 | height | Page height for converting CAD document
 | layoutNames | Specify which layouts to be converted
 
@@ -73,7 +73,7 @@ Properties | Description
 
 ## DiagramLoadOptions - vsd, vsdx, vss, vst, vsx, vtx, vdw, vdx, svg, vssx, vstx, vstm, vsdm, vssm ##
 
-| Properties | Description  
+| Properties | Description
 |---|---
 |defaultFont|Default font for Diagram document.
 

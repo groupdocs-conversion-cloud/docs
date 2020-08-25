@@ -24,7 +24,6 @@ There are couple of improvements and bug fixes in this release. Most notable are
 |CONVERSIONCLOUD-159|Improve swagger specification of GroupDocs.Conversion Cloud|Improvement
 |CONVERSIONCLOUD-165|Unable to handle requests with single multipart MIME body|Bug
 
-
 ## Public API and Backward Incompatible Changes ##
 
 No changes in the public API.

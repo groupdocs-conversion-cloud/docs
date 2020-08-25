@@ -8,10 +8,7 @@ description: ""
 keywords: ""
 ---
 
-
-
 This page contains release notes for GroupDocs.Conversion Cloud 20.3
-
 
 ## Major Features ##
 
@@ -22,7 +19,8 @@ This page contains release notes for GroupDocs.Conversion Cloud 20.3
 
 ## Full List of Issues Covering all Changes in this Release ##
 
-|#Key|#Category|#Summary
+|Key|Category|Summary
+|---|---|---
 |CONVERSIONCLOUD-364|Feature |Support for page numeration in the output document when convert html to wordprocessing documents
 |CONVERSIONCLOUD-365|Feature |Hide / remove borders while converting DOCX to HTML
 |CONVERSIONCLOUD-366|Feature |Implement rename email fields when converting an Email file
@@ -30,6 +28,5 @@ This page contains release notes for GroupDocs.Conversion Cloud 20.3
 |CONVERSIONCLOUD-337|Bug |DWG to JPG conversion issue
 
 [List of changes in GroupDocs.Conversion Cloud 20.3]({{< ref "conversion/developer-guide/_index.md" >}})||style#"background-color: rgb(255, 255, 255); font-size: 14px;")Public API Examples
-
 
  

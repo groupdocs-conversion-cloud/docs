@@ -49,26 +49,26 @@ The API is completely independent of your operating system, database system or d
 
 ### Get Document Metadata ###
 
-#### C# ####
+ C#
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Document_Information.cs >}}
 
-#### PHP ####
+ PHP
 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Document_Information.php >}}
 
-#### Java ####
+ Java
 
 {{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Document_Information.java >}}
 
-#### Ruby ####
+ Ruby
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Document_Information.rb >}}
 
-#### Node.Js ####
+ Node
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_Document_Information.js >}}
 
-#### Python ####
+ Python
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Document_Information.py >}}

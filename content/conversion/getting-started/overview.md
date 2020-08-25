@@ -47,10 +47,10 @@ Our GroupDocs.Conversion Cloud REST API comes with many features, such as:
   * HyperText Markup Language: HTML
   * Image files: BMP, GIF, JPG, PNG, TIFF, multi-page TIFF, WebP, SVG, DNG, PSD
   * Electronic publication: EPUB
-* Watermarking pages
-* Converting page by page or custom range of pages
-* Specifying output document resolution and quality when applicable
-* Password protect output document when output format support it
+  * Watermarking pages
+  * Converting page by page or custom range of pages
+  * Specifying output document resolution and quality when applicable
+  * Password protect output document when output format support it
 
 ## Security and Authentication ##
 

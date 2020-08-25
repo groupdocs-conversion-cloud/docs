@@ -18,15 +18,11 @@ There are couple of improvements and bug fixes in this release. Most notable are
 
 ## Full List of Issues Covering all Changes in this Release ##
 
-|Key
-|---
-|Summary
-|Category
-
+|Key|Category|Summary
+|---|---|---
 |CONVERSIONCLOUD-121 |Add PHP SDK for GroupDocs.Conversion Cloud|New Feature
 |CONVERSIONCLOUD-158|Some API methods returns error 401|Bug
 |CONVERSIONCLOUD-160 |Get all possible conversions return invalid response|Bug
-
 
 ## Public API and Backward Incompatible Changes ##
 
