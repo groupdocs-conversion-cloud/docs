@@ -27,6 +27,4 @@ This page contains release notes for GroupDocs.Conversion Cloud 20.3
 |CONVERSIONCLOUD-367|Improvement |Change date format when converting from email formats
 |CONVERSIONCLOUD-337|Bug |DWG to JPG conversion issue
 
-[List of changes in GroupDocs.Conversion Cloud 20.3]({{< ref "conversion/developer-guide/_index.md" >}})||style#"background-color: rgb(255, 255, 255); font-size: 14px;")Public API Examples
-
- 
+[List of changes in GroupDocs.Conversion Cloud 20.3]({{< ref "conversion/developer-guide/_index.md" >}})

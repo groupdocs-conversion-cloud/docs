@@ -52,15 +52,15 @@ The API is completely independent of your operating system, database system or d
 
 ### Quick Convert to Any Formats with Storage URL Output ###
 
- C#
+{{< tabs tabTotal="2" tabID="11" tabName1="C#" tabName2="PHP" >}} {{< tab tabNum="1" >}}
 
- 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Convert_To_Any_Format.cs >}}
 
- PHP
+{{< /tab >}} {{< tab tabNum="2" >}}
 
- 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Convert_To_Any_Forrmat.php >}}
+
+{{< /tab >}} {{< /tabs >}}
 
 # Quick Convert to Any Formats with Stream Output #
 
@@ -92,14 +92,12 @@ The API is completely independent of your operating system, database system or d
 
 ### Quick Convert to Any Formats with Stream Output ###
 
- C#
+{{< tabs tabTotal="2" tabID="12" tabName1="C#" tabName2="PHP" >}} {{< tab tabNum="1" >}}
 
- 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Convert_To_Any_Format _Stream.cs
- >}}
+{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Convert_To_Any_Format_Stream.cs >}}
 
- PHP
+{{< /tab >}} {{< tab tabNum="2" >}}
 
- 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Convert_To_Any_Forrmat_Stream.php >}}
 
+{{< /tab >}} {{< /tabs >}}

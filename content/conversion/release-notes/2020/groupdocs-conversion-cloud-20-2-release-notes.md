@@ -40,6 +40,4 @@ This page contains release notes for GroupDocs.Conversion Cloud 20.2
 
 ## Public API Examples ##
 
-[List of changes in GroupDocs.Conversion Cloud 20.2]({{< ref "conversion/developer-guide/_index.md" >}}))
-
- 
+[List of changes in GroupDocs.Conversion Cloud 20.2]({{< ref "conversion/developer-guide/_index.md" >}})

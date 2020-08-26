@@ -56,6 +56,9 @@ At the moment following SDKs are provided:
 * .NET ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet), [NuGet Package](https://www.nuget.org/packages/GroupDocs.Conversion-Cloud/))
 * Java ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java), [Jar](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-conversion-cloud))
 * PHP ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php))
+* Node.js ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node))
+* Python ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python))
+* Ruby ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby))
 
 ## API Explorer ##
 

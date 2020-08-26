@@ -53,15 +53,15 @@ The API is completely independent of your operating system, database system or d
 
 ### Convert to HTML Formats with Storage URL Output ###
 
- C#
+{{< tabs tabTotal="2" tabID="10" tabName1="C#" tabName2="PHP" >}} {{< tab tabNum="1" >}}
 
- 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Convert_To_Html.cs >}}
 
- PHP
+{{< /tab >}} {{< tab tabNum="2" >}}
 
- 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Convert_To_Html.php >}}
+
+{{< /tab >}} {{< /tabs >}}
 
 # Convert to HTML with Stream Output #
 
@@ -94,13 +94,12 @@ The API is completely independent of your operating system, database system or d
 
 ### Convert to HTML Formats with Stream Output ###
 
- C#
+{{< tabs tabTotal="2" tabID="11" tabName1="C#" tabName2="PHP" >}} {{< tab tabNum="1" >}}
 
- 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Convert_To_Html_Stream.cs >}}
 
- PHP
+{{< /tab >}} {{< tab tabNum="2" >}}
 
- 
 {{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Convert_To_Html_Stream.php >}}
 
+{{< /tab >}} {{< /tabs >}}
