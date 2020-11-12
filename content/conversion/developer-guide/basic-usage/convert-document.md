@@ -17,7 +17,8 @@ This example demonstrates how to convert word processing document into pdf docum
 Steps 1 and 3 are storage operations, please refer to this  for usage details.
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 
-| Name | Description | Comment
+|Name|Description|Comment
+|---|---|---
 |FileInfo.FilePath|The path of the document, located in the storage.|Required.
 |FileInfo.StorageName|Storage name|It could be omitted for default storage.
 |FileInfo.Password|The password to open file|It should be specified only for password-protected documents.
@@ -69,7 +70,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 ## SDKs ##
 
-Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-watermark-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-watermark-cloud), it shows [document information](https://apireference.groupdocs.cloud/watermark/#/Info/GetInfo) API calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
+Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. 
 
 ### SDK Examples ###
 
