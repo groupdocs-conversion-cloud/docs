@@ -45,7 +45,7 @@ GroupDocs.Conversion Cloud allows obtaining basic information about source docum
 
 ## Security and Authentication ##
 
-The GroupDocs.Conversion Cloud API is secured and requires authentication. Two keys AppSID and AppKey are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud/). Check [Authenticating API Requests]({{< ref "total/getting-started/overview-rest-api/authenticating-api-requests.md" >}})) article for a complete example.
+The GroupDocs.Conversion Cloud API is secured and requires authentication. Two keys ClientId and ClientSecret are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud). Check [Authenticating API Requests]({{< ref "total/getting-started/overview-rest-api/authenticating-api-requests.md" >}}) article for a complete example.
 
 ## SDKs ##
 

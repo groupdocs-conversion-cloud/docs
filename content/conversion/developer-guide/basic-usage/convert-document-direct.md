@@ -31,7 +31,7 @@ Method parameters:
 
 ```html
 // First get JSON Web Token
-// Please get your App Key and App SID from https://dashboard.groupdocs.cloud/#/apps. Kindly place App Key in "client_secret" and App SID in "client_id" argument.
+// Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
 curl -v "https://api.groupdocs.cloud/connect/token" \
 -X POST \
 -d "grant_type=client_credentials&client_id=xxxx&client_secret=xxxx" \
@@ -66,10 +66,10 @@ Our API is completely independent of your operating system, database system or d
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
-string MyAppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
-string MyAppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+string MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+string MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
   
-var configuration = new Configuration(MyAppSid, MyAppKey);
+var configuration = new Configuration(MyClientId, MyClientSecret);
   
 // Create necessary API instances
 var apiInstance = new ConvertApi(configuration);
@@ -87,10 +87,10 @@ Console.WriteLine("Document converted successfully: " + response.Length);
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
-String MyAppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
-String MyAppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+String MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+String MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
   
-Configuration configuration = new Configuration(MyAppSid, MyAppKey);
+Configuration configuration = new Configuration(MyClientId, MyClientSecret);
   
 // Create API instance
 ConvertApi apiInstance = new ConvertApi(configuration);
@@ -111,12 +111,12 @@ System.out.println("Document converted: " + result.length());
 use GroupDocs\Conversion\Model;
 use GroupDocs\Conversion\Model\Requests;
 
-$AppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
-$AppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
   
 $configuration = new GroupDocs\Conversion\Configuration();
-$configuration->setAppSid($AppSid);
-$configuration->setAppKey($AppKey);
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 
 $apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
 
@@ -137,10 +137,10 @@ echo "Document converted: " . $result->getSize();
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
 global.conversion_cloud = require("groupdocs-conversion-cloud");
 
-global.appSid = "XXXX-XXXX-XXXX-XXXX"; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
-global.appKey = "XXXXXXXXXXXXXXXX"; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+global.clientId = "XXXX-XXXX-XXXX-XXXX"; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+global.clientSecret = "XXXXXXXXXXXXXXXX"; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
   
-global.convertApi = conversion_cloud.ConvertApi.fromKeys(appSid, appKey);
+global.convertApi = conversion_cloud.ConvertApi.fromKeys(clientId, clientSecret);
 
 let file = fs.readFileSync('./Resources/WordProcessing/four-pages.docx');
 
@@ -157,11 +157,11 @@ console.log("Document converted: " + result.length);
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
 import groupdocs_conversion_cloud
 
-app_sid = "XXXX-XXXX-XXXX-XXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
-app_key = "XXXXXXXXXXXXXXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+client_id = "XXXX-XXXX-XXXX-XXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
   
 # Create necessary API instances
-apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.app_sid, Common.app_key)
+apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.client_id, Common.client_secret)
 
 # Prepare request
 request = groupdocs_conversion_cloud.ConvertDocumentDirectRequest("pdf", "Resources\\WordProcessing\\four-pages.docx")
@@ -178,11 +178,11 @@ print("Document converted: " + result)
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples
 require 'groupdocs_conversion_cloud'
 
-$app_sid = "XXXX-XXXX-XXXX-XXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
-$app_key = "XXXXXXXXXXXXXXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+$client_id = "XXXX-XXXX-XXXX-XXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
   
 # Create necessary API instances
-apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($app_sid, $app_key)
+apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($client_id, $client_secret)
 
 # Prepare request
 file = File.open("Resources\\WordProcessing\\four-pages.docx", "r")
