@@ -14,7 +14,7 @@ This page contains release notes for GroupDocs.Conversion Cloud 21.12
 
 * Added License API which allows to get metered license consumption information
 
-NOTE: metered license can be used in docker image based version of the product.
+NOTE: metered license can be used in Docker image based version of the product.
 
 ## Full List of Issues Covering all Changes in this Release ##
 
@@ -26,4 +26,4 @@ NOTE: metered license can be used in docker image based version of the product.
 
 [Here is an example how to retrieve metered license consumption]({{< ref "conversion/developer-guide/advanced-usage/metered-consumption.md" >}})
 
-You can find more information about docker version at [How to self-host GroupDocs.Conversion Cloud with Docker]({{< ref "conversion/getting-started/self-host-with-docker.md" >}})
+You can find more information about Docker version at [How to self-host GroupDocs.Conversion Cloud with Docker]({{< ref "conversion/getting-started/self-host-with-docker.md" >}})

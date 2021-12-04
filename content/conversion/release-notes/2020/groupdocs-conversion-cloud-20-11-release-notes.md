@@ -13,7 +13,7 @@ This page contains release notes for GroupDocs.Conversion Cloud 20.11
 ## Major Features ##
 
 * Introduced possibility to convert documents without cloud storage
-* Introduced docker image for self-hosting GroupDocs.Conversion Cloud
+* Introduced Docker image for self-hosting GroupDocs.Conversion Cloud
 
 ## Full List of Issues Covering all Changes in this Release ##
 

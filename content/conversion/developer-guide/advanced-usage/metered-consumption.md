@@ -9,13 +9,13 @@ keywords: ""
 ### Introduction ###
 
 {{< alert style="info" >}}
-This example related to docker version of GroupDocs.Conversion-Cloud only
+This example related to Docker version of GroupDocs.Conversion-Cloud only
 {{< /alert >}}
 
 The metered license can be used in Docker version of GroupDocs.Conversion-Cloud.
 Here is an example how to retrieve metered license consumption.
 
-You can find more information about docker version at [How to self-host GroupDocs.Conversion Cloud with Docker]({{< ref "conversion/getting-started/self-host-with-docker.md" >}})
+You can find more information about Docker version at [How to self-host GroupDocs.Conversion Cloud with Docker]({{< ref "conversion/getting-started/self-host-with-docker.md" >}})
 
 ## Resource URI ##
 
