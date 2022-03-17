@@ -3,7 +3,7 @@ id: "self-host-with-docker"
 url: "conversion/self-host-with-docker"
 title: "How to self-host GroupDocs.Conversion Cloud with Docker"
 productName: "GroupDocs.Conversion Cloud"
-weight: 11
+weight: 9
 description: ""
 keywords: ""
 ---
@@ -114,6 +114,8 @@ We generate our SDKs in different languages so you may check if yours is availab
 If you don't find your language in the SDK list, feel free to request for it on our [Support Forums](https://forum.groupdocs.cloud/c/conversion), or use raw REST API requests as you can find it [here](https://products.groupdocs.cloud/conversion/curl).
 {{< /alert >}}
 
+The authentication is required in case you're going to use SDK. To enable authentication set CLIENT_ID/CLIENT_SECRET parameters as it shown below.
+
 {{< tabs tabTotal="2" tabID="3" tabName1="Windows (PowerShell)" tabName2="Linux (bash)" >}} {{< tab tabNum="1" >}}
 
 ```powershell
@@ -140,6 +142,159 @@ docker run \
 В В В В -e client_secret=client_secret \
 В В В В --name conversion_cloud \
 В В В В groupdocs/conversion-cloud
+```
+
+{{< /tab >}} {{< /tabs >}}
+
+Then, when using SDK, setup the api base url, as shown in examples below:
+
+{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
+
+```csharp
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
+string MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+string MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+
+var configuration = new Configuration(MyClientId, MyClientSecret)
+{
+    ApiBaseUrl = "http://localhost:8080"
+};
+
+// Create necessary API instances
+var apiInstance = new ConvertApi(configuration);
+
+// Prepare convert settings
+var settings = new ConvertSettings
+{
+    FilePath = "WordProcessing/four-pages.docx",
+    Format = "pdf",
+    OutputPath = "converted"
+};
+
+// Convert to specified format
+var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings));
+```
+
+{{< /tab >}} {{< tab tabNum="2" >}}
+
+```java
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
+String MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+String MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+
+Configuration configuration = new Configuration(MyClientId, MyClientSecret);
+
+configuration.setApiBaseUrl("http://localhost:8080");
+
+// Create API instance
+ConvertApi apiInstance = new ConvertApi(configuration);
+
+// Prepare convert settings
+ConvertSettings settings = new ConvertSettings();
+settings.setFilePath("WordProcessing/four-pages.docx");
+settings.setFormat("pdf");
+settings.setOutputPath("converted");
+
+List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
+```
+
+{{< /tab >}} {{< tab tabNum="3" >}}
+
+```php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model;
+use GroupDocs\Conversion\Model\Requests;
+
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
+$configuration->setApiBaseUrl("http://localhost:8080");
+
+$apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
+
+// Prepare convert settings
+$settings = new Model\ConvertSettings();
+$settings->setFilePath("WordProcessing/four-pages.docx");
+$settings->setFormat("pdf");
+$settings->setOutputPath("converted");
+
+// Convert
+$result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($settings));
+```
+
+{{< /tab >}} {{< tab tabNum="4" >}}
+
+```node
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
+global.conversion_cloud = require("groupdocs-conversion-cloud");
+
+const clientId = "XXXX-XXXX-XXXX-XXXX"; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+const clientSecret = "XXXXXXXXXXXXXXXX"; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+const config = new Configuration(clientId, clientSecret);
+config.apiBaseUrl = "http://localhost:8080";
+
+global.convertApi = conversion_cloud.ConvertApi.fromConfig(config);
+
+let settings = new conversion_cloud.ConvertSettings();
+settings.filePath = "WordProcessing/four-pages.docx";
+settings.format = "pdf";
+settings.outputPath = "converted";
+
+let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocumentRequest(settings));
+```
+
+{{< /tab >}} {{< tab tabNum="5" >}}
+
+```python
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
+import groupdocs_conversion_cloud
+
+client_id = "XXXX-XXXX-XXXX-XXXX" = Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+client_secret = "XXXXXXXXXXXXXXXX" = Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+
+configuration = Configuration(client_id, client_secret)
+configuration.api_base_url = "http://localhost:8080"
+
+# Create necessary API instances
+apiInstance = groupdocs_conversion_cloud.ConvertApi.from_config(configuration)
+
+# Prepare convert settings
+settings = groupdocs_conversion_cloud.ConvertSettings()
+settings.file_path = "WordProcessing/four-pages.docx"
+settings.format = "pdf"
+settings.output_path = "converted"
+
+# Convert
+result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocumentRequest(settings))
+```
+
+{{< /tab >}} {{< tab tabNum="6" >}}
+
+```ruby
+
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples
+require 'groupdocs_conversion_cloud'
+
+client_id = "XXXX-XXXX-XXXX-XXXX" = Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+client_secret = "XXXXXXXXXXXXXXXX" = Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+
+config = Configuration.new(client_id, client_secret)
+config.api_base_url = "http://localhost:8080"
+
+# Create necessary API instances
+apiInstance = GroupDocsConversionCloud::ConvertApi.from_config(config)
+
+# Prepare convert settings
+settings = GroupDocsConversionCloud::ConvertSettings.new
+settings.file_path = "WordProcessing/four-pages.docx"
+settings.format = "pdf"
+settings.output_path = "converted"
+
+# Convert
+result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentRequest.new(settings))
 ```
 
 {{< /tab >}} {{< /tabs >}}
