@@ -8,16 +8,18 @@ keywords: ""
 ---
 ### Introduction ###
 
-This example demonstrates how to convert document without using cloud storage. Use this method to directly convert any document, using default options. The only options available are start page and pages count. If more than one page requested then an archive returned containing output pages.
+This example demonstrates how to convert document without using cloud storage. Use this method to directly convert any document, using conversion options.
 
 Method parameters:
 
-|Name|Description|Comment
-|---|---|---
-|format|Requested conversion format|Required.
-|File|Input file to convert|Form data
-|fromPage|Page start conversion from|Default value : 1
-|pagesCount|Number of pages to convert|Default value : 0 (all pages)
+|Name|Type|Description|Comment
+|---|---|---|---
+|format|string|Requested conversion format|Required.
+|File|binary|Input file to convert|Form data, Required
+|fromPage|integer|Page start conversion from|Default value : 1
+|pagesCount|integer|Number of pages to convert|Default value : 0 (all pages)
+|loadOptions|LoadOptions|Input file loading options|Form data
+|convertOptions|ConvertOptions|Conversion options|Form data
 
 ## Resource URI ##
 
@@ -75,8 +77,11 @@ var configuration = new Configuration(MyClientId, MyClientSecret);
 var apiInstance = new ConvertApi(configuration);
 
 // Prepare request
-var fileStream = File.Open("..\\..\\..\\Resources\\WordProcessing\\four-pages.docx", FileMode.Open);
-var request = new ConvertDocumentDirectRequest("pdf", fileStream);
+var fileStream = File.Open("..\\..\\..\\Resources\\WordProcessing\\password-protected.docx", FileMode.Open);
+var loadOptions = new DocxLoadOptions();
+loadOptions.Format = "docx";
+loadOptions.Password = "password";
+var request = new ConvertDocumentDirectRequest("pdf", fileStream, null, null, loadOptions);
 
 // Convert to specified format
 var response = apiInstance.ConvertDocumentDirect(request);
@@ -95,9 +100,12 @@ Configuration configuration = new Configuration(MyClientId, MyClientSecret);
 // Create API instance
 ConvertApi apiInstance = new ConvertApi(configuration);
 
-File file = new File("examples\\src\\main\\resources\\WordProcessing\\four-pages.docx");
+File file = new File("examples\\src\\main\\resources\\WordProcessing\\password-protected.docx");
+DocxLoadOptions loadOptions = new DocxLoadOptions();
+loadOptions.setFormat("docx");
+loadOptions.setPassword("password");
 
-ConvertDocumentDirectRequest request = new ConvertDocumentDirectRequest("pdf", file, 1, 0); // all pages
+ConvertDocumentDirectRequest request = new ConvertDocumentDirectRequest("pdf", file, 1, 0, loadOptions, null); // all pages
 
 File result = apiInstance.convertDocumentDirect(request);
 
@@ -121,8 +129,11 @@ $configuration->setAppKey($ClientSecret);
 $apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
 
 // Prepare request
-$filePath = dirname(realpath(__DIR__)) . '\Resources\WordProcessing\four-pages.docx';
-$request = new Requests\ConvertDocumentDirectRequest("pdf", $filePath);
+$filePath = dirname(realpath(__DIR__)) . '\Resources\WordProcessing\password-protected.docx';
+$loadOptions = new Model\DocxLoadOptions();
+$loadOptions->setFormat("docx");
+$loadOptions->setPassword("password");        
+$request = new Requests\ConvertDocumentDirectRequest("pdf", $filePath, null, null, $loadOptions);
 
 // Convert
 $result = $apiInstance->convertDocumentDirect($request);
@@ -142,9 +153,11 @@ global.clientSecret = "XXXXXXXXXXXXXXXX"; // Get ClientId and ClientSecret from 
   
 global.convertApi = conversion_cloud.ConvertApi.fromKeys(clientId, clientSecret);
 
-let file = fs.readFileSync('./Resources/WordProcessing/four-pages.docx');
-
-let request = new conversion_cloud.ConvertDocumentDirectRequest("pdf", file);
+let file = fs.readFileSync('./Resources/WordProcessing/password-protected.docx');
+let loadOptions = new conversion_cloud.DocxLoadOptions();
+loadOptions.format = "docx";
+loadOptions.password = "password";
+let request = new conversion_cloud.ConvertDocumentDirectRequest("pdf", file, undefined, undefined, loadOptions);
 
 let result = await convertApi.convertDocumentDirect(request);
 
@@ -164,7 +177,10 @@ client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https://
 apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.client_id, Common.client_secret)
 
 # Prepare request
-request = groupdocs_conversion_cloud.ConvertDocumentDirectRequest("pdf", "Resources\\WordProcessing\\four-pages.docx")
+load_options = groupdocs_conversion_cloud.DocxLoadOptions()
+load_options.format = "docx"
+load_options.password = "password"
+request = groupdocs_conversion_cloud.ConvertDocumentDirectRequest("pdf", "Resources\\WordProcessing\\password-protected.docx", None, None, load_options)
 
 # Convert
 result = apiInstance.convert_document_direct(request)
@@ -185,8 +201,11 @@ $client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https:/
 apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($client_id, $client_secret)
 
 # Prepare request
-file = File.open("Resources\\WordProcessing\\four-pages.docx", "r")
-request = GroupDocsConversionCloud::ConvertDocumentDirectRequest.new("pdf", file)
+file = File.open("Resources\\WordProcessing\\password-protected.docx", "r")
+load_options = GroupDocsConversionCloud::DocxLoadOptions.new
+load_options.format = "docx"
+load_options.password = "password"
+request = GroupDocsConversionCloud::ConvertDocumentDirectRequest.new("pdf", file, nil, nil, load_options)
 
 # Convert
 result = apiInstance.convert_document_direct(request)
