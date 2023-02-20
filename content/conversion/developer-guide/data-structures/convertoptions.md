@@ -436,6 +436,9 @@ keywords: ""
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
 |watermarkOptions|Watermark options to be applied during conversion
+|pdfRecognitionMode|Recognition mode when converting from pdf [Textbox, Flow]
+|pageSize|Specifies page size [Default, A3, Statement, Quarto, Paper11x17, Paper10x14, Letter, Legal, Ledger, Folio, Executive, EnvelopeDL, Custom, B5, B4, A5, A4, Tabloid]
+|pageOrientation|Specifies page orientation [Default, Landscape, Portrait]
 
 ```json
 {
@@ -449,7 +452,10 @@ keywords: ""
   "pagesCount": 10,
   "pages": [2,4,6],
   "usePdf": false,
-  "watermarkOptions": [{options}]
+  "watermarkOptions": [{options}],
+  "pdfRecognitionMode": "Textbox",
+  "pageSize": "Custom",
+  "pageOrientation": "Default"
 }
 ```
 
