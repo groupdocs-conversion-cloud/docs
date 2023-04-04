@@ -268,36 +268,6 @@ keywords: ""
 }
 ```
 
-### svg ###
-
-|Properties|Description
-|---|---|---
-|format|Convert format
-|width|Width of image after conversion
-|height|Height of image after conversion
-|grayscale|Convert to grayscale image
-|rotateAngle|Image conversion angle
-|fromPage|Start conversion from specified page number
-|pagesCount|Convert pagesCount from specified page
-|pages|An array with set of pages to be converted
-|usePdf|Use pdf as intermediate format
-|watermarkOptions|Watermark options to be applied during conversion
-
-```json
-{
-  "format": "svg",
-  "width": 1920,
-  "height": 1080,
-  "grayscale": false,
-  "rotateAngle": 0,
-  "fromPage": 1,
-  "pagesCount": 10,
-  "pages": [2,4,6],
-  "usePdf": false,
-  "watermarkOptions": [{options}]
-}
-```
-
 ### pdf ###
 
 |Properties|Description
@@ -358,41 +328,47 @@ keywords: ""
 }
 ```
 
-### epub, xps ###
+### svg, xps, cgm ###
 
 |Properties|Description
 |---|---|---
 |format|Convert format
-|width|Width of image after conversion
-|height|Height of image after conversion
-|dpi|Document DPI
-|password|Document password
-|marginTop|Document top margin
-|marginBottom|Document bottom margin
-|marginLeft|Document left margin
-|marginRight|Document right margin
 |fromPage|Start conversion from specified page number
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
-|usePdf|Use pdf as intermediate format
 |watermarkOptions|Watermark options to be applied during conversion
 
 ```json
 {
   "format": "{format}",
-  "width": 1920,
-  "height": 1080,
-  "dpi": 96,
-  "password": "Pass123",
-  "marginTop": 0,
-  "marginBottom": 0,
-  "marginLeft": 0,
-  "marginRight: 0,
   "fromPage": 1,
   "pagesCount": 10,
   "pages": [2,4,6],
-  "usePdf": false,
   "watermarkOptions": [{options}]
+}
+```
+
+### epub ###
+
+|Properties|Description
+|---|---|---
+|format|Convert format
+|fromPage|Start conversion from specified page number
+|pagesCount|Convert pagesCount from specified page
+|pages|An array with set of pages to be converted
+|watermarkOptions|Watermark options to be applied during conversion
+|pageSize|Specifies page size
+|pageOrientation|Specifies page orientation
+
+```json
+{
+  "format": "{format}",
+  "fromPage": 1,
+  "pagesCount": 10,
+  "pages": [2,4,6],
+  "watermarkOptions": [{options}],
+  "pageSize": "{pageSize}",
+  "pageOrientation": "{pageOrientation}"
 }
 ```
 

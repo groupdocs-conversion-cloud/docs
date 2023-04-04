@@ -215,7 +215,7 @@ Properties | Description
 }
 ```
 
-## HtmlLoadOptions - html ##
+## WebLoadOptions - html ##
 
 | Properties | Description
 |---|---
