@@ -98,7 +98,7 @@ var settings = new ConvertSettings
     StorageName = Constants.MyStorage,
     FilePath = "Html/sample.html",
     Format = "pdf",
-    LoadOptions = new HtmlLoadOptions
+    LoadOptions = new WebLoadOptions
     {
         PageNumbering = true
     },
@@ -128,7 +128,7 @@ ConvertSettings settings = new ConvertSettings();
 settings.setFilePath("Html/sample.html");
 settings.setFormat("pdf");
 
-HtmlLoadOptions loadOptions = new HtmlLoadOptions();
+WebLoadOptions loadOptions = new WebLoadOptions();
 loadOptions.setPageNumbering(true);
 
 settings.setLoadOptions(loadOptions);
@@ -161,7 +161,7 @@ $settings->setStorageName(Utils::$MyStorage);
 $settings->setFilePath("Html/sample.html");
 $settings->setFormat("pdf");
 
-$loadOptions = new Model\HtmlLoadOptions();
+$loadOptions = new Model\WebLoadOptions();
 $loadOptions->setPageNumbering(true);
 
 $settings->setLoadOptions($loadOptions);
@@ -188,7 +188,7 @@ let settings = new conversion_cloud.ConvertSettings();
 settings.filePath = "Html/sample.html";
 settings.format = "pdf";
 
-let loadOptions = new conversion_cloud.HtmlLoadOptions();
+let loadOptions = new conversion_cloud.WebLoadOptions();
 loadOptions.pageNumbering = true;
 
 settings.loadOptions = loadOptions;
@@ -216,7 +216,7 @@ settings = groupdocs_conversion_cloud.ConvertSettings()
 settings.file_path = "Html/sample.html"
 settings.format = "pdf"
 
-loadOptions = groupdocs_conversion_cloud.HtmlLoadOptions()
+loadOptions = groupdocs_conversion_cloud.WebLoadOptions()
 loadOptions.page_numbering = True
 
 settings.load_options = loadOptions
@@ -245,7 +245,7 @@ settings = GroupDocsConversionCloud::ConvertSettings.new
 settings.file_path = "Html/sample.html"
 settings.format = "pdf"
 
-loadOptions = GroupDocsConversionCloud::HtmlLoadOptions.new
+loadOptions = GroupDocsConversionCloud::WebLoadOptions.new
 loadOptions.page_numbering = true
 
 settings.load_options = loadOptions

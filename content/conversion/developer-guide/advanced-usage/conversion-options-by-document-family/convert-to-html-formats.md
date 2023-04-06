@@ -102,7 +102,7 @@ var settings = new ConvertSettings
 {
     FilePath = "WordProcessing/four-pages.docx",
     Format = "html",
-    ConvertOptions = new HtmlConvertOptions
+    ConvertOptions = new WebConvertOptions
     {
         FromPage = 1,
         PagesCount = 1,
@@ -135,7 +135,7 @@ ConvertSettings settings = new ConvertSettings();
 settings.setFilePath("WordProcessing/four-pages.docx");
 settings.setFormat("html");
 
-HtmlConvertOptions convertOptions = new HtmlConvertOptions();
+WebConvertOptions convertOptions = new WebConvertOptions();
 convertOptions.setFromPage(1);
 convertOptions.setPagesCount(1);
 convertOptions.setFixedLayout(true);
@@ -170,7 +170,7 @@ $settings = new Model\ConvertSettings();
 $settings->setFilePath("WordProcessing/four-pages.docx");
 $settings->setFormat("html");
 
-$convertOptions = new Model\HtmlConvertOptions();
+$convertOptions = new Model\WebConvertOptions();
 $convertOptions->setFromPage(1);
 $convertOptions->setPagesCount(1);
 $convertOptions->setFixedLayout(true);
@@ -200,7 +200,7 @@ let settings = new conversion_cloud.ConvertSettings();
 settings.filePath = "WordProcessing/four-pages.docx";
 settings.format = "html";
 
-let convertOptions = new conversion_cloud.HtmlConvertOptions();
+let convertOptions = new conversion_cloud.WebConvertOptions();
 convertOptions.fromPage = 1;
 convertOptions.pagesCount = 1;
 convertOptions.fixedLayout = true;
@@ -229,7 +229,7 @@ apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.client_id, 
 settings = groupdocs_conversion_cloud.ConvertSettings()
 settings.file_path = "WordProcessing/four-pages.docx"
 settings.format = "html"
-convertOptions = groupdocs_conversion_cloud.HtmlConvertOptions()
+convertOptions = groupdocs_conversion_cloud.WebConvertOptions()
 convertOptions.from_page = 1
 convertOptions.pages_count = 1
 convertOptions.fixed_layout = True
@@ -259,7 +259,7 @@ apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($client_id, $client
 settings = GroupDocsConversionCloud::ConvertSettings.new
 settings.file_path = "WordProcessing/four-pages.docx"
 settings.format = "html"
-convertOptions = GroupDocsConversionCloud::HtmlConvertOptions.new
+convertOptions = GroupDocsConversionCloud::WebConvertOptions.new
 convertOptions.from_page = 1
 convertOptions.pages_count = 1
 convertOptions.fixed_layout = true
