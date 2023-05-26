@@ -41,12 +41,12 @@ In case you don't have license keys you can omit LICENSE_PUBLIC_KEY and LICENSE_
 ```powershell
 
 docker run `
-В  В  -p 8080:80 `
-В  В  -v "${pwd}/data:/data" `
-В  В  -e "LICENSE_PUBLIC_KEY#public_key" `
-В  В  -e "LICENSE_PRIVATE_KEY#private_key" `
-В  В  --name conversion_cloud `
-В  В  groupdocs/conversion-cloud
+      -p 8080:80 `
+      -v "${pwd}/data:/data" `
+      -e "LICENSE_PUBLIC_KEY#public_key" `
+      -e "LICENSE_PRIVATE_KEY#private_key" `
+      --name conversion_cloud `
+      groupdocs/conversion-cloud
 
 ```
 
@@ -55,12 +55,12 @@ docker run `
 ```bash
 
 docker run \
-В В В В -p 8080:80 \
-В В В В -v $(pwd)/data:/data \
-В В В В -e LICENSE_PUBLIC_KEY#public_key \
-В В В В -e LICENSE_PRIVATE_KEY#private_key \
-В В В В --name conversion_cloud \
-В В В В groupdocs/conversion-cloud
+        -p 8080:80 \
+        -v $(pwd)/data:/data \
+        -e LICENSE_PUBLIC_KEY#public_key \
+        -e LICENSE_PRIVATE_KEY#private_key \
+        --name conversion_cloud \
+        groupdocs/conversion-cloud
 
 ```
 
@@ -120,28 +120,28 @@ The authentication is required in case you're going to use SDK. To enable authen
 
 ```powershell
 docker run `
-В В В В -p 8080:80 `
-В В В В -v "${pwd}/data:/data" `
-В В В В -e "LICENSE_PUBLIC_KEY#public_key" `
-В В В В -e "LICENSE_PRIVATE_KEY#private_key" `
-В В В В -e "client_id=client_id" `
-В В В В -e "client_secret=client_secret" `
-В В В В --name conversion_cloud `
-В В В В groupdocs/conversion-cloud
+        -p 8080:80 `
+        -v "${pwd}/data:/data" `
+        -e "LICENSE_PUBLIC_KEY#public_key" `
+        -e "LICENSE_PRIVATE_KEY#private_key" `
+        -e "client_id=client_id" `
+        -e "client_secret=client_secret" `
+        --name conversion_cloud `
+        groupdocs/conversion-cloud
 ```
 
 {{< /tab >}} {{< tab tabNum="2" >}}
 
 ```bash
 docker run \
-В В В В -p 8080:80 \
-В В В В -v $(pwd)/data:/data \
-В В В В -e LICENSE_PUBLIC_KEY#public_key \
-В В В В -e LICENSE_PRIVATE_KEY#private_key \
-В В В В -e client_id=client_id \
-В В В В -e client_secret=client_secret \
-В В В В --name conversion_cloud \
-В В В В groupdocs/conversion-cloud
+        -p 8080:80 \
+        -v $(pwd)/data:/data \
+        -e LICENSE_PUBLIC_KEY#public_key \
+        -e LICENSE_PRIVATE_KEY#private_key \
+        -e client_id=client_id \
+        -e client_secret=client_secret \
+        --name conversion_cloud \
+        groupdocs/conversion-cloud
 ```
 
 {{< /tab >}} {{< /tabs >}}
@@ -328,6 +328,48 @@ docker run \
 ```
 
 {{< /tab >}} {{< /tabs >}}
+
+### Enable AWS S3 Cloud Storage
+
+By default, a local storage used inside container for file operations. It's possible to connect a AWS S3 Cloud storage by setting
+environment variables:
+| Name                | Description                                           |
+| ------------------- | ----------------------------------------------------- |
+| S3_STORAGE_BUCKET   | Bucket ID                                             |
+| S3_STORAGE_ACCESS_KEY| S3 API Access Key                                    |
+| S3_STORAGE_SECRET_KEY| S3 API Secret Key                                    |
+| S3_STORAGE_REGION   | AWS S3 Region                                         |
+
+{{< tabs tabTotal="2" tabID="351" tabName1="Windows (PowerShell)" tabName2="Linux (bash)" >}} {{< tab tabNum="1" >}}
+
+```powershell
+docker run `
+    -p 8080:80 `
+    -v "${pwd}/data:/data" `
+    -e "S3_STORAGE_BUCKET=main_bucket" `
+    -e "S3_STORAGE_ACCESS_KEY=XXXXXXXXXXXXXXXXXXX" `
+    -e "S3_STORAGE_SECRET_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" `
+    -e "S3_STORAGE_REGION=us-west-2" `
+    --name conversion_cloud `
+    groupdocs/conversion-cloud
+```
+
+{{< /tab >}} {{< tab tabNum="2" >}}
+
+```bash
+docker run \
+    -p 8080:80 \
+    -v $(pwd)/data:/data \
+    -e S3_STORAGE_BUCKET=main_bucket \
+    -e S3_STORAGE_ACCESS_KEY=XXXXXXXXXXXXXXXXXXX \
+    -e S3_STORAGE_SECRET_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+    -e S3_STORAGE_REGION=us-west-2" \
+    --name conversion_cloud \
+    groupdocs/conversion-cloud
+```
+
+{{< /tab >}} {{< /tabs >}}
+
 ### Stop Container
 
 To stop the running Docker container, just use Ctrl+C in the same terminal where the container is running. Alternatively, you can stop the container by name.

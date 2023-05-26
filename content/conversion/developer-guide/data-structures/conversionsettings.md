@@ -7,7 +7,7 @@ weight: 1
 description: ""
 keywords: ""
 ---
-ConversionSettings data structure used as input parameters for  [Document Conversion API]({{< ref "conversion/developer-guide/conversion-api.md" >}})).
+ConversionSettings data structure used as input parameters for  [Document Conversion API]({{< ref "conversion/developer-guide/conversion-api.md" >}}).
 
 ##### ConversionSettings example #####
 

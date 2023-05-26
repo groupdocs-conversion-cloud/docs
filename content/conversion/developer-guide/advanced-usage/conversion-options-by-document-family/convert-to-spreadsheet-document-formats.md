@@ -10,11 +10,11 @@ keywords: ""
 
 ## Introduction ##
 
-GroupDocs.Conversion Cloud REST API allows us to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}})) to **Spreadsheet Document Formats** and returns the output document **storage URL** and also support to get the result as a **stream**.
+GroupDocs.Conversion Cloud REST API allows us to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to **Spreadsheet Document Formats** and returns the output document **storage URL** and also support to get the result as a **stream**.
 
 # Convert to Spreadsheet Formats #
 
-You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}})) to **Spreadsheet** Formats and returns the output document **storage URL**
+You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Spreadsheet** Formats and returns the output document **storage URL**
 
 ## Resource ##
 
@@ -74,7 +74,7 @@ The API is completely independent of your operating system, database system or d
 
 # Convert to Spreadsheet Document Formats with Stream Output #
 
-You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}})) to **Spreadsheet** Formats and get the output document as **Stream**
+You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Spreadsheet** Formats and get the output document as **Stream**
 
 ## Resource ##
 
@@ -142,7 +142,7 @@ There are steps that usage of GroupDocs.Conversion Cloud consists of:
 2. Convert document
 3. Download converted document from storage
 
-Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion Cloud Storage Operations]({{< ref "conversion/developer-guide/working-with-storage-api.md" >}})) for usage details.
+Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion Cloud Storage Operations]({{< ref "conversion/developer-guide/working-with-storage-api.md" >}}) for usage details.
 
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 

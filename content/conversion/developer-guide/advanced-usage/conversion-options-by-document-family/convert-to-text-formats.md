@@ -10,11 +10,11 @@ keywords: ""
 
 ## Introduction ##
 
-GroupDocs.Conversion Cloud REST API allows to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}})) to  **Text Formats** and returns the output document **storage URL** and also support to get result as a **stream** or **Array of stream**.
+GroupDocs.Conversion Cloud REST API allows to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to  **Text Formats** and returns the output document **storage URL** and also support to get result as a **stream** or **Array of stream**.
 
 # Convert to Text Formats #
 
-You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}})) to **Text Formats** and get output as Storage URL.
+You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Text Formats** and get output as Storage URL.
 
 ## Resource ##
 
@@ -75,7 +75,7 @@ The API is completely independent of your operating system, database system or d
 
 # Convert to Text Formats with Stream Output #
 
-You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}})) to **Text Formats** and get output as Stream.
+You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Text Formats** and get output as Stream.
 
 ## Resource ##
 

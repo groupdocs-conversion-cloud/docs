@@ -18,7 +18,7 @@ There are steps that usage of GroupDocs.Conversion Cloud consists of:
    2. Convert document
    3. Download converted document from storage
 
-Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion Cloud documentation]({{< ref "conversion/developer-guide/working-with-storage-api.md" >}})) for usage details.
+Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion Cloud documentation]({{< ref "conversion/developer-guide/working-with-storage-api.md" >}}) for usage details.
 
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 

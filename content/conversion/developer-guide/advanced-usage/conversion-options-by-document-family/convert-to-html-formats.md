@@ -23,7 +23,7 @@ Step 3 is not needed, if "OutputPath" option is not provided: the convert api me
 
 ## Convert to Html Format ##
 
-You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}})) to **Html Format** and get the output as a storage URL
+You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Html Format** and get the output as a storage URL
 
 ## Resource URI ##
 
