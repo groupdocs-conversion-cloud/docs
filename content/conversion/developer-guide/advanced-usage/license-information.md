@@ -1,7 +1,7 @@
 ---
-id: "metered-consumption"
-url: "conversion/metered-consumption"
-title: "Getting metered license consumption"
+id: "license-information"
+url: "conversion/license-information"
+title: "Getting metered license-information"
 productName: "GroupDocs.Conversion Cloud"
 description: ""
 keywords: ""
@@ -13,13 +13,13 @@ This example related to Self-hosted version of GroupDocs.Conversion-Cloud only
 {{< /alert >}}
 
 The metered license can be used in Self-hosted version of GroupDocs.Conversion-Cloud.
-Here is an example how to retrieve metered license consumption.
+Here is an example how to retrieve metered license information.
 
 You can find more information about Self-hosted version at [How to self-host GroupDocs.Conversion Cloud with Docker]({{< ref "conversion/getting-started/self-host-with-docker.md" >}})
 
 ## Resource URI ##
 
-```HTTP GET ~/conversion/consumption```
+```HTTP GET ~/conversion/license```
 
 ## cURL Example ##
 
@@ -27,8 +27,8 @@ You can find more information about Self-hosted version at [How to self-host Gr
 
 ```html
 
-* cURL example to get metered license consumption
-curl -v "http://<base url>/v2.0/conversion/consumption" \
+* cURL example to get metered license information
+curl -v "http://<base url>/v2.0/conversion/license" \
 -X GET \
 -H "Accept: application/json" \
 -H "Authorization: Bearer <jwt token>"
@@ -38,19 +38,17 @@ curl -v "http://<base url>/v2.0/conversion/consumption" \
 
 ```html
 {
-  "credit": 487848,
-  "quantity": 6061570985.37938
+  "isLicensed": true
 }
 {{< /tab >}} {{< /tabs >}}
 
 ## Response ##
 
-The response structure contains metered license consumption information:
+The response structure contains metered license information:
 
 | Name | Type | Comment
 |---|---|---
-|Credit|decimal|Amount of used credits.
-|Quantity|decimal|Amount of MBs processed.
+|isLicensed|bool|True, if metered license is set and active, false when license switched to trial mode or not applied.
 
 ## SDKs ##
 
@@ -70,10 +68,9 @@ var configuration = new Configuration(MyClientId, MyClientSecret);
 // Create necessary API instances
 var apiInstance = new LicenseApi(configuration);
 
-var response = apiInstance.GetConsumptionCredit();
+var response = apiInstance.GetLicenseInfo();
 
-Console.WriteLine($"Credits: {response.Credit}");
-Console.WriteLine($"Quantity: {response.Quantity}");
+Console.WriteLine($"Is licensed: {response.IsLicensed}");
 ```
 
 {{< /tab >}} {{< tab tabNum="2" >}}
@@ -88,9 +85,8 @@ Configuration configuration = new Configuration(MyClientId, MyClientSecret);
 // Create API instance
 LicenseApi apiInstance = new LicenseApi(configuration);
 
-ConsumptionResult response = apiInstance.getConsumptionCredit();
-System.out.println("Credit: " + response.getCredit());
-System.out.println("Quantity: " + response.getQuantity());
+LicenseInfo response = apiInstance.getLicenseInfo();
+System.out.println("Is licensed: " + response.getIsLicensed());
 ```
 
 {{< /tab >}} {{< tab tabNum="3" >}}
@@ -109,11 +105,11 @@ $configuration->setAppKey($ClientSecret);
 
 $apiInstance = new GroupDocs\Conversion\LicenseApi($configuration);
 
-// Get consumption
-$result = $apiInstance->getConsumptionCredit();
+// Get info
+$result = $apiInstance->getLicenseInfo();
 
 // Done
-echo "Credit: " . $result->getCredit();
+echo "Is licensed: " . $result->is_licensed();
 ```
 
 {{< /tab >}} {{< tab tabNum="4" >}}
@@ -127,8 +123,8 @@ global.clientSecret = "XXXXXXXXXXXXXXXX"; // Get ClientId and ClientSecret from 
   
 global.licenseApi = conversion_cloud.LicenseApi.fromKeys(clientId, clientSecret);
 
-let response = await licenseApi.getConsumptionCredit();
-console.log("GetLicenseConsumption: Credit = " + response.credit);
+let response = await licenseApi.getLicenseInfo();
+console.log("isLicensed = " + response.isLicensed);
 ```
 
 {{< /tab >}} {{< tab tabNum="5" >}}
@@ -143,10 +139,10 @@ client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https://
 # Create necessary API instances
 apiInstance = groupdocs_conversion_cloud.LicenseApi.from_keys(Common.client_id, Common.client_secret)
 
-# Get consumption
-result = apiInstance.get_consumption_credit()
+# Get info
+result = apiInstance.get_license_info()
 
-print("Credit: " + result.credit)
+print("isLicensed: " + result.isLicensed)
 ```
 
 {{< /tab >}} {{< tab tabNum="6" >}}
@@ -161,10 +157,10 @@ $client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https:/
 # Create necessary API instances
 apiInstance = GroupDocsConversionCloud::LicenseApi.from_keys($client_id, $client_secret)
 
-# Get consumption
-result = apiInstance.get_consumption_credit()
+# Get info
+result = apiInstance.get_license_info()
 
-puts("Credit: " + result.credit)
+puts("isLicensed: " + result.isLicensed)
 ```
 
 {{< /tab >}} {{< /tabs >}}
