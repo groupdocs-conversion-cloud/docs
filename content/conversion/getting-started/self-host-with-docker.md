@@ -36,7 +36,7 @@ To run GroupDocs.Conversion Cloud in Docker type one of the following commands:
 In case you don't have license keys you can omit LICENSE_PUBLIC_KEY and LICENSE_PRIVATE_KEY parameters. Without license GroupDocs.Conversion will work in evaluation mode.
 {{< /alert >}}
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Windows (PowerShell)" tabName2="Linux (bash)" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "Windows (PowerShell)" >}}
 
 ```powershell
 
@@ -50,7 +50,7 @@ docker run `
 
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Linux (bash)" >}}
 
 ```bash
 
@@ -74,7 +74,7 @@ I'm running Docker on Windows and will be using PowerShell to run the commands b
 
 After the container is started you'll see the following messages that indicate that GroupDocs.Conversion Cloud service up and running.
 
-![Docker container started](conversion/images/start.png)
+![Docker container started](/conversion/images/start.png)
 
 Now you can work with GroupDocs.Conversion Cloud which is hosted on your machine.
 
@@ -82,13 +82,13 @@ Now you can work with GroupDocs.Conversion Cloud which is hosted on your machine
 
 When the container and GroupDocs.Conversion Cloud started you can check service status by calling GET [http://localhost:8080/](http://localhost:8080/). The successful response status (200) will indicate that the service is up and running.
 
-{{< tabs tabTotal="2" tabID="2" tabName1="Windows (PowerShell)" tabName2="Linux (bash)" >}} {{< tab tabNum="1" >}}
+{{< tabs "example2">}} {{< tab "Windows (PowerShell)" >}}
 
 ```powershell
 Invoke-WebRequest -Uri http://localhost:8080/
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Linux (bash)" >}}
 
 ```bash
 curl -i http://localhost:8080/
@@ -98,13 +98,13 @@ curl -i http://localhost:8080/
 
 At the following screenshot, I'm calling [http://localhost:8080/](http://localhost:8080/) in a separate Powershell window and response indicates that service is alive:
 
-![Health check](conversion/images/invoke.png)
+![Health check](/conversion/images/invoke.png)
 
 ### Using UI
 
 After starting, you can use Swagger UI at [http://localhost:8080/swagger/](http://localhost:8080/swagger/) and explore the API. With Swagger UI you can call API methods in your browser.
 
-![Swagger UI](conversion/images/UI.png)
+![Swagger UI](/conversion/images/UI.png)
 
 ### Using SDK
 
@@ -116,7 +116,7 @@ If you don't find your language in the SDK list, feel free to request for it on 
 
 The authentication is required in case you're going to use SDK. To enable authentication set CLIENT_ID/CLIENT_SECRET parameters as it shown below.
 
-{{< tabs tabTotal="2" tabID="3" tabName1="Windows (PowerShell)" tabName2="Linux (bash)" >}} {{< tab tabNum="1" >}}
+{{< tabs "example3">}} {{< tab "Windows (PowerShell)" >}}
 
 ```powershell
 docker run `
@@ -130,7 +130,7 @@ docker run `
         groupdocs/conversion-cloud
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Linux (bash)" >}}
 
 ```bash
 docker run \
@@ -148,7 +148,7 @@ docker run \
 
 Then, when using SDK, setup the api base url, as shown in examples below:
 
-{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
+{{< tabs "example4">}} {{< tab "C#" >}}
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
@@ -175,7 +175,7 @@ var settings = new ConvertSettings
 var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Java" >}}
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
@@ -198,7 +198,7 @@ settings.setOutputPath("converted");
 List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="3" >}}
+{{< /tab >}} {{< tab "PHP" >}}
 
 ```php
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
@@ -225,9 +225,9 @@ $settings->setOutputPath("converted");
 $result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="4" >}}
+{{< /tab >}} {{< tab "Node.js" >}}
 
-```node
+```js
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
 global.conversion_cloud = require("groupdocs-conversion-cloud");
 
@@ -246,7 +246,7 @@ settings.outputPath = "converted";
 let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocumentRequest(settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="5" >}}
+{{< /tab >}} {{< tab "Python" >}}
 
 ```python
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
@@ -271,7 +271,7 @@ settings.output_path = "converted"
 result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocumentRequest(settings))
 ```
 
-{{< /tab >}} {{< tab tabNum="6" >}}
+{{< /tab >}} {{< tab "Ruby" >}}
 
 ```ruby
 
@@ -303,7 +303,7 @@ result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentR
 
 By default, a local storage used inside container for file operations. It's possible to connect a Google Cloud storage by setting GOOGLE_APPLICATION_CREDENTIALS and GOOGLE_STORAGE_BUCKET environment variables.
 
-{{< tabs tabTotal="2" tabID="35" tabName1="Windows (PowerShell)" tabName2="Linux (bash)" >}} {{< tab tabNum="1" >}}
+{{< tabs "example5">}} {{< tab "Windows (PowerShell)" >}}
 
 ```powershell
 docker run `
@@ -315,7 +315,7 @@ docker run `
     groupdocs/conversion-cloud
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Linux (bash)" >}}
 
 ```bash
 docker run \
@@ -340,7 +340,7 @@ environment variables:
 | S3_STORAGE_SECRET_KEY| S3 API Secret Key                                    |
 | S3_STORAGE_REGION   | AWS S3 Region                                         |
 
-{{< tabs tabTotal="2" tabID="351" tabName1="Windows (PowerShell)" tabName2="Linux (bash)" >}} {{< tab tabNum="1" >}}
+{{< tabs "example6">}} {{< tab "Windows (PowerShell)" >}}
 
 ```powershell
 docker run `
@@ -354,7 +354,7 @@ docker run `
     groupdocs/conversion-cloud
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Linux (bash)" >}}
 
 ```bash
 docker run \

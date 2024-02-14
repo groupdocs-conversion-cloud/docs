@@ -23,24 +23,25 @@ You can find more information about Self-hosted version at [How to self-host Gr
 
 ## cURL Example ##
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "Request" >}}
 
-```html
+```bash
 
-* cURL example to get metered license consumption
+# cURL example to get metered license consumption
 curl -v "http://<base url>/v2.0/conversion/consumption" \
 -X GET \
 -H "Accept: application/json" \
 -H "Authorization: Bearer <jwt token>"
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Response" >}}
 
-```html
+```json
 {
   "credit": 487848,
   "quantity": 6061570985.37938
 }
+```
 {{< /tab >}} {{< /tabs >}}
 
 ## Response ##
@@ -58,7 +59,7 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
+{{< tabs "example2">}} {{< tab "C#" >}}
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
@@ -76,7 +77,7 @@ Console.WriteLine($"Credits: {response.Credit}");
 Console.WriteLine($"Quantity: {response.Quantity}");
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Java" >}}
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
@@ -93,7 +94,7 @@ System.out.println("Credit: " + response.getCredit());
 System.out.println("Quantity: " + response.getQuantity());
 ```
 
-{{< /tab >}} {{< tab tabNum="3" >}}
+{{< /tab >}} {{< tab "PHP" >}}
 
 ```php
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
@@ -116,9 +117,9 @@ $result = $apiInstance->getConsumptionCredit();
 echo "Credit: " . $result->getCredit();
 ```
 
-{{< /tab >}} {{< tab tabNum="4" >}}
+{{< /tab >}} {{< tab "Node.js" >}}
 
-```node
+```js
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
 global.conversion_cloud = require("groupdocs-conversion-cloud");
 
@@ -131,7 +132,7 @@ let response = await licenseApi.getConsumptionCredit();
 console.log("GetLicenseConsumption: Credit = " + response.credit);
 ```
 
-{{< /tab >}} {{< tab tabNum="5" >}}
+{{< /tab >}} {{< tab "Python" >}}
 
 ```python
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
@@ -149,7 +150,7 @@ result = apiInstance.get_consumption_credit()
 print("Credit: " + result.credit)
 ```
 
-{{< /tab >}} {{< tab tabNum="6" >}}
+{{< /tab >}} {{< tab "Ruby" >}}
 
 ```ruby
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples

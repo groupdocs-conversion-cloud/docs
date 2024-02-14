@@ -22,7 +22,7 @@ Our supported SDKs are 100% tested and out of the box running. These SDKs are op
 **GroupDocs.Conversion Cloud SDK for .NET** allows you to incorporate GroupDocs.Conversion Cloud services in your .NET applications quickly and easily.
 Install [GroupDocs.Conversion-Cloud](https://www.nuget.org/packages/GroupDocs.conversion-Cloud/) via NuGet from Package Manager:
 
-```html
+```powershell
 PM> Install-Package GroupDocs.Conversion-Cloud
 ```
 
@@ -33,13 +33,13 @@ Complete source code of GroupDocs.Conversion Cloud SDK for .Net is freely avai
 **GroupDocs.Conversion Cloud SDK for PHP** allows you to incorporate GroupDocs.Conversion Cloud services in your PHP applications quickly and easily.
 *groupdocs-conversion-cloud* is available on Packagist as the [groupdocs-conversion-cloud](https://packagist.org/packages/groupdocscloud/groupdocs-conversion-cloud) package. Run the following command:
 
-```html
+```php
 composer require groupdocscloud/groupdocs-conversion-cloud
 ```
 
 To use the SDK, use Composer's [autoload](https://getcomposer.org/doc/00-intro.md#autoloading):
 
-```html
+```php
 require_once('vendor/autoload.php');
 ```
 
@@ -53,7 +53,7 @@ Alternatively, you can use **[Maven](https://releases.groupdocs.cloud/java/repo/
 
 ### GroupDocs Maven Repository ###
 
-```html
+```xml
 <repository>
     <id>groupdocs-artifact-repository</id>
     <name>GroupDocs Artifact Repository</name>
@@ -63,7 +63,7 @@ Alternatively, you can use **[Maven](https://releases.groupdocs.cloud/java/repo/
 
 ### Maven Dependency ###
 
-```html
+```xml
 <dependency>
     <groupId>com.groupdocs</groupId>
     <artifactId>groupdocs-Conversion-cloud</artifactId>
@@ -76,7 +76,7 @@ Alternatively, you can use **[Maven](https://releases.groupdocs.cloud/java/repo/
 
 #### Maven ####
 
-```html
+```bash
 $ mvn dependency:sources
 $ mvn dependency:resolve -Dclassifier#javadoc
 ```
@@ -90,7 +90,7 @@ $ mvn eclipse:eclipse -DdownloadSources#true -DdownloadJavadocs#false
 
 #### pom.xml ####
 
-```html
+```xml
 <build>
     <plugins>
         <plugin>
@@ -115,7 +115,7 @@ Please see the GroupDocs.Conversion Cloud SDK for Java [Examples here](https://g
 **GroupDocs.Conversion Cloud SDK for Ruby** allows you to incorporate GroupDocs.Conversion Cloud services in your Ruby applications quickly and easily.
 *Conversion-sdk-ruby* is available on **[RubyGem distribution](https://rubygems.org/gems/groupdocs_conversion_cloud)** package. Run the following command::
 
-```html
+```bash
 gem install groupdocs_cloud_Conversion
 ```
 
@@ -126,7 +126,7 @@ Please see the GroupDocs.Conversion Cloud SDK for Ruby [Examples here](https://g
 **GroupDocs.Conversion Cloud SDK for Node.js** allows you to incorporate GroupDocs.Conversion Cloud services in your Node.js applications quickly and easily.
 *Conversion-sdk-nodejs* is available on **[npmjs.com](https://www.npmjs.com/package/groupdocs-conversion-cloud)** package. Run the following command:
 
-```html
+```bash
 npm install groupdocs-Conversion-cloud
 ```
 
@@ -137,7 +137,7 @@ Please see the GroupDocs.Conversion Cloud SDK for Node.js [Examples here](https:
 **GroupDocs.Conversion Cloud SDK for Python** allows you to incorporate GroupDocs.Conversion Cloud services in your Python applications quickly and easily.
 Install groupdocs-Conversion-cloud with [PIP](https://pypi.org/project/pip/) from [PyPI](https://pypi.org/project/groupdocs-conversion-cloud/) package. Run the following command:
 
-```html
+```bash
 pip install groupdocs-Conversion-cloud
 ```
 

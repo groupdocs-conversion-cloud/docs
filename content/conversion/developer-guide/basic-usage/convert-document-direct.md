@@ -29,9 +29,9 @@ Method parameters:
 
 ## cURL Example ##
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "Request" >}}
 
-```html
+```bash
 // First get JSON Web Token
 // Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
 curl -v "https://api.groupdocs.cloud/connect/token" \
@@ -49,9 +49,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 --data-binary "@path/to/file"
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Response" >}}
 
-```html
+```json
 Code 200
 <binary file>
 ```
@@ -64,7 +64,7 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
+{{< tabs "example2">}} {{< tab "C#" >}}
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
@@ -88,7 +88,7 @@ var response = apiInstance.ConvertDocumentDirect(request);
 Console.WriteLine("Document converted successfully: " + response.Length);
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Java" >}}
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
@@ -112,7 +112,7 @@ File result = apiInstance.convertDocumentDirect(request);
 System.out.println("Document converted: " + result.length());
 ```
 
-{{< /tab >}} {{< tab tabNum="3" >}}
+{{< /tab >}} {{< tab "PHP" >}}
 
 ```php
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
@@ -142,9 +142,9 @@ $result = $apiInstance->convertDocumentDirect($request);
 echo "Document converted: " . $result->getSize();
 ```
 
-{{< /tab >}} {{< tab tabNum="4" >}}
+{{< /tab >}} {{< tab "Node.js" >}}
 
-```node
+```js
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
 global.conversion_cloud = require("groupdocs-conversion-cloud");
 
@@ -164,7 +164,7 @@ let result = await convertApi.convertDocumentDirect(request);
 console.log("Document converted: " + result.length);
 ```
 
-{{< /tab >}} {{< tab tabNum="5" >}}
+{{< /tab >}} {{< tab "Python" >}}
 
 ```python
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
@@ -188,7 +188,7 @@ result = apiInstance.convert_document_direct(request)
 print("Document converted: " + result)
 ```
 
-{{< /tab >}} {{< tab tabNum="6" >}}
+{{< /tab >}} {{< tab "Ruby" >}}
 
 ```ruby
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples

@@ -23,23 +23,24 @@ You can find more information about Self-hosted version at [How to self-host Gr
 
 ## cURL Example ##
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "Request" >}}
 
-```html
+```bash
 
-* cURL example to get metered license information
+# cURL example to get metered license information
 curl -v "http://<base url>/v2.0/conversion/license" \
 -X GET \
 -H "Accept: application/json" \
 -H "Authorization: Bearer <jwt token>"
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Response" >}}
 
-```html
+```json
 {
   "isLicensed": true
 }
+```
 {{< /tab >}} {{< /tabs >}}
 
 ## Response ##
@@ -56,7 +57,7 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
+{{< tabs "example2">}} {{< tab "C#" >}}
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
@@ -73,7 +74,7 @@ var response = apiInstance.GetLicenseInfo();
 Console.WriteLine($"Is licensed: {response.IsLicensed}");
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Java" >}}
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
@@ -89,7 +90,7 @@ LicenseInfo response = apiInstance.getLicenseInfo();
 System.out.println("Is licensed: " + response.getIsLicensed());
 ```
 
-{{< /tab >}} {{< tab tabNum="3" >}}
+{{< /tab >}} {{< tab "PHP" >}}
 
 ```php
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
@@ -112,9 +113,9 @@ $result = $apiInstance->getLicenseInfo();
 echo "Is licensed: " . $result->is_licensed();
 ```
 
-{{< /tab >}} {{< tab tabNum="4" >}}
+{{< /tab >}} {{< tab "Node.js" >}}
 
-```node
+```js
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
 global.conversion_cloud = require("groupdocs-conversion-cloud");
 
@@ -127,7 +128,7 @@ let response = await licenseApi.getLicenseInfo();
 console.log("isLicensed = " + response.isLicensed);
 ```
 
-{{< /tab >}} {{< tab tabNum="5" >}}
+{{< /tab >}} {{< tab "Python" >}}
 
 ```python
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
@@ -145,7 +146,7 @@ result = apiInstance.get_license_info()
 print("isLicensed: " + result.isLicensed)
 ```
 
-{{< /tab >}} {{< tab tabNum="6" >}}
+{{< /tab >}} {{< tab "Ruby" >}}
 
 ```ruby
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples

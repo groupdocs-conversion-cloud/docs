@@ -3,6 +3,7 @@ id: "convert-to-html-formats"
 url: "conversion/convert-to-html-formats"
 title: "8. Convert to HTML Format"
 productName: "GroupDocs.Conversion Cloud"
+weight: 8
 description: ""
 keywords: ""
 ---
@@ -33,19 +34,19 @@ HTTP POST [https://api.groupdocs.cloud/v2.0/conversion/conversion](https://api.g
 
 ## cURL Example ##
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "Request" >}}
 
-```javascript
+```bash
 
-* First get JSON Web Token
-* Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+# First get JSON Web Token
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
 curl -v "https://api.groupdocs.cloud/connect/token" \
 -X POST \
 -d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
 -H "Content-Type: application/x-www-form-urlencoded" \
 -H "Accept: application/json"
 
-* cURL example to convert document
+# cURL example to convert document
 curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 -X POST \
 -H "Content-Type: application/json" \
@@ -65,7 +66,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Response" >}}
 
 ```javascript
 
@@ -77,14 +78,14 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
     "url": "https://api.groupdocs.cloud/v2.0/conversion/storage/file/Output/four-pages.html"
   }
 ]
-
+```
 {{< /tab >}} {{< /tabs >}}
 
 ## SDKs ##
 
 Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Check out our [GitHub repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion Cloud SDKs along with working examples, to get you started in no time. Please check [Available SDKs]({{< ref "conversion/getting-started/available-sdks.md" >}}) article to learn how to add an SDK to your project.
 
-{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
+{{< tabs "example2">}} {{< tab "C#" >}}
 
 ```csharp
 
@@ -117,7 +118,7 @@ var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings))
 
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Java" >}}
 
 ```java
 
@@ -148,7 +149,7 @@ List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocu
 
 ```
 
-{{< /tab >}} {{< tab tabNum="3" >}}
+{{< /tab >}} {{< tab "PHP" >}}
 
 ```php
 
@@ -184,7 +185,7 @@ $result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($set
 
 ```
 
-{{< /tab >}} {{< tab tabNum="4" >}}
+{{< /tab >}} {{< tab "Node.js" >}}
 
 ```javascript
 
@@ -212,7 +213,7 @@ let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocume
 
 ```
 
-{{< /tab >}} {{< tab tabNum="5" >}}
+{{< /tab >}} {{< tab "Python" >}}
 
 ```python
 
@@ -242,7 +243,7 @@ result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocument
 
 ```
 
-{{< /tab >}} {{< tab tabNum="6" >}}
+{{< /tab >}} {{< tab "Ruby" >}}
 
 ```ruby
 

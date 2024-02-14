@@ -11,7 +11,7 @@ ConversionResult data structure returned by  [Document Conversion API]({{< ref 
 
 ##### ConversionResult example #####
 
-```html
+```json
 [
   {
     "name": "one-page.pdf",

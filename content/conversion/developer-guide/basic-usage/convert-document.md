@@ -31,10 +31,10 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
 ## cURL Example ##
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "Request" >}}
 
-```html
-*/ First get JSON Web Token
+```bash
+// First get JSON Web Token
 // Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
 curl -v "https://api.groupdocs.cloud/connect/token" \
 -X POST \
@@ -55,9 +55,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
     }"
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Response" >}}
 
-```html
+```json
 [
   {
     "name": "four-pages.pdf",
@@ -66,7 +66,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
     "url": "https://api.groupdocs.cloud/v2.0/conversion/storage/file/Output/four-pages.pdf"
   }
 ]
+``` 
 {{< /tab >}} {{< /tabs >}}
+
 
 ## SDKs ##
 
@@ -74,7 +76,7 @@ Our API is completely independent of your operating system, database system or d
 
 ### SDK Examples ###
 
-{{< tabs tabTotal="6" tabID="10" tabName1="C#" tabName2="Java" tabName3="PHP" tabName4="Node.js" tabName5="Python" tabName6="Ruby" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "C#" >}}
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
@@ -98,7 +100,7 @@ var settings = new ConvertSettings
 var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Java" >}}
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
@@ -119,7 +121,7 @@ settings.setOutputPath("converted");
 List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="3" >}}
+{{< /tab >}} {{< tab "PHP" >}}
 
 ```php
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
@@ -145,9 +147,9 @@ $settings->setOutputPath("converted");
 $result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="4" >}}
+{{< /tab >}} {{< tab "Node.js" >}}
 
-```node
+```js
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
 global.conversion_cloud = require("groupdocs-conversion-cloud");
 
@@ -164,7 +166,7 @@ settings.outputPath = "converted";
 let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocumentRequest(settings));
 ```
 
-{{< /tab >}} {{< tab tabNum="5" >}}
+{{< /tab >}} {{< tab "Python" >}}
 
 ```python
 # For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
@@ -186,7 +188,7 @@ settings.output_path = "converted"
 result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocumentRequest(settings))
 ```
 
-{{< /tab >}} {{< tab tabNum="6" >}}
+{{< /tab >}} {{< tab "Ruby" >}}
 
 ```ruby
 
@@ -210,3 +212,4 @@ result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentR
 ```
 
 {{< /tab >}} {{< /tabs >}}
+

@@ -27,9 +27,9 @@ Takes  as input and returns.
 https://api.groupdocs.cloud/v2.0/conversion
 ```
 
-{{< tabs tabTotal="2" tabID="2" tabName1="Request" tabName2="Response" >}} {{< tab tabNum="1" >}}
+{{< tabs "example1">}} {{< tab "Request" >}}
 
-```html
+```bash
 {
   "FilePath": "/words/docx/one-page.docx",
   "Format": "pdf",
@@ -37,9 +37,9 @@ https://api.groupdocs.cloud/v2.0/conversion
 }
 ```
 
-{{< /tab >}} {{< tab tabNum="2" >}}
+{{< /tab >}} {{< tab "Response" >}}
 
-```html
+```json
 [
   {
     "name": "one-page.pdf",

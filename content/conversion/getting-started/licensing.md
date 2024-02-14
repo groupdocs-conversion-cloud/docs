@@ -13,7 +13,7 @@ For details on how to create a new account please check [Create a new Account](
 
 ## Apply Client Id and Client Secret ##
 
-For details on how to get Client Id and Client Secret please check [Create New App and Get Client Id and Client Secret]({{< ref "total/getting-started/ui-topics/creating-and-managing-application.md" >}}).
+For details on how to get Client Id and Client Secret please check [Create New App and Get Client Id and Client Secret]({{< ref "total/ui-topics/creating-and-managing-application.md" >}}).
 
 ## Free Plan ##
 
