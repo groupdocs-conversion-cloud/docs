@@ -6,21 +6,20 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 7
 description: ""
 keywords: ""
+toc: True
 ---
-
-## Introduction ##
 
 GroupDocs.Conversion Cloud REST API allows to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to  **Text Formats** and returns the output document **storage URL** and also support to get result as a **stream** or **Array of stream**.
 
-# Convert to Text Formats #
+## Convert to Text Formats
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Text Formats** and get output as Storage URL.
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to Text format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -38,14 +37,12 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "size": 2141,
     "url": "MyStorage:converted/toptext/sample.txt"
   }
-
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Text Formats ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -73,40 +70,32 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to Text Formats with Stream Output #
+## Convert to Text Formats with Stream Output
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Text Formats** and get output as Stream.
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to Text format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
 -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \""}"
-
 ```
-
 {{< /tab >}} {{< tab "Response" >}}
 
-```json
-Code : 200
-{
-Download file
-}
-content-type: application/octet-stream
-
+```log
+File contents
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Text Formats with Stream Output ###
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 

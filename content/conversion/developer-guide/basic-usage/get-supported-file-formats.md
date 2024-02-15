@@ -6,14 +6,15 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 2
 description: ""
 keywords: ""
+toc: True
 ---
 GroupDocs.conversion Cloud REST APIs support document conversion tools to convert files from 65+ supported formats to get high-quality output in quickly and reliably. To get a list of supported formats, You can use the below API.
 
-## Resource ##
+## Resource
 
 The following GroupDocs.conversion Cloud REST API resource has been used in the [Supported File Formats](https://apireference.groupdocs.cloud/conversion/#/Conversion/GetSupportedConversionTypes) example.
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -81,11 +82,9 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" -H  "accept: a
 ``` 
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Get All Supported Formats For Provided Document ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -113,15 +112,15 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-## Get All Supported Formats For Provided Document Extension ##
+## Get All Supported Formats For Provided Document Extension
 
 GroupDocs.Conversion Cloud supports functinality to get a list of supported formats from provided document extension, You can use the below API.
 
-## Resource ##
+## Resource
 
 The following GroupDocs.conversion Cloud REST API resource has been used in the [Supported File Formats](https://apireference.groupdocs.cloud/conversion/#/Conversion/GetSupportedConversionTypes) example.
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -188,11 +187,11 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" -H
 ``` 
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
-### Get All Supported Formats For Provided Document Extension ###
+### Get All Supported Formats For Provided Document Extension
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 

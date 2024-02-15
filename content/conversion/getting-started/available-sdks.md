@@ -6,18 +6,20 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 4
 description: ""
 keywords: ""
+toc: True
 ---
+
 GroupDocs.Conversion Cloud is a modern REST oriented API, that allows easy integration into existing systems.
 
-## Why use an SDK? ##
+## Why use an SDK?
 
 Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project.
 
-## SDK benefits ##
+## SDK benefits
 
 Our supported SDKs are 100% tested and out of the box running. These SDKs are open source and have an MIT license. You can use them, and even customize them for absolutely free of charge.
 
-## Supported SDKs ##
+## Supported SDKs
 
 **GroupDocs.Conversion Cloud SDK for .NET** allows you to incorporate GroupDocs.Conversion Cloud services in your .NET applications quickly and easily.
 Install [GroupDocs.Conversion-Cloud](https://www.nuget.org/packages/GroupDocs.conversion-Cloud/) via NuGet from Package Manager:
@@ -51,7 +53,7 @@ Please see the GroupDocs.Conversion Cloud SDK for PHP [Examples here](https://g
 You can directly include the source code of GroupDocs.Conversion Cloud SDK for Java in your own project, the source code is available from [here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java).
 Alternatively, you can use **[Maven](https://releases.groupdocs.cloud/java/repo/com/groupdocs/groupdocs-conversion-cloud/)** to include in your Java project. Below are the steps for Maven.
 
-### GroupDocs Maven Repository ###
+### GroupDocs Maven Repository
 
 ```xml
 <repository>
@@ -61,7 +63,7 @@ Alternatively, you can use **[Maven](https://releases.groupdocs.cloud/java/repo/
 </repository>
 ```
 
-### Maven Dependency ###
+### Maven Dependency
 
 ```xml
 <dependency>
@@ -72,23 +74,23 @@ Alternatively, you can use **[Maven](https://releases.groupdocs.cloud/java/repo/
 </dependency>
 ```
 
-### Get Sources and Javadocs ###
+### Get Sources and Javadocs
 
-#### Maven ####
+#### Maven
 
 ```bash
 $ mvn dependency:sources
 $ mvn dependency:resolve -Dclassifier#javadoc
 ```
 
-#### Eclipse IDE ####
+#### Eclipse IDE
 
 ```html
 $ mvn eclipse:eclipse -DdownloadSources#true
 $ mvn eclipse:eclipse -DdownloadSources#true -DdownloadJavadocs#false
 ```
 
-#### pom.xml ####
+#### pom.xml
 
 ```xml
 <build>
@@ -105,7 +107,7 @@ $ mvn eclipse:eclipse -DdownloadSources#true -DdownloadJavadocs#false
 </build>
 ```
 
-#### Direct Download ####
+#### Direct Download
 
 {{< alert style="info" >}}
 Complete source code of GroupDocs.Conversion Cloud SDK for Java is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java).

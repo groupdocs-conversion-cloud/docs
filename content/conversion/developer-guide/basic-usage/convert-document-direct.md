@@ -5,8 +5,9 @@ title: "Convert document without storage"
 productName: "GroupDocs.Conversion Cloud"
 description: ""
 keywords: ""
+toc: True
 ---
-### Introduction ###
+
 
 This example demonstrates how to convert document without using cloud storage. Use this method to directly convert any document, using conversion options.
 
@@ -21,13 +22,13 @@ Method parameters:
 |loadOptions|LoadOptions|Input file loading options|Form data
 |convertOptions|ConvertOptions|Conversion options|Form data
 
-## Resource URI ##
+## Resource URI
 
 ```HTTP PUT ~/conversion```
 
 [Swagger UI](https://apireference-qa.groupdocs.cloud/v2/conversion/#/Convert/ConvertDocumentDirect) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -58,11 +59,9 @@ Code 200
 
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us.
-
-### SDK Examples ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 

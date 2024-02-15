@@ -6,14 +6,18 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 3
 description: ""
 keywords: ""
+toc: True
 ---
+
+## Download File API 
+
 This API allows you to download a file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud).
 
-## API Explorer ##
+### API Explorer
 
 [GroupDocs.Conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Download a File API](https://apireference.groupdocs.cloud/conversion/#/File/DownloadFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs exposes.
 
-### Request parameters ###
+### Request parameters
 
 |Parameter|Description
 |---|---
@@ -21,7 +25,7 @@ This API allows you to download a file from [GroupDocs Cloud Storage](https://da
 |storageName|Name of the storage. If not set, then default storage used
 |versionId|File version id
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -39,11 +43,10 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/file/one-page.d
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-### SDK Examples ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -71,15 +74,15 @@ Our API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-## Upload File API ##
+## Upload File API
 
 This API allows you to upload files to the [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-### API Explorer ###
+### API Explorer
 
 [GroupDocs.Conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you try out [Upload a File API](https://apireference.groupdocs.cloud/conversion/#/File/UploadFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs exposes.
 
-### Request Body parameters ###
+### Request Body parameters
 
 |Parameter|Description
 |---|---
@@ -87,7 +90,7 @@ This API allows you to upload files to the [GroupDocs Cloud Storage](https://
 |storageName|Name of the storage. If not set, then default storage used
 |File|File content
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -118,11 +121,10 @@ Http status code: 200 (Returns OK and list of errors, which is empty if success.
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
-### SDK Examples ###
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
@@ -149,15 +151,15 @@ Our API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-## Delete File API ##
+## Delete File API
 
 This API allows you to delete specific file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-## API Explorer ##
+### API Explorer
 
 [GroupDocs.Conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Delete a File](https://apireference.groupdocs.cloud/conversion/#/File/DeleteFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs exposes.
 
-### Request parameters ###
+#### Request parameters
 
 |Parameter|Description
 |---|---
@@ -165,7 +167,7 @@ This API allows you to delete specific file from [GroupDocs Cloud Storage](htt
 |storageName|Name of the storage. If not set, then default storage used
 |versionId|File version id
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -183,11 +185,10 @@ curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/file/convers
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-### SDK Examples ###
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 
@@ -215,15 +216,15 @@ Our API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-## File Copy API ##
+## File Copy API
 
 This API allows you to copy specific file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-## API Explorer ##
+### API Explorer
 
 [GroupDocs.Conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Copy File](https://apireference.groupdocs.cloud/conversion/#/File/CopyFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs exposes.
 
-### Request parameters ###
+### Request parameters
 
 |Parameter|Description
 |---|---
@@ -233,7 +234,7 @@ This API allows you to copy specific file from [GroupDocs Cloud Storage](https
 |destStorageName|Name of the storage of destination file. If not set, then default storage used
 |versionId|Source file version id
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example7">}} {{< tab "Request" >}}
 
@@ -251,11 +252,10 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/copy/conve
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-### SDK Examples ###
 
 {{< tabs "example8">}} {{< tab "C#" >}}
 
@@ -283,15 +283,15 @@ Our API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-## File Move API ##
+## File Move API
 
 This API allows you to copy specific file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-## API Explorer ##
+### API Explorer
 
 [GroupDocs.Conversion Cloud API Reference](https://apireference.groupdocs.cloud/conversion/#/) lets you to try out [Move File](https://apireference.groupdocs.cloud/conversion/#/File/MoveFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs exposes.
 
-### Request parameters ###
+### Request parameters
 
 |Parameter|Description
 |---|---
@@ -301,7 +301,7 @@ This API allows you to copy specific file from [GroupDocs Cloud Storage](https:
 |destStorageName|Name of the storage of destination file. If not set, then default storage used
 |versionId|Source file version id
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example9">}} {{< tab "Request" >}}
 
@@ -319,11 +319,9 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/move/conve
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
-
-### SDK Examples ###
 
 {{< tabs "example10">}} {{< tab "C#" >}}
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Move_File.cs >}}

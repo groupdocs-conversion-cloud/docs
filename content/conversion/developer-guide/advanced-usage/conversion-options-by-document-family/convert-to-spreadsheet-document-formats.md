@@ -8,19 +8,17 @@ description: ""
 keywords: ""
 ---
 
-## Introduction ##
-
 GroupDocs.Conversion Cloud REST API allows us to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to **Spreadsheet Document Formats** and returns the output document **storage URL** and also support to get the result as a **stream**.
 
-# Convert to Spreadsheet Formats #
+## Convert to Spreadsheet Formats
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Spreadsheet** Formats and returns the output document **storage URL**
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to spreadsheet Format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -37,14 +35,12 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "size": 7265,
     "url": "MyStorage:converted/tocells/password-protected.xlsx"
   }
-
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Spreadsheet Formats ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -72,15 +68,15 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to Spreadsheet Document Formats with Stream Output #
+## Convert to Spreadsheet Document Formats with Stream Output
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Spreadsheet** Formats and get the output document as **Stream**
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to spreadsheet Format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -91,20 +87,14 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
 
 {{< /tab >}} {{< tab "Response" >}}
 
-```json
-Code : 200
-{
-Download file
-}
-content-type: application/octet-stream
-
+```log
+File contents
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Spreadsheet Formats with Stream Output ###
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
@@ -132,7 +122,7 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to Spreadsheet with Advanced Options #
+## Convert to Spreadsheet with Advanced Options
 
 This example demonstrates how to convert word processing documents into a spreadsheet with advanced conversion options.
 
@@ -146,13 +136,15 @@ Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion
 
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 
-## Resource ##
+## Resource
 
+```
 HTTP POST ~/conversion
+```
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -200,11 +192,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Spreadsheet with Advanced Options ###
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 

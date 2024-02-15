@@ -5,8 +5,8 @@ title: "Convert document using custom font"
 productName: "GroupDocs.Conversion Cloud"
 description: ""
 keywords: ""
+toc: True
 ---
-### Introduction ###
 
 This example demonstrates how to convert document that use custom font, or non-standard font. Fonts should be uploaded into cloud storage before conversion. Then put path to fonts into conversion options.
 
@@ -20,13 +20,13 @@ Steps 1 and 3 are storage operations, please refer to this GroupDocs.Storage Clo
 
 Step 3 is not needed, if "OutputPath" option is not provided: the convert api method will return converted document in the response body.
 
-## Resource URI ##
+## Resource URI
 
 ```HTTP POST ~/conversion```
 
 [Swagger UI](https://apireference.groupdocs.cloud/watermark/#/Info/GetInfo) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -68,11 +68,10 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ``` 
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. 
 
-### SDK Examples ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 

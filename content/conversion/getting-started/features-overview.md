@@ -6,10 +6,12 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 1
 description: ""
 keywords: ""
+toc: True
 ---
+
 GroupDocs.Conversion Cloud is a REST API that allows you to convert documents across a wide range of supported document types. Below, the shortlist of possible actions:
 
-## Document conversion ##
+## Document conversion
 
 The main feature of GroupDocs.Conversion Cloud API is an ability to convert any document from a wide list of supported source document formats into any supported target format. All these conversions are possible without any additional software installed (like MS Office, Apache Open Office, Adobe Acrobat Reader, and others).
 
@@ -24,7 +26,7 @@ GroupDocs.Conversion Cloud provides a flexible set of settings to customize the 
 * Add text or image watermarks to any page
 * and much more
 
-## Document Information Extraction ##
+## Document Information Extraction
 
 GroupDocs.Conversion Cloud allows obtaining basic information about source document - file type, pages count, etc. Dependent on source file type some format-specific information can be extracted, for example:
 
@@ -33,7 +35,7 @@ GroupDocs.Conversion Cloud allows obtaining basic information about source docum
 * PDF – information about document printing restrictions;
 * Project Management – project start and end dates.
 
-## API Endpoint Groups Overview ##
+## API Endpoint Groups Overview
 
 |Endpoint Group|Description
 |---|---
@@ -43,11 +45,11 @@ GroupDocs.Conversion Cloud allows obtaining basic information about source docum
 | Folder | Contains endpoints for creating, copy, move, delete folders in the storage
 | Storage | Contains endpoints for obtaining storage information and file information
 
-## Security and Authentication ##
+## Security and Authentication
 
 The GroupDocs.Conversion Cloud API is secured and requires authentication. Two keys ClientId and ClientSecret are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud). Check [Authenticating API Requests]({{< ref "total/overview-rest-api/authenticating-api-requests.md" >}}) article for a complete example.
 
-## SDKs ##
+## SDKs
 
 Checkout our GitHub [repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion SDKs along with working examples, to get you started in no time.
 
@@ -60,6 +62,6 @@ At the moment following SDKs are provided:
 * Python ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python))
 * Ruby ([Sources](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby))
 
-## API Explorer ##
+## API Explorer
 
 The easiest way to try out our API right away in your browser! With the [GroupDocs.Conversion Cloud API explorer](https://apireference.groupdocs.cloud/conversion/). This is a collection of Swagger documentation for the GroupDocs Cloud APIs. You can get information about all the resources in the API. It also provides testing and interactivity to our API endpoint documentation.

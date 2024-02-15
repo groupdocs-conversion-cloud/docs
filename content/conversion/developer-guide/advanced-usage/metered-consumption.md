@@ -5,8 +5,8 @@ title: "Getting metered license consumption"
 productName: "GroupDocs.Conversion Cloud"
 description: ""
 keywords: ""
+toc: True
 ---
-### Introduction ###
 
 {{< alert style="info" >}}
 This example related to Self-hosted version of GroupDocs.Conversion-Cloud only
@@ -17,11 +17,11 @@ Here is an example how to retrieve metered license consumption.
 
 You can find more information about Self-hosted version at [How to self-host GroupDocs.Conversion Cloud with Docker]({{< ref "conversion/getting-started/self-host-with-docker.md" >}})
 
-## Resource URI ##
+## Resource URI
 
 ```HTTP GET ~/conversion/consumption```
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -44,7 +44,7 @@ curl -v "http://<base url>/v2.0/conversion/consumption" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## Response ##
+## Response
 
 The response structure contains metered license consumption information:
 
@@ -53,11 +53,9 @@ The response structure contains metered license consumption information:
 |Credit|decimal|Amount of used credits.
 |Quantity|decimal|Amount of MBs processed.
 
-## SDKs ##
+## SDKs
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us.
-
-### SDK Examples ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 

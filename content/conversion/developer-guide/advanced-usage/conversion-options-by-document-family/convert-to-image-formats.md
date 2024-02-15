@@ -6,31 +6,27 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 4
 description: ""
 keywords: ""
+toc: True
 ---
-
-## Introduction ##
 
 GroupDocs.Conversion Cloud REST API allows to convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Image Formats** and returns the output document **storage URL** and also support to get result as a **array of stream**.
 
-# Convert to Images Formats #
+## Convert to Images Formats
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Images Formats** and get the output as storage URL.
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to Images format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \"converted/topjpg\"}"
-
 ```
-
 {{< /tab >}} {{< tab "Response" >}}
-
 ```json
   {
     "name": "sample-page-1.jpg",
@@ -42,14 +38,12 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "size": 45075,
     "url": "MyStorage:converted/topjpg/sample-page-2.jpg"
   }
-
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Images Formats ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -77,15 +71,15 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to Image Formats with Stream Output #
+## Convert to Image Formats with Stream Output
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Images Formats** and get the output as Stream.
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to Images format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -96,20 +90,14 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
 
 {{< /tab >}} {{< tab "Response" >}}
 
-```json
-  Code : 200
-{
-Download file
-}
-content-type: application/octet-stream
-
+```log
+File contents
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Image Formats with Stream Output ###
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
@@ -137,7 +125,7 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to Images with Advanced Options #
+## Convert to Images with Advanced Options
 
 This example demonstrates how to convert word processing documents into a image with advanced conversion options.
 
@@ -151,13 +139,13 @@ Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion
 
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 
-## Resource ##
+### Resource
 
 HTTP POST ~/conversion
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -210,11 +198,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Images with Advanced Options ###
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 

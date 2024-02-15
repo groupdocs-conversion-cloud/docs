@@ -6,31 +6,30 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 3
 description: ""
 keywords: ""
+toc: True
 ---
-
-## Introduction ##
 
 GroupDocs.Conversion Cloud REST API allows us to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to **Word Processing Document Formats** and returns the output document **storage URL** and also support to get the result as a **stream**.
 
-# Convert to Words Formats #
+## Convert to Words Formats
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Word Processing Document Formats** and get the output as a storage URL
 
-## Resource ##
+### Resource
 
+```
 HTTP POST ~/conversion
+```
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token}" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.pdf\",  \"Format\": \"docx\",  \"LoadOptions\": {\"PdfLoadOptions\": {\"Password\": \"\",   \"HidePdfAnnotations\":\"true\",   \"RemoveEmbeddedFiles\":\"false\",   \"FlattenAllFields\":\"true\"}},  \"ConvertOptions\": {      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"100\", \"Dpi\": \"300\"  },  \"OutputPath\": \"converted/towords\"}"
-
 ```
-
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
@@ -39,14 +38,12 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "size": 2826293,
     "url": "MyStorage:converted/towords/sample.docx"
   }
-
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to Words Formats ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -74,17 +71,17 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to Word Processing Document Formats with Stream Output #
+## Convert to Word Processing Document Formats with Stream Output
 
 You can convert the [supported document formats]({{< ref "conversion/developer-guide/basic-usage/get-supported-file-formats.md" >}}) to **Word Processing Document Formats** and get the output as stream.
 
-## Resource ##
+### Resource
 
 HTTP POST ~/conversion
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -95,20 +92,16 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
 
 {{< /tab >}} {{< tab "Response" >}}
 
-```json
-Code : 200
-{
-Download file
-}
-content-type: application/octet-stream
-
+```log
+File contents
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
-### Convert to Word Processing Document Formats with Stream Output ###
+### Convert to Word Processing Document Formats with Stream Output
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
@@ -136,7 +129,7 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to WordProcessing with Advanced Options #
+## Convert to WordProcessing with Advanced Options
 
 This example demonstrates how to convert pdf documents into word processing documents with advanced conversion options.
 
@@ -150,13 +143,13 @@ Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Convers
 
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 
-## Resource ##
+### Resource
 
 HTTP POST ~/conversion
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -203,11 +196,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to WordProcessing with Advanced Options ###
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 

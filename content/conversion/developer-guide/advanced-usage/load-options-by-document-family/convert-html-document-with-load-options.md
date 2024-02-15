@@ -6,9 +6,8 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 10
 description: ""
 keywords: ""
+toc: True
 ---
-
-## Introduction ##
 
 This example demonstrates how to convert html document into pdf document with load options.
 
@@ -22,14 +21,14 @@ Steps 1 and 3 are storage operations, please refer to the [File API documenta
 
 Step 3 is not needed, if "OutputPath" option is not provided: the convert api method will return converted document in the response body
 
-## Resource URI ##
+## Resource URI
 
 |HTTP POST [https://api.groupdocs.cloud/v2.0/conversion/conversion](https://api.groupdocs.cloud/v2.0/conversion/conversion)
 |---
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -62,7 +61,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 
 {{< /tab >}} {{< tab "Response" >}}
 
-```javascript
+```json
 
 [
   {
@@ -75,15 +74,15 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
-Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Check out our [GitHub repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion Cloud SDKs along with working examples, to get you started in no time. Please check [Available SDKs>>path:/conversioncloud/getting-started/available-sdks/) article to learn how to add an SDK to your project.
+Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Check out our [GitHub repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion Cloud SDKs along with working examples, to get you started in no time. Please check [Available SDKs](/conversion/getting-started/available-sdks/) article to learn how to add an SDK to your project.
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
 ```csharp
 
-* For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
 string MyClientSecret = ""; * Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 string MyClientId = ""; * Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
@@ -114,7 +113,7 @@ var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings))
 
 ```java
 
-* For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
 String MyClientSecret = ""; * Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 String MyClientId = ""; * Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
@@ -142,7 +141,7 @@ List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocu
 
 ```php
 
-* For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
 use GroupDocs\Conversion\Model;
 use GroupDocs\Conversion\Model\Requests;
 
@@ -174,9 +173,9 @@ $result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($set
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-```javascript
+```json
 
-* For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
 global.conversion_cloud = require("groupdocs-conversion-cloud");
 
 global.clientId = "XXXX-XXXX-XXXX-XXXX"; * Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud

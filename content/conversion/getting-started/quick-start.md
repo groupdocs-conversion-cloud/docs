@@ -6,22 +6,24 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 3
 description: ""
 keywords: ""
+toc: True
 ---
-## Create an account ##
+
+## Create an account
 
 Creating an account is very simple. Go to [Dashboard](https://dashboard.groupdocs.cloud) to create a free account.\
 We're using Single Sign On across our websites, therefore, if you already have an account with our services, you can use it to also acccess the [Dashboard](https://dashboard.groupdocs.cloud).
 
-## Create an API client app ##
+## Create an API client app
 
 Before you can make any requests to GroupDocs Cloud API you need to get a **Client Id** and a **Client Secret**.
 This will will be used to invoke GroupDocs Cloud API. You can get it by creating a new [Application](https://dashboard.groupdocs.cloud/applications).
 
-## Install the SDK of your choice ##
+## Install the SDK of your choice
 
 GroupDocs Cloud SDK is written in different languages, all you need to get started is adding our [SDK]({{< ref "conversion/getting-started/available-sdks.md" >}}) to your existing project.
 
-## Make an API request from the SDK of your choice ##
+## Make an API request from the SDK of your choice
 
 Use the the **Client Id** and the **Client Secret** from the API app client you created in step one and replace it in the corresponding code. Below is an example demonstrating using the Formats API to get all supported file formats in GroupDocs.Conversion Cloud.
 

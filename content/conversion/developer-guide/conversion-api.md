@@ -9,19 +9,19 @@ keywords: ""
 ---
 This API intended for convert the document to specified target format.
 
-#### URI ####
+#### URI
 
 ```html
 ~/
 ```
 
-#### HTTP POST ####
+#### HTTP POST
 
-#### Example 2 (Convert document) ####
+#### Example 2 (Convert document)
 
 Takes  as input and returns.
 
-##### Example URL #####
+##### Example URL
 
 ```html
 https://api.groupdocs.cloud/v2.0/conversion

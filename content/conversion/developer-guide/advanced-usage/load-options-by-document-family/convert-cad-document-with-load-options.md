@@ -6,9 +6,8 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 1
 description: ""
 keywords: ""
+toc: True
 ---
-
-## Introduction ##
 
 This example demonstrates how to convert cad document into pdf document with load options.
 
@@ -22,13 +21,13 @@ Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion
 
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 
-## Resource ##
+## Resource
 
 HTTP POST /conversion
 
 Swagger UI lets you call this REST API directly from the browser. 
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -73,11 +72,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Check out our [GitHub repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion Cloud SDKs along with working examples, to get you started in no time. Please check [Available SDKs]({{< ref "conversion/getting-started/available-sdks.md" >}}) article to learn how to add an SDK to your project.
-
-### Convert CAD Document with Load Options ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 

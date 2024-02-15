@@ -6,10 +6,12 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 1
 description: ""
 keywords: ""
+toc: True
 ---
-## Format specific convert options ##
 
-### xls, xlsx, xlsx, xlsm, xlsb, xlsb, ods, xltx, xltm, tsv ###
+## Format specific convert options
+
+### xls, xlsx, xlsx, xlsm, xlsb, xlsb, ods, xltx, xltm, tsv
 
 |Properties|Description
 |---|---|---
@@ -35,7 +37,7 @@ keywords: ""
 }
 ```
 
-### csv ###
+### csv
 
 |Properties|Description
 |---|---|---
@@ -56,7 +58,7 @@ keywords: ""
 }
 ```
 
-### html ###
+### html
 
 |Properties|Description
 |---|---|---
@@ -82,7 +84,7 @@ keywords: ""
 }
 ```
 
-### png, gif, bmp, ico ###
+### png, gif, bmp, ico
 
 |Properties|Description
 |---|---|---
@@ -116,7 +118,7 @@ keywords: ""
 }
 ```
 
-### jpg, jpeg, jp2 ###
+### jpg, jpeg, jp2
 
 |Properties|Description
 |---|---|---
@@ -152,7 +154,7 @@ keywords: ""
 }
 ```
 
-### tiff, tif ###
+### tiff, tif
 
 |Properties|Description
 |---|---|---
@@ -188,7 +190,7 @@ keywords: ""
 }
 ```
 
-### psd ###
+### psd
 
 |Properties|Description
 |---|---|---
@@ -232,7 +234,7 @@ keywords: ""
 }
 ```
 
-### webp ###
+### webp
 
 |Properties|Description
 |---|---|---
@@ -268,7 +270,7 @@ keywords: ""
 }
 ```
 
-### pdf ###
+### pdf
 
 |Properties|Description
 |---|---|---
@@ -308,7 +310,7 @@ keywords: ""
   "marginTop": 0,
   "marginBottom": 0,
   "marginLeft": 0,
-  "marginRight: 0,
+  "marginRight": 0,
   "pdfFormat": "v1.3",
   "removePdfACompliance": false,
   "zoom": 100,
@@ -328,7 +330,7 @@ keywords: ""
 }
 ```
 
-### svg, xps, cgm ###
+### svg, xps, cgm
 
 |Properties|Description
 |---|---|---
@@ -348,7 +350,7 @@ keywords: ""
 }
 ```
 
-### epub ###
+### epub
 
 |Properties|Description
 |---|---|---
@@ -372,7 +374,7 @@ keywords: ""
 }
 ```
 
-### ppt, pps, pptx, ppsx, odp, potx, potm, pptm, ppsm ###
+### ppt, pps, pptx, ppsx, odp, potx, potm, pptm, ppsm
 
 |Properties|Description
 |---|---|---
@@ -398,7 +400,7 @@ keywords: ""
 }
 ```
 
-### doc, docm, docx, dot, dotm, dotx, odt, ott ###
+### doc, docm, docx, dot, dotm, dotx, odt, ott
 
 |Properties|Description
 |---|---|---
@@ -435,7 +437,7 @@ keywords: ""
 }
 ```
 
-### rtf ###
+### rtf
 
 |Properties|Description
 |---|---|---
@@ -458,7 +460,7 @@ keywords: ""
   "height": 1080,
   "dpi": 96,
   "password": "Pass123",
-  "exportImagesForOldReaders: false,
+  "exportImagesForOldReaders": false,
   "zoom": 100,
   "fromPage": 1,
   "pagesCount": 10,
@@ -468,7 +470,7 @@ keywords: ""
 }
 ```
 
-### txt ###
+### txt
 
 |Properties|Description
 |---|---|---
@@ -511,7 +513,7 @@ keywords: ""
   "width": 1920,
   "height": 1080,
   "top": 0,
-  "left: 0,
+  "left": 0,
   "rotationAngle": 45,
   "transparency": 0.5,
   "background": true,

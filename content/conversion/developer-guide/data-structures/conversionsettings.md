@@ -7,9 +7,10 @@ weight: 1
 description: ""
 keywords: ""
 ---
+
 ConversionSettings data structure used as input parameters for  [Document Conversion API]({{< ref "conversion/developer-guide/conversion-api.md" >}}).
 
-##### ConversionSettings example #####
+## ConversionSettings example
 
 ```html
 {
@@ -28,7 +29,7 @@ ConversionSettings data structure used as input parameters for  [Document Conve
 
 ```
 
-##### ViewOptions fields #####
+## ConversionSettings fields
 
 |Name|Description
 |---|---

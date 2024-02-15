@@ -7,7 +7,8 @@ weight: 1
 description: ""
 keywords: ""
 ---
-## CadLoadOptions - dxf, dwg, dgn, dwf, stl, Ifc, plt, Igs ##
+
+## CadLoadOptions - dxf, dwg, dgn, dwf, stl, Ifc, plt, Igs
 
 Properties | Description
 |---|---
@@ -23,7 +24,7 @@ Properties | Description
 }
 ```
 
-## SpreadsheetLoadOptions - xls, xlsx, xlsm, xlsb, xls2003, ods, ots, xltx, xltm, tsv ##
+## SpreadsheetLoadOptions - xls, xlsx, xlsm, xlsb, xls2003, ods, ots, xltx, xltm, tsv
 
 | Properties | Description
 |---|---
@@ -51,7 +52,7 @@ Properties | Description
 }
 ```
 
-## CsvLoadOptions - csv ##
+## CsvLoadOptions - csv
 
 | Properties | Description
 |---|---
@@ -71,7 +72,7 @@ Properties | Description
 }
 ```
 
-## DiagramLoadOptions - vsd, vsdx, vss, vst, vsx, vtx, vdw, vdx, svg, vssx, vstx, vstm, vsdm, vssm ##
+## DiagramLoadOptions - vsd, vsdx, vss, vst, vsx, vtx, vdw, vdx, svg, vssx, vstx, vstm, vsdm, vssm
 
 | Properties | Description
 |---|---
@@ -83,7 +84,7 @@ Properties | Description
 }
 ```
 
-## EmailLoadOptions - msg, eml, emlx, mht, ost, pst ##
+## EmailLoadOptions - msg, eml, emlx, mht, ost, pst
 
 | Properties | Description
 |---|---
@@ -111,7 +112,7 @@ Properties | Description
 }
 ```
 
-## ImageLoadOptions - tiff, tif, jpeg, jpg, jp2, j2c, j2k, jpf, jpm, jpx, odg, png, gif, bmp, ico, psd, dcm, wmf, emf, webp ##
+## ImageLoadOptions - tiff, tif, jpeg, jpg, jp2, j2c, j2k, jpf, jpm, jpx, odg, png, gif, bmp, ico, psd, dcm, wmf, emf, webp
 
 | Properties | Description
 |---|---
@@ -119,11 +120,11 @@ Properties | Description
 
 ```json
 {
-  defaultFont: "Arial"
+  "defaultFont": "Arial"
 }
 ```
 
-## OneLoadOptions - one ##
+## OneLoadOptions - one
 
 | Properties | Description
 |---|---
@@ -139,7 +140,7 @@ Properties | Description
 }
 ```
 
-## PdfLoadOptions - pdf ##
+## PdfLoadOptions - pdf
 
 | Properties | Description
 |---|---
@@ -157,7 +158,7 @@ Properties | Description
 }
 ```
 
-## PresentationLoadOptions - ppt, pps, pptx, ppsx, odp, otp, potx, potm, pptm, ppsm ##
+## PresentationLoadOptions - ppt, pps, pptx, ppsx, odp, otp, potx, potm, pptm, ppsm
 
 | Properties | Description
 |---|---
@@ -177,7 +178,7 @@ Properties | Description
 }
 ```
 
-## TxtLoadOptions - txt ##
+## TxtLoadOptions - txt
 
 | Properties | Description
 |---|---
@@ -193,7 +194,7 @@ Properties | Description
 }
 ```
 
-## WordProcessingLoadOptions - doc, docm, docx, dot, dotm, dotx, rtf, odt, ott, mobi ##
+## WordProcessingLoadOptions - doc, docm, docx, dot, dotm, dotx, rtf, odt, ott, mobi
 
 | Properties | Description
 |---|---
@@ -215,7 +216,7 @@ Properties | Description
 }
 ```
 
-## WebLoadOptions - html ##
+## WebLoadOptions - html
 
 | Properties | Description
 |---|---

@@ -6,21 +6,20 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 6
 description: ""
 keywords: ""
+toc: True
 ---
-
-## Introduction ##
 
 GroupDocs.Conversion Cloud REST API allows to convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to **PDF Formats** and returns the output document **storage URL** and also support to get result as a **stream**.
 
-# Convert to PDF Formats #
+## Convert to PDF Formats
 
 You can convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to **PDF Formats** and get output as storage URL.
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to PDF format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -37,14 +36,12 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "size": 68540,
     "url": "MyStorage:converted/topdf/password-protected.pdf"
   }
-
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to PDF Formats ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -72,15 +69,15 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to PDF Formats with Stream Output #
+## Convert to PDF Formats with Stream Output
 
 You can convert the [supported document formats]({{< ref "conversion/getting-started/supported-document-formats.md" >}}) to **PDF Formats** and get output as stream.
 
-## Resource ##
+### Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to PDF format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -91,20 +88,14 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
 
 {{< /tab >}} {{< tab "Response" >}}
 
-```json
-  Code : 200
-{
-Download file
-}
-content-type: application/octet-stream
-
+```log
+File contents
+```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to PDF Formats with Stream Output ###
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
@@ -132,7 +123,7 @@ The API is completely independent of your operating system, database system or d
 
 {{< /tab >}} {{< /tabs >}}
 
-# Convert to PDF with Advanced Options #
+## Convert to PDF with Advanced Options
 
 This example demonstrates how to convert word processing documents into pdf documents with advanced conversion options.
 
@@ -146,13 +137,13 @@ Steps 1 and 3 are storage operations, please refer to this [GroupDocs.Conversion
 
 Step 3 is not needed if the "OutputPath" option is not provided: the convert API method will return the converted document in the response body.
 
-## Resource ##
+### Resource
 
 HTTP POST ~/conversion
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example ##
+### cURL Example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -201,11 +192,9 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+### SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Convert to PDF with Advanced Options ###
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 

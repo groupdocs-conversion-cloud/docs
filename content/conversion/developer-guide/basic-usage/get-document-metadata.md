@@ -6,14 +6,15 @@ productName: "GroupDocs.Conversion Cloud"
 weight: 16
 description: ""
 keywords: ""
+toc: True
 ---
 GroupDocs.Conversion Cloud REST APIs support document conversion tools to convert files from 65+ supported formats to get high-quality output in quickly and reliably. To get a Metadata of supported formats, You can use the below API.
 
-## Resource ##
+## Resource
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [Document Metadata](https://apireference.groupdocs.cloud/conversion/#/Conversion/GetSupportedConversionTypes) example.
 
-## cURL Example ##
+## cURL Example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -44,11 +45,9 @@ Content-type: application/json
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs ##
+## SDKs
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
-
-### Get Document Metadata ###
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
