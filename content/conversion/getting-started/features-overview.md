@@ -49,7 +49,7 @@ GroupDocs.Conversion Cloud allows obtaining basic information about source docum
 
 The GroupDocs.Conversion Cloud API is secured and requires authentication. Two keys ClientId and ClientSecret are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud). Check [Authenticating API Requests]({{< ref "total/overview-rest-api/authenticating-api-requests.md" >}}) article for a complete example.
 
-## SDKs
+## SDK examples
 
 Checkout our GitHub [repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion SDKs along with working examples, to get you started in no time.
 

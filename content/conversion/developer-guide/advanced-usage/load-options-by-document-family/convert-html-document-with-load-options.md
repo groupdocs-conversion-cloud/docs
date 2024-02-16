@@ -17,7 +17,7 @@ There are steps that usage of GroupDocs.Conversion Cloud consists of:
 2. Convert document
 3. Download converted document from storage
 
-Steps 1 and 3 are storage operations, please refer to the [File API documentation>>path:/conversioncloud/developer-guide/working-with-file-api/) for usage details.
+Steps 1 and 3 are storage operations, please refer to the [File API documentation]({{< ref "conversion/developer-guide/working-with-file-api.md" >}}) for usage details.
 
 Step 3 is not needed, if "OutputPath" option is not provided: the convert api method will return converted document in the response body
 
@@ -28,7 +28,7 @@ Step 3 is not needed, if "OutputPath" option is not provided: the convert api me
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example
+## cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -74,7 +74,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs
+## SDK examples
 
 Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Check out our [GitHub repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion Cloud SDKs along with working examples, to get you started in no time. Please check [Available SDKs](/conversion/getting-started/available-sdks/) article to learn how to add an SDK to your project.
 

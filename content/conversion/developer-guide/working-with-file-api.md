@@ -25,7 +25,7 @@ This API allows you to download a file from [GroupDocs Cloud Storage](https://da
 |storageName|Name of the storage. If not set, then default storage used
 |versionId|File version id
 
-### cURL Example
+### cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -43,7 +43,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/file/one-page.d
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
@@ -90,7 +90,7 @@ This API allows you to upload files to the [GroupDocs Cloud Storage](https://
 |storageName|Name of the storage. If not set, then default storage used
 |File|File content
 
-### cURL Example
+### cURL example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -121,7 +121,7 @@ Http status code: 200 (Returns OK and list of errors, which is empty if success.
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
@@ -167,7 +167,7 @@ This API allows you to delete specific file from [GroupDocs Cloud Storage](htt
 |storageName|Name of the storage. If not set, then default storage used
 |versionId|File version id
 
-### cURL Example
+### cURL example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -185,7 +185,7 @@ curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/file/convers
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
@@ -234,7 +234,7 @@ This API allows you to copy specific file from [GroupDocs Cloud Storage](https
 |destStorageName|Name of the storage of destination file. If not set, then default storage used
 |versionId|Source file version id
 
-### cURL Example
+### cURL example
 
 {{< tabs "example7">}} {{< tab "Request" >}}
 
@@ -252,7 +252,7 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/copy/conve
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
@@ -301,7 +301,7 @@ This API allows you to copy specific file from [GroupDocs Cloud Storage](https:
 |destStorageName|Name of the storage of destination file. If not set, then default storage used
 |versionId|Source file version id
 
-### cURL Example
+### cURL example
 
 {{< tabs "example9">}} {{< tab "Request" >}}
 
@@ -319,7 +319,7 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/move/conve
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 

@@ -19,7 +19,7 @@ You can convert the [supported document formats]({{< ref "conversion/developer-g
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to Text format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-### cURL Example
+### cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -40,7 +40,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
@@ -78,7 +78,7 @@ You can convert the [supported document formats]({{< ref "conversion/developer-g
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [convert to Text format](https://apireference.groupdocs.cloud/conversion/#/Conversion/ConvertDocument) example.
 
-### cURL Example
+### cURL example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -93,7 +93,7 @@ File contents
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 

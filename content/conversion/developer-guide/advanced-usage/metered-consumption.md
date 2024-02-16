@@ -21,7 +21,7 @@ You can find more information about Self-hosted version at [How to self-host Gr
 
 ```HTTP GET ~/conversion/consumption```
 
-## cURL Example
+## cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -53,7 +53,7 @@ The response structure contains metered license consumption information:
 |Credit|decimal|Amount of used credits.
 |Quantity|decimal|Amount of MBs processed.
 
-## SDKs
+## SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us.
 

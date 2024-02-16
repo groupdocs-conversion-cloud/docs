@@ -14,7 +14,7 @@ GroupDocs.Conversion Cloud REST APIs support document conversion tools to conver
 
 The following GroupDocs.Conversion Cloud REST API resource has been used in the [Document Metadata](https://apireference.groupdocs.cloud/conversion/#/Conversion/GetSupportedConversionTypes) example.
 
-## cURL Example
+## cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -45,7 +45,7 @@ Content-type: application/json
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs
+## SDK examples
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 

@@ -27,7 +27,7 @@ HTTP POST /conversion
 
 Swagger UI lets you call this REST API directly from the browser. 
 
-## cURL Example
+## cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -78,7 +78,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs
+## SDK examples
 
 Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Check out our [GitHub repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion Cloud SDKs along with working examples, to get you started in no time. Please check [Available SDKs]({{< ref "conversion/getting-started/available-sdks.md" >}}) article to learn how to add an SDK to your project.
 

@@ -85,7 +85,7 @@ $ mvn dependency:resolve -Dclassifier#javadoc
 
 #### Eclipse IDE
 
-```html
+```bash
 $ mvn eclipse:eclipse -DdownloadSources#true
 $ mvn eclipse:eclipse -DdownloadSources#true -DdownloadJavadocs#false
 ```

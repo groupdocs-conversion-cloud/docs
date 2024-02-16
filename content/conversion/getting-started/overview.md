@@ -58,7 +58,7 @@ Our GroupDocs.Conversion Cloud REST API comes with many features, such as:
 
 The GroupDocs.Conversion Cloud API is secured and requires authentication. Developers can [generate]({{< ref "total/ui-topics/creating-and-managing-application.md" >}}) a new application with an unique Client Id and Client Secret combination after [registering]({{< ref "total/ui-topics/creating-and-managing-account.md" >}}) to our [dashboard](https://dashboard.groupdocs.cloud). Authenticated requests require a Bearer authorization header with a JWT Token obtained by using the previously specified Cliend Id + Client Secret credentials. You can check complete details about authenticating your calls to our API [here]({{< ref "total/overview-rest-api/authenticating-api-requests.md" >}}).
 
-## SDKs
+## SDK examples
 
 GroupDocs.Conversion Cloud comes with SDKs for different platforms to use this REST API in your specific project effortlessly. Please checkout our GitHub [repository](https://github.com/groupdocs-conversion-cloud) for a complete list of GroupDocs.Conversion SDKs along with working examples, to get you started in no time.
 

@@ -24,7 +24,7 @@ This API allows you to get a list of all files of a specific folder from the 
 |**path**|Path of the file including file name and extension e.g. /Folder1/file.ext. Required. Can be passed as query string parameter or as part of the URL
 |storageName|Name of the storage. If not set, then default storage used
 
-### cURL Example
+### cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -98,7 +98,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/conversi
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
@@ -143,7 +143,7 @@ This API allows you to create a new Folder in the specified Cloud Storage. If yo
 |**path**|Target folder’s path e.g. *Folder1/Folder2/*. The folders will be created recursively. Required. Can be passed as query string parameter or as part of the URL
 |storageName|Name of the storage. If not set, then default storage used
 
-### cURL Example
+### cURL example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -161,7 +161,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/convers
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
@@ -207,7 +207,7 @@ This API allows you to delete a particular Folder in the specified Cloud Storage
 |**path**|Folder path e.g. */Folder1*. Required. Can be passed as query string parameter or as part of the URL
 |storageName|Name of the storage. If not set, then default storage used
 
-### cURL Example
+### cURL example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -225,7 +225,7 @@ curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/conve
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Delete Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/DeleteFolder) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
@@ -273,7 +273,7 @@ This API allows you to copy a Folder to another location in the GroupDocs Cloud 
 |srcStorageName|Name of the storage of source folder. If not set, then default storage used
 |destStorageName|Name of the storage of destination folder. If not set, then default storage used
 
-### cURL Example
+### cURL example
 
 {{< tabs "example7">}} {{< tab "Request" >}}
 
@@ -291,7 +291,7 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/copy/con
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Copy Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/CopyFolder) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
@@ -339,7 +339,7 @@ This API allows you to move a Folder to another location in the GroupDocs Cloud 
 |srcStorageName|Name of the storage of source folder. If not set, then default storage used
 |destStorageName|Name of the storage of destination folder. If not set, then default storage used
 
-### cURL Example
+### cURL example
 
 {{< tabs "example9">}} {{< tab "Request" >}}
 
@@ -357,7 +357,7 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/move/con
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Move Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/MoveFolder) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 

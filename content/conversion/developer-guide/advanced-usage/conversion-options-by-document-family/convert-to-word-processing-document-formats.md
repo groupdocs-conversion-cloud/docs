@@ -23,7 +23,7 @@ HTTP POST ~/conversion
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-### cURL Example
+### cURL example
 
 {{< tabs "example1">}} {{< tab "Request" >}}
 
@@ -41,7 +41,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
@@ -81,7 +81,7 @@ HTTP POST ~/conversion
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-## cURL Example
+## cURL example
 
 {{< tabs "example3">}} {{< tab "Request" >}}
 
@@ -97,7 +97,7 @@ File contents
 ```
 {{< /tab >}} {{< /tabs >}}
 
-## SDKs
+## SDK examples
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 
@@ -149,7 +149,7 @@ HTTP POST ~/conversion
 
 [Swagger UI](https://apireference.groupdocs.cloud/conversion/) lets you call this REST API directly from the browser.
 
-### cURL Example
+### cURL example
 
 {{< tabs "example5">}} {{< tab "Request" >}}
 
@@ -196,7 +196,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 ```
 {{< /tab >}} {{< /tabs >}}
 
-### SDKs
+### SDK examples
 
 The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
 

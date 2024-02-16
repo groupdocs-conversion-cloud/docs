@@ -12,7 +12,7 @@ ConversionSettings data structure used as input parameters for  [Document Conve
 
 ## ConversionSettings example
 
-```html
+```json
 {
   "Format": "string",
   "FilePath": "string",

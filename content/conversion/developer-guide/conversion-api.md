@@ -11,7 +11,7 @@ This API intended for convert the document to specified target format.
 
 #### URI
 
-```html
+```bash
 ~/
 ```
 
@@ -23,7 +23,7 @@ Takes  as input and returns.
 
 ##### Example URL
 
-```html
+```bash
 https://api.groupdocs.cloud/v2.0/conversion
 ```
 
