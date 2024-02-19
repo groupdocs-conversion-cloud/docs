@@ -379,6 +379,64 @@ To stop the running Docker container, just use Ctrl+C in the same terminal where
 docker stop conversion_cloud
 ```
 
+### Automatic shutdown and restart
+
+Since v24.2, an automatic shutdown feature was added. By default, if out-of memory exception occurs, the application and container stops gracefully.
+To continue runnung the container in this case, an automatic restart option should be applied, when starting the container:
+
+{{< tabs "example7">}} {{< tab "Windows (PowerShell)" >}}
+
+```powershell
+docker run `
+    --restart always `
+    -p 8080:80 `
+    -v "${pwd}/data:/data" `
+    --name conversion_cloud `
+    groupdocs/conversion-cloud
+```
+
+{{< /tab >}} {{< tab "Linux (bash)" >}}
+
+```bash
+docker run \
+    --restart always \
+    -p 8080:80 \
+    -v $(pwd)/data:/data \
+    --name conversion_cloud \
+    groupdocs/conversion-cloud
+```
+
+{{< /tab >}} {{< /tabs >}}
+
+In addition, to have more control of the container stability, a new parameter was added: CONVERSIONS_LIMIT. When it set, the service counts the number of conversions,
+and if the number exceeds the limit, the application and container stops gracefully. To continue runnung the container, as in previos case, an automatic restart option should be applied:
+
+{{< tabs "example8">}} {{< tab "Windows (PowerShell)" >}}
+
+```powershell
+docker run `
+    --restart always `
+    -p 8080:80 `
+    -v "${pwd}/data:/data" `
+    -e "CONVERSIONS_LIMIT=100" `
+    --name conversion_cloud `
+    groupdocs/conversion-cloud
+```
+
+{{< /tab >}} {{< tab "Linux (bash)" >}}
+
+```bash
+docker run \
+    --restart always \
+    -p 8080:80 \
+    -v $(pwd)/data:/data \
+    -e CONVERSIONS_LIMIT=100 \
+    --name conversion_cloud \
+    groupdocs/conversion-cloud
+```
+
+{{< /tab >}} {{< /tabs >}}
+
 ## Licensing
 
 GroupDocs.Conversion Cloud can be started in trial and licensed modes. When GroupDocs.Conversion Cloud is working in trial mode the following limitations are applied:
