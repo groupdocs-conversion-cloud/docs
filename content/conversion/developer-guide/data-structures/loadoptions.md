@@ -10,8 +10,7 @@ keywords: ""
 
 ## CadLoadOptions - dxf, dwg, dgn, dwf, stl, Ifc, plt, Igs
 
-Properties | Description
-
+| Properties | Description
 |---|---
 |format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |layoutNames| Specify which layouts to be converted
