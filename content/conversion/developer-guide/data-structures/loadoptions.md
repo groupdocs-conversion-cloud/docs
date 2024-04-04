@@ -11,15 +11,15 @@ keywords: ""
 ## CadLoadOptions - dxf, dwg, dgn, dwf, stl, Ifc, plt, Igs
 
 Properties | Description
+
 |---|---
-| width | Page width for converting CAD document
-| height | Page height for converting CAD document
-| layoutNames | Specify which layouts to be converted
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
+|layoutNames| Specify which layouts to be converted
+|backgroundColor|A background color (for example: "Green")
+|drawType|Type of drawing, "UseDrawColor" (default) - Allows to use common color, or "UseObjectColor" - Allows to use separate color for every object
 
 ```json
 {
-    "width": 1920,
-    "height": 1080,
     "layoutNames": ["Floor1", "Floor3"]
 }
 ```
@@ -28,6 +28,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |defaultFont|Default font for Cells document|
 |fontSubstitutes|Substitute specific fonts when converting Cells document
 |showGridLines|Show grid lines
@@ -56,7 +57,8 @@ Properties | Description
 
 | Properties | Description
 |---|---
-|separator|Delimiter of a Csv file|
+|format| The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
+|separator|Delimiter of a Csv file
 |isMultiEncoded|True means the file contains several encodings
 |hasFormula|Indicates whether text is formula if it starts with "#"
 |convertNumericData|Indicates whether the string in the file is converted to numeric
@@ -76,6 +78,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |defaultFont|Default font for Diagram document.
 
 ```json
@@ -88,6 +91,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |displayHeader|Display or hide the email header
 |displayFromEmailAddress|Display or hide "from" email address
 |displayEmailAddress|Display or hide email address
@@ -116,6 +120,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |defaultFont|Default font for Psd, Emf, Wmf document types. The following font will be used if a font is missing
 
 ```json
@@ -128,6 +133,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |defaultFont|Default font for Note document
 |fontSubstitutes|Substitute specific fonts when converting Note document
 |password|Password to unprotect protected document
@@ -144,6 +150,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |removeEmbeddedFiles|Remove embedded files
 |password|Password to unprotect protected document
 |hidePdfAnnotations|Hide annotations in Pdf documents
@@ -162,7 +169,8 @@ Properties | Description
 
 | Properties | Description
 |---|---
-||defaultFont|Default font for rendering the presentation
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
+|defaultFont|Default font for rendering the presentation
 |fontSubstitutes|Substitute specific fonts when converting Slides document
 |password|Password to unprotect protected document
 |showHiddenSlides|Show hidden slides
@@ -182,6 +190,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |detectNumberingWithWhitespaces|Allows to specify how numbered list items are recognized when plain text document is converted
 |trailingSpacesOptions|Controls trailing space handling
 |leadingSpacesOptions|Controls leading space handling
@@ -198,6 +207,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |defaultFont|Default font for Words document
 |fontSubstitutes|Substitute specific fonts when converting Words document
 |autoFontSubstitution|Enable or disable auto font substitution
@@ -220,6 +230,7 @@ Properties | Description
 
 | Properties | Description
 |---|---
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
 |PageNumbering|Enable or disable generation of page numbering in converted document. Default: false
 
 ```json
