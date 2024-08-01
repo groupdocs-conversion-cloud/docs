@@ -27,7 +27,7 @@ Step 3 is not needed if the "OutputPath" option is not provided: the convert API
 
 ```HTTP POST ~/conversion```
 
-[Swagger UI](https://apireference.groupdocs.cloud/watermark/#/Info/GetInfo) lets you call this REST API directly from the browser.
+[Swagger UI](https://reference.groupdocs.cloud/conversion/#/Convert/ConvertDocument) lets you call this REST API directly from the browser.
 
 ## cURL example
 
@@ -75,7 +75,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. 
 
 
-{{< tabs "example1">}} {{< tab "C#" >}}
+{{< tabs "example2">}} {{< tab "C#" >}}
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
