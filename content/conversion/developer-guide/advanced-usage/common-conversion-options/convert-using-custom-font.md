@@ -65,13 +65,13 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
     "url": "https://api-qa.groupdocs.cloud/v2.0/conversion/storage/file/Output/uses-custom-font.pdf"
   }
 ]
-``` 
+```
+
 {{< /tab >}} {{< /tabs >}}
 
 ## SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. 
-
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -226,6 +226,39 @@ settings.fonts_path = "font/ttf"
 result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentRequest.new(settings))
  
 puts("Document converted: " + result[0].url)
+```
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package common
+
+import (
+ "fmt"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertUsingCustomFont() {
+
+ settings := models.ConvertSettings{
+  Format:     "pdf",
+  FilePath:   "Presentation/uses-custom-font.pptx",
+  OutputPath: "converted",
+  FontsPath:  "font/ttf",
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertUsingCustomFont error: %v\n", err)
+  return
+ }
+
+ fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+}
 ```
 
 {{< /tab >}} {{< /tabs >}}

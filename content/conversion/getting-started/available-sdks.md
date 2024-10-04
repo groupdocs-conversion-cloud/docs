@@ -29,7 +29,7 @@ PM> Install-Package GroupDocs.Conversion-Cloud
 ```
 
 {{< alert style="info" >}}
-Complete source code of GroupDocs.Conversion Cloud SDK for .Net is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet). Please see the GroupDocs.Conversion Cloud SDK for .NET [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet/tree/master/GroupDocs.Conversion.Cloud.Sdk.Test).
+Complete source code of GroupDocs.Conversion Cloud SDK for .Net is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet). Please see the GroupDocs.Conversion Cloud SDK for .NET [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples).
 {{< /alert >}}
 
 **GroupDocs.Conversion Cloud SDK for PHP** allows you to incorporate GroupDocs.Conversion Cloud services in your PHP applications quickly and easily.
@@ -47,7 +47,7 @@ require_once('vendor/autoload.php');
 
 {{< alert style="info" >}}
 Complete source code of GroupDocs.Conversion Cloud SDK for PHP is freely available on [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php).
-Please see the GroupDocs.Conversion Cloud SDK for PHP [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php/tree/master/tests/GroupDocs/Conversion/ApiTests).{{< /alert >}}
+Please see the GroupDocs.Conversion Cloud SDK for PHP [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples).{{< /alert >}}
 
 **GroupDocs.Conversion Cloud SDK for Java** allows you to incorporate GroupDocs.Conversion Cloud services in your Java applications quickly and easily.
 You can directly include the source code of GroupDocs.Conversion Cloud SDK for Java in your own project, the source code is available from [here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java).
@@ -111,7 +111,7 @@ $ mvn eclipse:eclipse -DdownloadSources#true -DdownloadJavadocs#false
 
 {{< alert style="info" >}}
 Complete source code of GroupDocs.Conversion Cloud SDK for Java is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java).
-Please see the GroupDocs.Conversion Cloud SDK for Java [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java/tree/master/src/test/java/com/groupdocs/cloud/conversion/api).
+Please see the GroupDocs.Conversion Cloud SDK for Java [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples).
 {{< /alert >}}
 
 **GroupDocs.Conversion Cloud SDK for Ruby** allows you to incorporate GroupDocs.Conversion Cloud services in your Ruby applications quickly and easily.
@@ -123,7 +123,7 @@ gem install groupdocs_cloud_Conversion
 
 {{< alert style="info" >}}
 Complete source code of GroupDocs.Conversion Cloud SDK for Ruby is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby).
-Please see the GroupDocs.Conversion Cloud SDK for Ruby [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby/tree/master/test).{{< /alert >}}
+Please see the GroupDocs.Conversion Cloud SDK for Ruby [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples).{{< /alert >}}
 
 **GroupDocs.Conversion Cloud SDK for Node.js** allows you to incorporate GroupDocs.Conversion Cloud services in your Node.js applications quickly and easily.
 *Conversion-sdk-nodejs* is available on **[npmjs.com](https://www.npmjs.com/package/groupdocs-conversion-cloud)** package. Run the following command:
@@ -134,7 +134,7 @@ npm install groupdocs-Conversion-cloud
 
 {{< alert style="info" >}}
 Complete source code of GroupDocs.Conversion Cloud SDK for Node.js is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node).
-Please see the GroupDocs.Conversion Cloud SDK for Node.js [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node/tree/master/test).{{< /alert >}}
+Please see the GroupDocs.Conversion Cloud SDK for Node.js [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples).{{< /alert >}}
 
 **GroupDocs.Conversion Cloud SDK for Python** allows you to incorporate GroupDocs.Conversion Cloud services in your Python applications quickly and easily.
 Install groupdocs-Conversion-cloud with [PIP](https://pypi.org/project/pip/) from [PyPI](https://pypi.org/project/groupdocs-conversion-cloud/) package. Run the following command:
@@ -145,5 +145,17 @@ pip install groupdocs-Conversion-cloud
 
 {{< alert style="info" >}}
 Complete source code of GroupDocs.Conversion Cloud SDK for Python is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python)
-Please see the GroupDocs.Conversion Cloud SDK for Python [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python/tree/master/test).
+Please see the GroupDocs.Conversion Cloud SDK for Python [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples).
+{{< /alert >}}
+
+**GroupDocs.Conversion Cloud SDK for Go** allows you to incorporate GroupDocs.Conversion Cloud services in your Go applications quickly and easily.
+Install groupdocs-Conversion-cloud with following command:
+
+```bash
+go get github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go
+```
+
+{{< alert style="info" >}}
+Complete source code of GroupDocs.Conversion Cloud SDK for Go is freely available on the [GitHub](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go)
+Please see the GroupDocs.Conversion Cloud SDK for Go [Examples here](https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples).
 {{< /alert >}}

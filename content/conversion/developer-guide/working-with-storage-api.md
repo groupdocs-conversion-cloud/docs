@@ -38,6 +38,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/MyStorage/exist
   "exists": true
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -67,6 +68,31 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Storage_Exist.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func StorageExist() {
+    response, _, err := client.StorageApi.StorageExists(ctx, StorageName)
+    if err != nil {
+      fmt.Printf("Failed to check if storage exists: %v", err)
+    }
+
+    // Assert
+    if !response.Exists {
+      fmt.Printf("Storage does not exist")
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -104,6 +130,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/exist/conversio
   "isFolder": true
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -133,6 +160,31 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Object_Exists.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func ObjectExist() {
+    response, _, err := client.StorageApi.StorageExists(ctx, StorageName)
+    if err != nil {
+      fmt.Printf("Failed to check if storage exists: %v", err)
+    }
+
+    // Assert
+    if !response.Exists {
+      fmt.Printf("Storage does not exist")
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -166,6 +218,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/disc?storageNam
   "totalSize": 3221225472
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -195,6 +248,34 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Object_Exists.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func GetDiscUsage() {
+    
+    response, _, err := client.StorageApi.GetDiscUsage(ctx, nil)
+    if err != nil {
+      fmt.Printf("Failed to get disk usage: %v", err)
+    }
+
+    if response.TotalSize <= 0 {
+      fmt.Printf("Total size is not greater than 0")
+    }
+    if response.UsedSize <= 0 {
+      fmt.Printf("Used size is not greater than 0")
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -238,6 +319,7 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/version/one-pag
   ]
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -267,5 +349,31 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Disc_Usage.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func GetFileVersions() {
+    testFile := "WordProcessing/one-page.docx"
+
+    response, _, err := client.StorageApi.GetFileVersions(ctx, testFile, nil)
+    if err != nil {
+      fmt.Printf("Failed to get file versions: %v", err)
+    }
+
+    if len(response.Value) == 0 {
+      fmt.Printf("Expected file versions, found none")
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}

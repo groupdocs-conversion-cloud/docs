@@ -126,6 +126,32 @@ Our API is completely independent of your operating system, database system or d
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Files_List.py >}}
 
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func GetFilesList() {
+    path := "WordProcessing"
+    filesList, _, err := client.FolderApi.GetFilesList(ctx, path, nil)
+    if err != nil {
+      fmt.Printf("Failed to get files list: %v", err)
+    }
+
+    // Act & Assert
+    if len(filesList.Value) == 0 {
+      fmt.Printf("Expected files in directory, found none")
+    }
+}
+```
+
 {{< /tab >}} {{< /tabs >}}
 
 ## Create a New Folder
@@ -165,7 +191,6 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/convers
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [Folder API](https://apireference.groupdocs.cloud/conversion/#/Folder/) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
-
 {{< tabs "example4">}} {{< tab "C#" >}}
 
 {{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Create_Folder.cs >}}
@@ -189,6 +214,27 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Create_Folder.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func CreateFolder() {
+    // Create temp folder
+    _, err := client.FolderApi.CreateFolder(ctx, "temp", nil)
+    if err != nil {
+      fmt.Printf("Failed to create temp folder: %v", err)
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -223,6 +269,7 @@ curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/conve
   "status": "OK"
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -253,6 +300,30 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Delete_Folder.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+"github.com/antihax/optional"
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func DeleteFolder() {
+    opts := &conversion.FolderApiDeleteFolderOpts{
+      Recursive: optional.NewBool(true),
+    }
+    _, err = client.FolderApi.DeleteFolder(ctx, "temp", opts)
+    if err != nil {
+      fmt.Printf("Failed to delete temp folder: %v", err)
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -320,6 +391,26 @@ Our API is completely independent of your operating system, database system or d
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Copy_Folder.py >}}
 
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func CopyFolder() {
+    _, err = client.FolderApi.CopyFolder(ctx, "temp", "temp1", nil)
+    if err != nil {
+      t.Errorf("Failed to copy folder: %v", err)
+    }
+}
+```
+
 {{< /tab >}} {{< /tabs >}}
 
 ## Move a Specific Folder
@@ -355,6 +446,7 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/folder/move/con
   "status": "OK"
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -384,5 +476,25 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Move_Folder.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func MoveFolder() {
+    _, err = client.FolderApi.MoveFolder(ctx, "temp1", "temp2", nil)
+    if err != nil {
+      t.Errorf("Failed to move folder: %v", err)
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}

@@ -68,6 +68,37 @@ The API is completely independent of your operating system, database system or d
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Convert_To_Text.py >}}
 
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+ "os"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToTxt() {
+
+ settings := models.ConvertSettings{
+  Format:     "txt",
+  FilePath:   "WordProcessing/four-pages.docx",
+  OutputPath: "converted",
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToTxt error: %v\n", err)
+  return
+ }
+}
+```
+
 {{< /tab >}} {{< /tabs >}}
 
 ## Convert to Text Formats with Stream Output
@@ -120,5 +151,44 @@ The API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Convert_To_Text_Stream.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+ "os"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToTxt() {
+
+ settings := models.ConvertSettings{
+  Format:     "txt",
+  FilePath:   "WordProcessing/four-pages.docx",
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToTxt error: %v\n", err)
+  return
+ }
+
+ // Get file info
+ fileInfo, errInfo := result.Stat()
+ if errInfo != nil {
+  t.Error(errInfo)
+ }
+
+ // Get the size of the file
+ fileSize := fileInfo.Size()
+}
+```
 
 {{< /tab >}} {{< /tabs >}}

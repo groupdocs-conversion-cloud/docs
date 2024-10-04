@@ -9,7 +9,7 @@ keywords: ""
 toc: True
 ---
 
-## Download File API 
+## Download File API
 
 This API allows you to download a file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud).
 
@@ -41,12 +41,12 @@ curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/storage/file/one-page.d
   "Status": "OK"
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
-
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
@@ -71,6 +71,41 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Download_File.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+ "os"
+ 
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func DownloadFile() {
+    var path = "WordProcessing/four-pages.docx"
+    dlFileResp, _, err := config.Client.FileApi.DownloadFile(ctx, path, nil)
+    if err != nil {
+      fmt.Print("Failed to download file %v\n", err)
+    }
+
+    // Get file info
+    fileInfo, errInfo := dlFileResp.Stat()
+    if errInfo != nil {
+      fmt.Print(errInfo)
+    }
+
+    // Get the size of the file
+    fileSize := fileInfo.Size()
+
+    if fileSize == 0 {
+      fmt.Print("File size is zero")
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -119,12 +154,12 @@ Http status code: 200 (Returns OK and list of errors, which is empty if success.
   ]
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
-
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
@@ -148,6 +183,31 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Upload_File.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+ "os"
+ 
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func UploadFile() {
+    localFile, err := os.Open("./TestData/" + path)
+    if err != nil {
+      fmt.Printf("Failed to open file %v\n", err)
+    }
+    _, _, err = client.FileApi.UploadFile(ctx, path, localFile, nil)
+    if err != nil {
+      fmt.Printf("Failed to upload file %s: %v\n", path, err)
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -183,12 +243,12 @@ curl -X DELETE "https://api.groupdocs.cloud/v2.0/conversion/storage/file/convers
   "Status": "OK"
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
-
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 
@@ -213,6 +273,23 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Delete_File.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func DeleteFile() {
+    var path = "WordProcessing/four-pages.docx"
+    client.FileApi.DeleteFile(ctx, path, nil)
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -250,12 +327,12 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/copy/conve
   "Status": "OK"
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-conversion-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-conversion-cloud), it hides the [File API](https://apireference.groupdocs.cloud/conversion/#/File) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
-
 
 {{< tabs "example8">}} {{< tab "C#" >}}
 
@@ -280,6 +357,26 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Copy_File.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+ 
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func CopyFile() {
+    _, err = client.FileApi.CopyFile(ctx, path, "temp/four-pages.docx", nil)
+    if err != nil {
+      fmt.Print(err)
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -317,6 +414,7 @@ curl -X PUT "https://api.groupdocs.cloud/v2.0/conversion/storage/file/move/conve
   "Status": "OK"
 }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -345,5 +443,26 @@ Our API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Move_File.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+package main
+
+import (
+ "fmt"
+ "os"
+ 
+ conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+)
+
+func MoveFile() {
+    _, err = client.FileApi.MoveFile(ctx, "temp/four-pages.docx", "temp/four-pages1.docx", nil)
+    if err != nil {
+      fmt.Print(err)
+    }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}

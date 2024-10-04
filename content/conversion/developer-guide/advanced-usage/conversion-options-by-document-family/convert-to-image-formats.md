@@ -26,7 +26,9 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in the�
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \"converted/topjpg\"}"
 ```
+
 {{< /tab >}} {{< tab "Response" >}}
+
 ```json
   {
     "name": "sample-page-1.jpg",
@@ -39,6 +41,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "url": "MyStorage:converted/topjpg/sample-page-2.jpg"
   }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -69,6 +72,42 @@ The API is completely independent of your operating system, database system or d
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Convert_To_Images.py >}}
 
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToImage() {
+
+ settings := models.ConvertSettings{
+  Format:     "jpg",
+  FilePath:   "WordProcessing/four-pages.docx",
+  OutputPath: "converted",
+  ConvertOptions: &models.ImageConvertOptions{
+   FromPage:   1,
+   PagesCount: 2,
+  },
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToImage error: %v\n", err)
+  return
+ }
+
+ fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+}
+```
+
 {{< /tab >}} {{< /tabs >}}
 
 ## Convert to Image Formats with Stream Output
@@ -93,6 +132,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
 ```log
 File contents
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -122,6 +162,45 @@ The API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Convert_To_Images_Stream.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+ "os"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToImage() {
+
+ settings := models.ConvertSettings{
+  Format:     "jpg",
+  FilePath:   "WordProcessing/four-pages.docx",
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToImage error: %v\n", err)
+  return
+ }
+
+ // Get file info
+ fileInfo, errInfo := result.Stat()
+ if errInfo != nil {
+  t.Error(errInfo)
+ }
+
+ // Get the size of the file
+ fileSize := fileInfo.Size()
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -196,6 +275,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -225,5 +305,44 @@ The API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Advance_Options_Images.py >}}
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToImage() {
+
+ settings := models.ConvertSettings{
+  Format:     "jpg",
+  FilePath:   "WordProcessing/four-pages.docx",
+  OutputPath: "converted",
+  ConvertOptions: &models.JpegConvertOptions{
+   Grayscale: false,
+   FromPage:   1,
+   PagesCount: 2,
+   Quality: 100,
+   RotateAngle: 90,
+   UsePdf: false,
+  },
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToImage error: %v\n", err)
+  return
+ }
+
+ fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+}
+```
 
 {{< /tab >}} {{< /tabs >}}

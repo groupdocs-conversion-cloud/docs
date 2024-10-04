@@ -17,7 +17,7 @@ You can convert the [supported document formats]({{< ref "conversion/developer-g
 
 ### Resource
 
-```
+```js
 HTTP POST ~/conversion
 ```
 
@@ -30,6 +30,7 @@ HTTP POST ~/conversion
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token}" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.pdf\",  \"Format\": \"docx\",  \"LoadOptions\": {\"PdfLoadOptions\": {\"Password\": \"\",   \"HidePdfAnnotations\":\"true\",   \"RemoveEmbeddedFiles\":\"false\",   \"FlattenAllFields\":\"true\"}},  \"ConvertOptions\": {      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"100\", \"Dpi\": \"300\"  },  \"OutputPath\": \"converted/towords\"}"
 ```
+
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
@@ -39,6 +40,7 @@ curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: applicat
     "url": "MyStorage:converted/towords/sample.docx"
   }
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ### SDK examples
@@ -68,6 +70,37 @@ The API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Convert_To_Words.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+ "os"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToWord() {
+
+ settings := models.ConvertSettings{
+  Format:     "docx",
+  FilePath:   "Pdf/sample.pdf",
+  OutputPath: "converted",
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToWord error: %v\n", err)
+  return
+ }
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -126,6 +159,45 @@ The API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Convert_To_Words_Stream.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+ "os"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToWord() {
+
+ settings := models.ConvertSettings{
+  Format:     "docx",
+  FilePath:   "Pdf/sample.pdf",
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToWord error: %v\n", err)
+  return
+ }
+
+ // Get file info
+ fileInfo, errInfo := result.Stat()
+ if errInfo != nil {
+  t.Error(errInfo)
+ }
+
+ // Get the size of the file
+ fileSize := fileInfo.Size()
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
 
@@ -223,5 +295,43 @@ The API is completely independent of your operating system, database system or d
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Advance_Options_Words.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToWordProcessing() {
+
+ settings := models.ConvertSettings{
+  Format:     "docx",
+  FilePath:   "Pdf/sample.pdf",
+  OutputPath: "converted",
+  LoadOptions: &models.PdfLoadOptions{
+   HidePdfAnnotations:  true,
+   RemoveEmbeddedFiles: false,
+   FlattenAllFields:    true,
+  },
+  ConvertOptions: &models.WordProcessingConvertOptions{},
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToWordProcessing error: %v\n", err)
+  return
+ }
+
+ fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+}
+```
 
 {{< /tab >}} {{< /tabs >}}

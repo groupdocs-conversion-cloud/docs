@@ -71,6 +71,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
   }
 ]
 ```
+
 {{< /tab >}} {{< /tabs >}}
 
 ## SDK examples
@@ -93,12 +94,48 @@ Using an SDK (API client) is the quickest way for a developer to speed up the de
 
 {{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Load_Options_CSV.rb >}}
 
- Node.Js
+{{< /tab >}} {{< tab "Node.Js" >}}
 
 {{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Load_Options_CSV.js >}}
 
 {{< /tab >}} {{< tab "Python" >}}
 
 {{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Load_Options_CSV.py >}}
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package csv
+
+import (
+ "fmt"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertCsvBySpecifyingDelimiter() {
+
+ settings := models.ConvertSettings{
+  Format:     "pdf",
+  FilePath:   "Spreadsheet/sample.csv",
+  OutputPath: "converted",
+  LoadOptions: &models.CsvLoadOptions{
+   Format:    "csv",
+   Separator: ",",
+  },
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertCsvBySpecifyingDelimiter error: %v\n", err)
+  return
+ }
+
+ fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+}
+```
 
 {{< /tab >}} {{< /tabs >}}
