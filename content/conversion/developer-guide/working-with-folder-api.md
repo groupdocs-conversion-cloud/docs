@@ -104,27 +104,161 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Files_List.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+using GroupDocs.Conversion.Cloud.Sdk.Model;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Get Files List
+    class Get_Files_List
+    {
+        public static void Run(string path)
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new FolderApi(configuration);
+
+            try
+            {
+                var request = new GetFilesListRequest(path, Common.MyStorage);
+
+                var response = apiInstance.GetFilesList(request);
+                foreach (StorageFile storageFile in response.Value)
+                {
+                    Console.WriteLine("Expected response type is FilesList: " + storageFile.Path);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling FolderApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Files_List.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetFolderApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\GetFilesListRequest("conversions", CommonUtils::$MyStorage);
+        $response = $apiInstance->getFilesList($request);
+        
+        echo "Expected response type is FilesList.", "<br />";
+
+        foreach($response->getValue() as $storageFile) {
+          echo "Files: ", $storageFile->getPath(), "<br />";
+        }
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Files_List.java >}}
+```java
+package examples.Working_With_Folder;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.FilesList;
+import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Get_Files_List {
+
+    public static void main(String[] args) {
+
+        FolderApi apiInstance = new FolderApi(Utils.AppSID, Utils.AppKey);
+        try {
+            GetFilesListRequest request = new GetFilesListRequest("conversions", Utils.MYStorage);
+            FilesList response = apiInstance.getFilesList(request);
+            System.out.println("Expected response type is FilesList.");
+            for (StorageFile storageFile : response.getValue()) {
+                System.out.println("Files: " + storageFile.getPath());
+            }
+        } catch (ApiException e) {
+            System.err.println("Exception while calling FolderApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Files_List.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Folder
+  def self.Conversion_Ruby_Get_Files_List()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_FolderApi_Instance()
+    
+    $request = GroupDocsConversionCloud::GetFilesListRequest.new("conversions/sample.docx", $myStorage)
+    $response = $api.get_files_list($request)
+
+    puts("Expected response type is FilesList: " + ($response).to_s)
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_Files_List.js >}}
+```js
+"use strict";
+class Conversion_Node_Get_Files_List {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.GetFilesListRequest("conversions/sample.docx", myStorage);
+        folderApi.getFilesList(request)
+            .then(function (response) {
+                console.log("Expected response type is FilesList: " + response.value.length);
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Get_Files_List;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Files_List.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Get_Files_List:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_FolderApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.GetFilesListRequest("conversions\\sample.docx", Common_Utilities.myStorage)
+            response = api.get_files_list(request)
+            
+            print("Expected response type is FilesList: " + str(response))
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
@@ -193,27 +327,148 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Create_Folder.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Create Folder
+    class Create_Folder
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new FolderApi(configuration);
+
+            try
+            {
+                var request = new CreateFolderRequest("conversions", Common.MyStorage);
+
+                apiInstance.CreateFolder(request);
+                Console.WriteLine("Expected response type is Void: 'conversions' folder created.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling FolderApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Create_Folder.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetFolderApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\CreateFolderRequest("conversions", CommonUtils::$MyStorage);
+        $apiInstance->createFolder($request);
+        
+        echo "Expected response type is Void: 'conversions' folder created.", "<br />";
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Create_Folder.java >}}
+```java
+package examples.Working_With_Folder;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Create_Folder {
+
+    public static void main(String[] args) {
+
+        FolderApi apiInstance = new FolderApi(Utils.AppSID, Utils.AppKey);
+        try {
+            CreateFolderRequest request = new CreateFolderRequest("conversions", Utils.MYStorage);
+            apiInstance.createFolder(request);
+            System.out.println("Expected response type is Void: 'conversions' folder created.");
+        } catch (ApiException e) {
+            System.err.println("Exception while calling FolderApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Create_Folder.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Folder
+  def self.Conversion_Ruby_Create_Folder()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_FolderApi_Instance()
+    
+    $request = GroupDocsConversionCloud::CreateFolderRequest.new("conversions", $myStorage)
+    $response = $api.create_folder($request)
+
+    puts("Expected response type is Void: 'conversions' folder created.")
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Create_Folder.js >}}
+```js
+"use strict";
+class Conversion_Node_Create_Folder {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.CreateFolderRequest("conversions", myStorage);
+        folderApi.createFolder(request)
+            .then(function () {
+                console.log("Expected response type is Void: 'conversions' folder created.");
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Create_Folder;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Create_Folder.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Create_Folder:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_FolderApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.CreateFolderRequest("conversions", Common_Utilities.myStorage)
+            api.create_folder(request)
+            
+            print("Expected response type is Void: 'conversions' folder created.")
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
@@ -279,27 +534,149 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Delete_Folder.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Delete Folder
+    class Delete_Folder
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new FolderApi(configuration);
+
+            try
+            {
+                var request = new DeleteFolderRequest("conversions/conversions1", Common.MyStorage, true);
+
+                apiInstance.DeleteFolder(request);
+                Console.WriteLine("Expected response type is Void: 'conversions/conversions1' folder deleted recusrsively.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling FolderApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Delete_Folder.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetFolderApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\DeleteFolderRequest("conversions1\\conversions1", CommonUtils::$MyStorage, true);
+        $apiInstance->deleteFolder($request);
+        
+        echo "Expected response type is Void: 'conversions1/conversions' folder deleted recusrsively.", "<br />";
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Delete_Folder.java >}}
+```java
+package examples.Working_With_Folder;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Delete_Folder {
+
+    public static void main(String[] args) {
+
+        FolderApi apiInstance = new FolderApi(Utils.AppSID, Utils.AppKey);
+        try {
+            DeleteFolderRequest request = new DeleteFolderRequest("conversions\\conversions1", Utils.MYStorage, true);
+            apiInstance.deleteFolder(request);
+            System.out
+                    .println("Expected response type is Void: 'conversions/conversions1' folder deleted recusrsively.");
+        } catch (ApiException e) {
+            System.err.println("Exception while calling FolderApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Delete_Folder.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Folder
+  def self.Conversion_Ruby_Delete_Folder()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_FolderApi_Instance()
+    
+    $request = GroupDocsConversionCloud::DeleteFolderRequest.new("conversions1", $myStorage, true)
+    $response = $api.delete_folder($request)
+
+    puts("Expected response type is Void: 'conversions/conversions1' folder deleted recursively.")
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Delete_Folder.js >}}
+```js
+"use strict";
+class Conversion_Node_Delete_Folder {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.DeleteFolderRequest("conversions/conversions1", myStorage, true);
+        folderApi.deleteFolder(request)
+            .then(function () {
+                console.log("Expected response type is Void: 'conversions/conversions1' folder deleted recursively.");
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Delete_Folder;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Delete_Folder.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Delete_Folder:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_FolderApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.DeleteFolderRequest("conversions\\conversions1", Common_Utilities.myStorage, True)
+            api.delete_folder(request)
+            
+            print("Expected response type is Void: 'conversions/conversions1' folder deleted recursively.")
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
@@ -369,27 +746,149 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example8">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Copy_Folder.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Copy Folder
+    class Copy_Folder
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new FolderApi(configuration);
+
+            try
+            {
+                var request = new CopyFolderRequest("conversions", "conversions1", Common.MyStorage, Common.MyStorage);
+
+                apiInstance.CopyFolder(request);
+                Console.WriteLine("Expected response type is Void: 'conversions' folder copied as 'conversions1'.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling FolderApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Copy_Folder.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetFolderApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\CopyFolderRequest("conversions", "conversions1", CommonUtils::$MyStorage, CommonUtils::$MyStorage);
+        $apiInstance->copyFolder($request);
+        
+        echo "Expected response type is Void: 'conversions' folder copied as 'conversions1'.", "<br />";
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Copy_Folder.java >}}
+```java
+package examples.Working_With_Folder;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Copy_Folder {
+
+    public static void main(String[] args) {
+
+        FolderApi apiInstance = new FolderApi(Utils.AppSID, Utils.AppKey);
+        try {
+            CopyFolderRequest request = new CopyFolderRequest("conversions", "conversions1", Utils.MYStorage,
+                    Utils.MYStorage);
+            apiInstance.copyFolder(request);
+            System.out.println("Expected response type is Void: 'conversions' folder copied as 'conversions1'.");
+        } catch (ApiException e) {
+            System.err.println("Exception while calling FolderApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Copy_Folder.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Folder
+  def self.Conversion_Ruby_Copy_Folder()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_FolderApi_Instance()
+    
+    $request = GroupDocsConversionCloud::CopyFolderRequest.new("conversions", "conversions1", $myStorage, $myStorage)
+    $response = $api.copy_folder($request)
+
+    puts("Expected response type is Void: 'conversions' folder copied as 'conversions1'.")
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Copy_Folder.js >}}
+```js
+"use strict";
+class Conversion_Node_Copy_Folder {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.CopyFolderRequest("conversions", "conversions1", myStorage, myStorage);
+        folderApi.copyFolder(request)
+            .then(function () {
+                console.log("Expected response type is Void: 'conversions' folder copied as 'conversions1'.");
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Copy_Folder;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Copy_Folder.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Copy_Folder:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_FolderApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.CopyFolderRequest("conversions", "conversions1", Common_Utilities.myStorage, Common_Utilities.myStorage)
+            api.copy_folder(request)
+            
+            print("Expected response type is Void: 'conversions' folder copied as 'conversions1'.")
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
@@ -455,27 +954,150 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example10">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Move_Folder.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Move Folder
+    class Move_Folder
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new FolderApi(configuration);
+
+            try
+            {
+                var request = new MoveFolderRequest("conversions1", "conversions/conversions1", Common.MyStorage, Common.MyStorage);
+
+                apiInstance.MoveFolder(request);
+                Console.WriteLine("Expected response type is Void: 'conversions1' folder moved to 'conversions/conversions1'.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling FolderApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Move_Folder.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetFolderApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\MoveFolderRequest("conversions1", "conversions1\\conversions1", CommonUtils::$MyStorage, CommonUtils::$MyStorage, true);
+        $apiInstance->moveFolder($request);
+        
+        echo "Expected response type is Void: 'conversions1' folder moved to 'conversions/conversions1'.", "<br />";
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Move_Folder.java >}}
+```java
+package examples.Working_With_Folder;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Move_Folder {
+
+    public static void main(String[] args) {
+
+        FolderApi apiInstance = new FolderApi(Utils.AppSID, Utils.AppKey);
+        try {
+            MoveFolderRequest request = new MoveFolderRequest("conversions1", "conversions\\conversions1",
+                    Utils.MYStorage, Utils.MYStorage);
+            apiInstance.moveFolder(request);
+            System.out.println(
+                    "Expected response type is Void: 'conversions1' folder moved to 'conversions/conversions1'.");
+        } catch (ApiException e) {
+            System.err.println("Exception while calling FolderApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Move_Folder.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Folder
+  def self.Conversion_Ruby_Move_Folder()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_FolderApi_Instance()
+
+    $request = GroupDocsConversionCloud::MoveFolderRequest.new("conversions1", "conversions/conversions1", $myStorage, $myStorage)
+    $response = $api.move_folder($request)
+
+    puts("Expected response type is Void: 'conversions1' folder moved to 'conversions/conversions1'.")
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Move_Folder.js >}}
+```js
+"use strict";
+class Conversion_Node_Move_Folder {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.MoveFolderRequest("conversions1", "conversions/conversions1", myStorage, myStorage);
+        folderApi.moveFolder(request)
+            .then(function () {
+                console.log("Expected response type is Void: 'conversions1' folder moved to 'conversions/conversions1'.");
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Move_Folder;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Move_Folder.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Move_Folder:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_FolderApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.MoveFolderRequest("conversions1", "conversions1\\conversions", Common_Utilities.myStorage, Common_Utilities.myStorage)
+            api.move_folder(request)
+            
+            print("Expected response type is Void: 'conversions1' folder moved to 'conversions/conversions1'.")
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 

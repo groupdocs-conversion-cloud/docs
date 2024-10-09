@@ -33,27 +33,178 @@ The GitHub repository for [GroupDocs.Conversion Cloud](https://github.com/groupd
 
 {{< tabs "example1">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Supported_Formats.cs >}}
+```csharp
+using System;
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Get All Supported Formats
+    class Get_All_Supported_Formats
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+
+            var apiInstance = new InfoApi(configuration);
+
+            try
+            {
+                // Get supported file formats
+                var response = apiInstance.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
+
+                foreach (var entry in response)
+                {
+                    foreach (var formats in entry.TargetFormats)
+                    {
+                        Console.WriteLine(string.Format("{0} TO {1}", entry.SourceFormat, string.Join(",", formats)));
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling InfoApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Supported_Formats.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+try {
+    $infoApi = CommonUtils::GetInfoApiInstance();
+
+    $request = new GroupDocs\Conversion\Model\Requests\GetSupportedConversionTypesRequest();
+    $response = $infoApi->getSupportedConversionTypes($request);
+
+    echo '<b>Supported file formats<br /></b>';
+    foreach($response as $key => $format) {
+      echo $format->getSourceFormat(), "<br />";
+    }
+} catch (Exception $e) {
+    echo "Something went wrong: ", $e->getMessage(), "\n";
+}
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Supported_Formats.java >}}
+```java
+package examples.Supported_File_Formats;
+
+import com.groupdocs.cloud.conversion.client.*;
+import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import java.util.List;
+
+import com.groupdocs.cloud.conversion.api.*;
+import examples.Utils;
+
+public class Conversion_Java_Get_Supported_Formats {
+
+    public static void main(String[] args) {
+
+        InfoApi apiInstance = new InfoApi(Utils.AppSID, Utils.AppKey);
+        try {
+            GetSupportedConversionTypesRequest request = new GetSupportedConversionTypesRequest();
+            List<SupportedFormat> response = apiInstance.getSupportedConversionTypes(request);
+
+            for (SupportedFormat entry : response) {
+                for (String formats : entry.getTargetFormats()) {
+                    System.out.println(entry.getSourceFormat() + " TO " + formats);
+                }
+            }
+        } catch (ApiException e) {
+            System.err.println("Exception while calling InfoApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_All_Supported_Formats.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class File_Formats
+  def self.Conversion_Ruby_Get_All_Supported_Formats()
+
+    # Getting instance of the API
+    api = Common_Utilities.Get_InfoApi_Instance()
+
+    $request = GroupDocsConversionCloud::GetSupportedConversionTypesRequest.new()
+
+    # Retrieve supported file-formats
+    $response = api.get_supported_conversion_types($request)
+
+    # Print out supported file-formats
+    puts("Supported file-formats:")
+    $response.each do |format|
+      puts("#{format.source_format} to [#{format.target_formats.join(', ')}]")
+    end
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_All_Supported_Formats.js >}}
+```js
+"use strict";
+class Conversion_Node_Get_All_Supported_Formats {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.GetSupportedConversionTypesRequest();
+        infoApi.getSupportedConversionTypes(request)
+            .then(function (response) {
+                console.log("Supported file-formats:");
+                response.forEach(function (format) {
+                    console.log(format.sourceFormat + " - To - " + format.targetFormats + "\n");
+                });
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Get_All_Supported_Formats;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_All_Supported_Formats.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Get_All_Supported_Formats:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_InfoApi_Instance()
+        
+        try:
+            # Retrieve supported conversion types
+            request = groupdocs_conversion_cloud.GetSupportedConversionTypesRequest()
+            response = api.get_supported_conversion_types(request)
+            
+            # Print out supported conversion types
+            print("Supported conversion types:")
+            for fileformat in response:
+                print('{0} to [{1}]'.format(fileformat.source_format, ', '.join(fileformat.target_formats))) 
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception when calling get_supported_conversion_types: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 

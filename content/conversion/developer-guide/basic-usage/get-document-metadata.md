@@ -51,27 +51,174 @@ The API is completely independent of your operating system, database system or d
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Document_Information.cs >}}
+```csharp
+using System;
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Get Document Information / Docuement Metada
+    class Get_Document_Information
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+
+            var apiInstance = new InfoApi(configuration);
+
+            try
+            {
+                // get document info/metadata request
+                var request = new GetDocumentMetadataRequest
+                {
+                    StorageName = Common.MyStorage,
+                    FilePath = "conversions/password-protected.docx"
+                };
+
+                // Execute api method to get response.
+                var response = apiInstance.GetDocumentMetadata(request);
+                Console.WriteLine("Expected response type is DocumentMetadata: " + response.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception when calling InfoApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Document_Information.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+try {
+    $infoApi = CommonUtils::GetInfoApiInstance();
+
+    $request = new GroupDocs\Conversion\Model\Requests\GetDocumentMetadataRequest();
+    $request->setStorageName(CommonUtils::$MyStorage);
+    $request->setFilePath("conversions\\sample.docx");
+        
+    $response = $infoApi->getDocumentMetadata($request);
+
+    echo "Expected response type is DocumentMetadata: ", $response[0]->getPageCount();
+} catch (Exception $e) {
+    echo "Something went wrong: ", $e->getMessage(), "\n";
+}
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Document_Information.java >}}
+```java
+package examples.Supported_File_Formats;
+
+import com.groupdocs.cloud.conversion.client.*;
+import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import java.util.List;
+
+import com.groupdocs.cloud.conversion.api.*;
+import examples.Utils;
+
+public class Conversion_Java_Get_Document_Information {
+
+    public static void main(String[] args) {
+
+        InfoApi apiInstance = new InfoApi(Utils.AppSID, Utils.AppKey);
+        try {
+            GetDocumentMetadataRequest request = new GetDocumentMetadataRequest();
+            request.setStorageName(Utils.MYStorage);
+            request.setFilePath("conversions\\sample.docx");
+            
+            DocumentMetadata response = apiInstance.getDocumentMetadata(request);
+
+            System.out.println("Expected response type is DocumentMetadata: " + response.getPageCount());
+        } catch (ApiException e) {
+            System.err.println("Exception while calling InfoApi:");
+            e.printStackTrace();
+        }
+    }
+}
+
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Document_Information.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Document_Information
+  def self.Conversion_Ruby_Get_Document_Information()
+
+    # Getting instance of the API
+    api = Common_Utilities.Get_InfoApi_Instance()
+
+    $request = GroupDocsConversionCloud::GetDocumentMetadataRequest.new()
+    $request.storage_name = $myStorage;
+    $request.file_path = "conversions/sample.docx"
+    
+    $response = api.get_document_metadata($request)
+
+    puts("Expected response type is DocumentMetadata: " + ($response).to_s)
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_Document_Information.js >}}
+```js
+"use strict";
+class Conversion_Node_Get_Document_Information {
+    static Run() {
+
+        var request = new groupdocs_conversion_cloud_1.GetDocumentMetadataRequest();
+        request.storageName = myStorage;
+        request.filePath = "conversions/password-protected.docx";
+
+        infoApi.getDocumentMetadata(request)
+            .then(function (response) {
+                console.log("Expected response type is DocumentMetadata: : " + response);
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Get_Document_Information;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Document_Information.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Get_Document_Information:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_InfoApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.GetDocumentMetadataRequest()
+            request.storage_name = Common_Utilities.myStorage;
+            request.file_path = "conversions\\password-protected.docx"
+            
+            response = api.get_document_metadata(request)
+
+            print("Expected response type is DocumentMetadata: " + str(len(response)))
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 

@@ -80,27 +80,180 @@ Using an SDK (API client) is the quickest way for a developer to speed up the de
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Load_Options_OneNote.cs >}}
+```csharp
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
+string MyAppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+string MyAppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+var configuration = new Configuration(MyAppSid, MyAppKey);
+  
+// Create necessary API instances
+var apiInstance = new ConvertApi(configuration);
+ 
+// Prepare convert settings
+var loadOptions = new OneLoadOptions
+{
+    FontSubstitutes = new Dictionary<string, string>
+    {
+        {"Tahoma", "Arial"}, {"Times New Roman", "Arial"}
+    }
+};
+var settings = new ConvertSettings
+{
+    FilePath = "Note/sample.one",
+    Format = "pdf",
+    LoadOptions = loadOptions,
+    OutputPath = "converted"
+};
+ 
+// Convert to specified format
+var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings));
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Load_Options_OneNote.php >}}
+```php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model;
+use GroupDocs\Conversion\Model\Requests;
+ 
+$AppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+$AppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($AppSid);
+$configuration->setAppKey($AppKey);
+ 
+$apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
+ 
+// Prepare convert settings
+$settings = new Model\ConvertSettings();
+$settings->setFilePath("Note/sample.one");
+$settings->setFormat("pdf");
+ 
+$loadOptions = new Model\OneLoadOptions();
+$loadOptions->setFontSubstitutes(["Tahoma" => "Arial", "Times New Roman" => "Arial"]);
+ 
+$settings->setLoadOptions($loadOptions);
+$settings->setOutputPath("converted");
+ 
+// Convert
+$result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($settings));
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Load_Options_OneNote.java >}}
+```java
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
+String MyAppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+String MyAppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+Configuration configuration = new Configuration(MyAppSid, MyAppKey);
+  
+// Create API instance
+ConvertApi apiInstance = new ConvertApi(configuration);
+ 
+// Prepare convert settings
+ConvertSettings settings = new ConvertSettings();
+settings.setFilePath("Note/sample.one");
+settings.setFormat("pdf");
+ 
+OneLoadOptions loadOptions = new OneLoadOptions();
+ 
+Map<String, String> fontSubs = new HashMap<String, String>();
+fontSubs.put("Tahoma", "Arial");
+fontSubs.put("Times New Roman", "Arial");           
+ 
+loadOptions.setFontSubstitutes(fontSubs);
+ 
+settings.setLoadOptions(loadOptions);
+settings.setOutputPath("converted");
+ 
+List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Load_Options_OneNote.rb >}}
+```ruby
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples
+require 'groupdocs_conversion_cloud'
+ 
+$app_sid = "XXXX-XXXX-XXXX-XXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+$app_key = "XXXXXXXXXXXXXXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+# Create necessary API instances
+apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($app_sid, $app_key)
+ 
+# Prepare convert settings
+settings = GroupDocsConversionCloud::ConvertSettings.new
+settings.file_path = "Note/sample.one"
+settings.format = "pdf"
+ 
+loadOptions = GroupDocsConversionCloud::OneLoadOptions.new
+fonts = Hash.new
+fonts["Tahoma"] = "Arial"
+fonts["Times New Roman"] = "Arial"
+loadOptions.font_substitutes = fonts
+ 
+settings.load_options = loadOptions
+settings.output_path = "converted"
+ 
+# Convert
+result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentRequest.new(settings))
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Load_Options_OneNote.js >}}
+```js
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
+global.conversion_cloud = require("groupdocs-conversion-cloud");
+ 
+global.appSid = "XXXX-XXXX-XXXX-XXXX"; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+global.appKey = "XXXXXXXXXXXXXXXX"; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+global.convertApi = conversion_cloud.ConvertApi.fromKeys(appSid, appKey);
+ 
+let settings = new conversion_cloud.ConvertSettings();
+settings.filePath = "Note/sample.one";
+settings.format = "pdf";
+ 
+let loadOptions = new conversion_cloud.OneLoadOptions();
+loadOptions.fontSubstitutes = {};
+loadOptions.fontSubstitutes["Tahoma"] = "Arial";
+loadOptions.fontSubstitutes["Times New Roman"] = "Arial";
+ 
+settings.loadOptions = loadOptions;
+settings.outputPath = "converted";
+ 
+let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocumentRequest(settings));
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Load_Options_OneNote.py >}}
+```python
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
+import groupdocs_conversion_cloud
+ 
+app_sid = "XXXX-XXXX-XXXX-XXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+app_key = "XXXXXXXXXXXXXXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+# Create necessary API instances
+apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.app_sid, Common.app_key)
+ 
+# Prepare convert settings
+settings = groupdocs_conversion_cloud.ConvertSettings()
+settings.file_path = "Note/sample.one"
+settings.format = "pdf"
+ 
+loadOptions = groupdocs_conversion_cloud.OneLoadOptions()
+loadOptions.font_substitutes = {"Tahoma" : "Arial", "Times New Roman" : "Arial"}
+ 
+settings.load_options = loadOptions
+settings.output_path = "converted"
+ 
+# Convert
+result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocumentRequest(settings))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 

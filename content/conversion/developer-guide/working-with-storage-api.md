@@ -47,27 +47,149 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example2">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Storage_Exist.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Is Storage Exist
+    class Storage_Exist
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new StorageApi(configuration);
+
+            try
+            {
+                var request = new StorageExistsRequest(Common.MyStorage);
+
+                var response = apiInstance.StorageExists(request);
+                Console.WriteLine("Expected response type is StorageExist: " + response.Exists.Value.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling StorageApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Storage_Exist.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+try {
+    $apiInstance = CommonUtils::GetStorageApiInstance();
+
+    $request = new GroupDocs\Conversion\Model\Requests\StorageExistsRequest(CommonUtils::$MyStorage);
+        $response = $apiInstance->storageExists($request);
+        
+        echo "Expected response type is StorageExist: ", $response;
+} catch (Exception $e) {
+    echo "Something went wrong: ", $e->getMessage(), "\n";
+}
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Storage_Exist.java >}}
+```java
+package examples.Working_With_Storage;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Storage_Exist {
+
+    public static void main(String[] args) {
+
+        StorageApi apiInstance = new StorageApi(Utils.AppSID, Utils.AppKey);
+        try {
+            StorageExistsRequest request = new StorageExistsRequest(Utils.MYStorage);
+            StorageExist response = apiInstance.storageExists(request);
+            System.out.println("Expected response type is StorageExist: " + response.getExists());
+        } catch (ApiException e) {
+            System.err.println("Exception while calling StorageApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Storage_Exist.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Storage
+  def self.Conversion_Ruby_Storage_Exist()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_StorageApi_Instance()
+    
+    $request = GroupDocsConversionCloud::StorageExistsRequest.new($myStorage)
+    $response = $api.storage_exists($request)
+
+    puts("Expected response type is StorageExist: " + ($response).to_s)
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Storage_Exist.js >}}
+```js
+"use strict";
+class Conversion_Node_Storage_Exist {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.StorageExistsRequest(myStorage);
+        storageApi.storageExists(request)
+            .then(function (response) {
+                console.log("Expected response type is StorageExist: " + response.exists);
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Storage_Exist;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Storage_Exist.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Storage_Exist:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_StorageApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.StorageExistsRequest(Common_Utilities.myStorage)
+            response = api.storage_exists(request)
+            
+            print("Expected response type is StorageExist: " + str(response))
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
@@ -139,27 +261,149 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example4">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Object_Exists.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Is Object Exists
+    class Object_Exists
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new StorageApi(configuration);
+
+            try
+            {
+                var request = new ObjectExistsRequest("conversions/one-page.docx", Common.MyStorage);
+
+                var response = apiInstance.ObjectExists(request);
+                Console.WriteLine("Expected response type is ObjectExist: " + response.Exists.Value.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling StorageApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Object_Exists.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetStorageApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\ObjectExistsRequest("conversions\one-page.docx", CommonUtils::$MyStorage);
+        $response = $apiInstance->objectExists($request);
+        
+        echo "Expected response type is ObjectExist: ", $response;
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Object_Exists.java >}}
+```java
+package examples.Working_With_Storage;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Object_Exists {
+
+    public static void main(String[] args) {
+
+        StorageApi apiInstance = new StorageApi(Utils.AppSID, Utils.AppKey);
+        try {
+            ObjectExistsRequest request = new ObjectExistsRequest("conversions\\one-page.docx", Utils.MYStorage, null);
+            ObjectExist response = apiInstance.objectExists(request);
+            System.out.println("Expected response type is ObjectExist: " + response.getExists());
+        } catch (ApiException e) {
+            System.err.println("Exception while calling StorageApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Object_Exists.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Storage
+  def self.Conversion_Ruby_Object_Exists()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_StorageApi_Instance()
+    
+    $request = GroupDocsConversionCloud::ObjectExistsRequest.new("conversions/one-page.docx", $myStorage)
+    $response = $api.object_exists($request)
+
+    puts("Expected response type is ObjectExist: " + ($response).to_s)
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Object_Exists.js >}}
+```js
+"use strict";
+class Conversion_Node_Object_Exists {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.ObjectExistsRequest("conversions/one-page.docx", myStorage);
+        storageApi.objectExists(request)
+            .then(function (response) {
+                console.log("Expected response type is ObjectExist: " + response.exists);
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Object_Exists;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Object_Exists.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Object_Exists:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_StorageApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.ObjectExistsRequest("conversions\\one-page.docx", Common_Utilities.myStorage)
+            response = api.object_exists(request)
+            
+            print("Expected response type is ObjectExist: " + str(response))
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
@@ -227,27 +471,149 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example6">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_Disc_Usage.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Get Get Disc Usage
+    class Get_Disc_Usage
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new StorageApi(configuration);
+
+            try
+            {
+                var request = new GetDiscUsageRequest(Common.MyStorage);
+
+                var response = apiInstance.GetDiscUsage(request);
+                Console.WriteLine("Expected response type is DiscUsage: " + response.UsedSize.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling StorageApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_Disc_Usage.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetStorageApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\GetDiscUsageRequest(CommonUtils::$MyStorage);
+        $response = $apiInstance->getDiscUsage($request);
+            
+        echo "Expected response type is DiscUsage: ", $response;
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Disc_Usage.java >}}
+```java
+package examples.Working_With_Storage;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Get_Disc_Usage {
+
+    public static void main(String[] args) {
+
+        StorageApi apiInstance = new StorageApi(Utils.AppSID, Utils.AppKey);
+        try {
+            GetDiscUsageRequest request = new GetDiscUsageRequest(Utils.MYStorage);
+            DiscUsage response = apiInstance.getDiscUsage(request);
+            System.out.println("Expected response type is DiscUsage: " + response.getUsedSize());
+        } catch (ApiException e) {
+            System.err.println("Exception while calling StorageApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Disc_Usage.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Storage
+  def self.Conversion_Ruby_Get_Disc_Usage()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_StorageApi_Instance()
+    
+    $request = GroupDocsConversionCloud::GetDiscUsageRequest.new($myStorage)
+    $response = $api.get_disc_usage($request)
+
+    puts("Expected response type is DiscUsage: " + ($response).to_s)
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Object_Exists.js >}}
+```js
+"use strict";
+class Conversion_Node_Object_Exists {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.ObjectExistsRequest("conversions/one-page.docx", myStorage);
+        storageApi.objectExists(request)
+            .then(function (response) {
+                console.log("Expected response type is ObjectExist: " + response.exists);
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Object_Exists;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Object_Exists.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Object_Exists:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_StorageApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.ObjectExistsRequest("conversions\\one-page.docx", Common_Utilities.myStorage)
+            response = api.object_exists(request)
+            
+            print("Expected response type is ObjectExist: " + str(response))
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
@@ -328,27 +694,149 @@ Our API is completely independent of your operating system, database system or d
 
 {{< tabs "example8">}} {{< tab "C#" >}}
 
-{{< gist groupdocscloud 2a7a7a2afe748942748c4b5ae066b233 Conversion_CSharp_Get_File_Versions.cs >}}
+```csharp
+using GroupDocs.Conversion.Cloud.Sdk.Api;
+using GroupDocs.Conversion.Cloud.Sdk.Client;
+using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+using System;
+
+namespace GroupDocs.Conversion.Cloud.Examples.CSharp
+{
+    // Get File Versions
+    class Get_File_Versions
+    {
+        public static void Run()
+        {
+            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+            var apiInstance = new StorageApi(configuration);
+
+            try
+            {
+                var request = new GetFileVersionsRequest("conversions/one-page.docx", Common.MyStorage);
+
+                var response = apiInstance.GetFileVersions(request);
+                Console.WriteLine("Expected response type is FileVersions: " + response.Value.Count.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception while calling StorageApi: " + e.Message);
+            }
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "PHP" >}}
 
-{{< gist groupdocscloud 52c581e5d4cbfafe60dc0f41a88a8c55 Conversion_Php_Get_File_Versions.php >}}
+```php
+<?php
+
+include(dirname(__DIR__) . '\CommonUtils.php');
+
+    try {
+        $apiInstance = CommonUtils::GetStorageApiInstance();
+
+        $request = new GroupDocs\Conversion\Model\Requests\GetFileVersionsRequest("conversions\one-page.docx", CommonUtils::$MyStorage);
+        $response = $apiInstance->getFileVersions($request);
+        
+        echo "Expected response type is FileVersions: ", $response;
+    } catch (Exception $e) {
+        echo "Something went wrong: ", $e->getMessage(), "\n";
+    }
+?>
+```
 
 {{< /tab >}} {{< tab "Java" >}}
 
-{{< gist groupdocscloud f3869a8f33daa0fe48b22798738a03af Conversion_Java_Get_Disc_Usage.java >}}
+```java
+package examples.Working_With_Storage;
+
+import com.groupdocs.cloud.conversion.api.*;
+import com.groupdocs.cloud.conversion.client.ApiException;
+import com.groupdocs.cloud.conversion.model.*;
+import com.groupdocs.cloud.conversion.model.requests.*;
+import examples.Utils;
+
+public class Conversion_Java_Get_Disc_Usage {
+
+    public static void main(String[] args) {
+
+        StorageApi apiInstance = new StorageApi(Utils.AppSID, Utils.AppKey);
+        try {
+            GetDiscUsageRequest request = new GetDiscUsageRequest(Utils.MYStorage);
+            DiscUsage response = apiInstance.getDiscUsage(request);
+            System.out.println("Expected response type is DiscUsage: " + response.getUsedSize());
+        } catch (ApiException e) {
+            System.err.println("Exception while calling StorageApi:");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 {{< /tab >}} {{< tab "Ruby" >}}
 
-{{< gist groupdocscloud ecd63c8e6e188b11de12a95929fcccc6 Conversion_Ruby_Get_Disc_Usage.rb >}}
+```ruby
+# Load the gem
+require 'groupdocs_conversion_cloud'
+require 'common_utilities/Utils.rb'
+
+class Working_With_Storage
+  def self.Conversion_Ruby_Get_Disc_Usage()
+
+    # Getting instance of the API
+    $api = Common_Utilities.Get_StorageApi_Instance()
+    
+    $request = GroupDocsConversionCloud::GetDiscUsageRequest.new($myStorage)
+    $response = $api.get_disc_usage($request)
+
+    puts("Expected response type is DiscUsage: " + ($response).to_s)
+  end
+end
+```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
-{{< gist groupdocscloud 0b518025a03dae691c9d9421153a9650 Conversion_Node_Get_Disc_Usage.js >}}
+```js
+"use strict";
+class Conversion_Node_Get_Disc_Usage {
+    static Run() {
+        // retrieve supported file-formats
+        var request = new groupdocs_conversion_cloud_1.GetDiscUsageRequest(myStorage);
+        storageApi.getDiscUsage(request)
+            .then(function (response) {
+                console.log("Expected response type is DiscUsage: " + response.usedSize);
+            })
+            .catch(function (error) {
+                console.log("Error: " + error.message);
+            });
+    }
+}
+module.exports = Conversion_Node_Get_Disc_Usage;
+```
 
 {{< /tab >}} {{< tab "Python" >}}
 
-{{< gist groupdocscloud c5f65caff3accc22d8dc1d9da2dc735c Conversion_Python_Get_Disc_Usage.py >}}
+```python
+# Import modules
+import groupdocs_conversion_cloud
+from Common_Utilities.Utils import Common_Utilities
+
+class Conversion_Python_Get_Disc_Usage:
+    
+    @classmethod
+    def Run(self):
+        # Create instance of the API
+        api = Common_Utilities.Get_StorageApi_Instance()
+        
+        try:
+            request = groupdocs_conversion_cloud.GetDiscUsageRequest(Common_Utilities.myStorage)
+            response = api.get_disc_usage(request)
+            
+            print("Expected response type is DiscUsage: " + str(response))
+        except groupdocs_conversion_cloud.ApiException as e:
+            print("Exception while calling API: {0}".format(e.message))
+```
 
 {{< /tab >}} {{< tab "Go" >}}
 
