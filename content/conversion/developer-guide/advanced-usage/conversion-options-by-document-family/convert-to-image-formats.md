@@ -1006,3 +1006,228 @@ func ConvertToImage() {
 ```
 
 {{< /tab >}} {{< /tabs >}}
+
+## Convert to PNG with Background Color
+
+This example demonstrates how to convert documents to PNG format with a specified background color.
+
+### SDK examples
+
+The API is completely independent of your operating system, database system or development language. We provide and support API SDKs in many development languages in order to make it even easier to integrate. You can see our available SDKs list [here](https://github.com/groupdocs-conversion-cloud).
+
+{{< tabs "example7">}} {{< tab "C#" >}}
+
+```csharp
+// filepath: d:\GroupDocsCloud\Conversion\Docs\content\conversion\developer-guide\advanced-usage\conversion-options-by-document-family\convert-to-image-formats.md
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
+string MyAppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+string MyAppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+var configuration = new Configuration(MyAppSid, MyAppKey);
+  
+// Create necessary API instances
+var apiInstance = new ConvertApi(configuration);
+ 
+// Prepare convert settings
+var settings = new ConvertSettings
+{
+    FilePath = "WordProcessing/four-pages.docx",
+    Format = "png",
+    ConvertOptions = new PngConvertOptions
+    {
+        FromPage = 1,
+        PagesCount = 2,
+        BackgroundColor = "white"
+    },
+    OutputPath = "converted"
+};
+ 
+// Convert to specified format
+var response = apiInstance.ConvertDocument(new ConvertDocumentRequest(settings));
+```
+
+{{< /tab >}} {{< tab "Java" >}}
+
+```java
+// filepath: d:\GroupDocsCloud\Conversion\Docs\content\conversion\developer-guide\advanced-usage\conversion-options-by-document-family\convert-to-image-formats.md
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
+String MyAppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+String MyAppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+Configuration configuration = new Configuration(MyAppSid, MyAppKey);
+  
+// Create API instance
+ConvertApi apiInstance = new ConvertApi(configuration);
+ 
+// Prepare convert settings
+ConvertSettings settings = new ConvertSettings();
+settings.setFilePath("WordProcessing/four-pages.docx");
+settings.setFormat("png");
+ 
+PngConvertOptions convertOptions = new PngConvertOptions();
+convertOptions.setFromPage(1);
+convertOptions.setPagesCount(2);
+convertOptions.setBackgroundColor("white");
+
+settings.setConvertOptions(convertOptions);
+settings.setOutputPath("converted");
+ 
+List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
+```
+
+{{< /tab >}} {{< tab "PHP" >}}
+
+```php
+// filepath: d:\GroupDocsCloud\Conversion\Docs\content\conversion\developer-guide\advanced-usage\conversion-options-by-document-family\convert-to-image-formats.md
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model;
+use GroupDocs\Conversion\Model\Requests;
+ 
+$AppSid = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+$AppKey = ""; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($AppSid);
+$configuration->setAppKey($AppKey);
+ 
+$apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
+ 
+// Prepare convert settings
+$settings = new Model\ConvertSettings();
+$settings->setFilePath("WordProcessing/four-pages.docx");
+$settings->setFormat("png");
+ 
+$convertOptions = new Model\PngConvertOptions();
+$convertOptions->setFromPage(1);
+$convertOptions->setPagesCount(2);
+$convertOptions->setBackgroundColor("white");
+ 
+$settings->setConvertOptions($convertOptions);
+$settings->setOutputPath("converted");
+ 
+// Convert
+$result = $apiInstance->convertDocument(new Requests\ConvertDocumentRequest($settings));
+```
+
+{{< /tab >}} {{< tab "Ruby" >}}
+
+```ruby
+# filepath: d:\GroupDocsCloud\Conversion\Docs\content\conversion\developer-guide\advanced-usage\conversion-options-by-document-family\convert-to-image-formats.md
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples
+require 'groupdocs_conversion_cloud'
+ 
+$app_sid = "XXXX-XXXX-XXXX-XXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+$app_key = "XXXXXXXXXXXXXXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+# Create necessary API instances
+apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($app_sid, $app_key)
+ 
+# Prepare convert settings
+settings = GroupDocsConversionCloud::ConvertSettings.new
+settings.file_path = "WordProcessing/four-pages.docx"
+settings.format = "png"
+convertOptions = GroupDocsConversionCloud::PngConvertOptions.new
+convertOptions.from_page = 1
+convertOptions.pages_count = 2
+convertOptions.background_color = "white"
+settings.convert_options = convertOptions
+settings.output_path = "converted"
+ 
+# Convert
+result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentRequest.new(settings))
+```
+
+{{< /tab >}} {{< tab "Node.js" >}}
+
+```js
+// filepath: d:\GroupDocsCloud\Conversion\Docs\content\conversion\developer-guide\advanced-usage\conversion-options-by-document-family\convert-to-image-formats.md
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
+global.conversion_cloud = require("groupdocs-conversion-cloud");
+ 
+global.appSid = "XXXX-XXXX-XXXX-XXXX"; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+global.appKey = "XXXXXXXXXXXXXXXX"; // Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+global.convertApi = conversion_cloud.ConvertApi.fromKeys(appSid, appKey);
+ 
+let settings = new conversion_cloud.ConvertSettings();
+settings.filePath = "WordProcessing/four-pages.docx";
+settings.format = "png";
+ 
+let convertOptions = new conversion_cloud.PngConvertOptions();
+convertOptions.fromPage = 1;
+convertOptions.pagesCount = 2;
+convertOptions.backgroundColor = "white";
+ 
+settings.convertOptions = convertOptions
+settings.outputPath = "converted";
+ 
+let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocumentRequest(settings));
+```
+
+{{< /tab >}} {{< tab "Python" >}}
+
+```python
+# filepath: d:\GroupDocsCloud\Conversion\Docs\content\conversion\developer-guide\advanced-usage\conversion-options-by-document-family\convert-to-image-formats.md
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
+import groupdocs_conversion_cloud
+ 
+app_sid = "XXXX-XXXX-XXXX-XXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+app_key = "XXXXXXXXXXXXXXXX" # Get AppKey and AppSID from https://dashboard.groupdocs.cloud
+  
+# Create necessary API instances
+apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.app_sid, Common.app_key)
+ 
+# Prepare convert settings
+settings = groupdocs_conversion_cloud.ConvertSettings()
+settings.file_path = "WordProcessing/four-pages.docx"
+settings.format = "png"
+convertOptions = groupdocs_conversion_cloud.PngConvertOptions() 
+convertOptions.from_page = 1
+convertOptions.pages_count = 2
+convertOptions.background_color = "white"
+settings.convert_options = convertOptions
+settings.output_path = "converted"
+ 
+# Convert
+result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocumentRequest(settings))
+```
+
+{{< /tab >}} {{< tab "Go" >}}
+
+```go
+// filepath: d:\GroupDocsCloud\Conversion\Docs\content\conversion\developer-guide\advanced-usage\conversion-options-by-document-family\convert-to-image-formats.md
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
+
+import (
+ "fmt"
+
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+ "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+)
+
+func ConvertToPng() {
+
+ settings := models.ConvertSettings{
+  Format:     "png",
+  FilePath:   "WordProcessing/four-pages.docx",
+  OutputPath: "converted",
+  ConvertOptions: &models.PngConvertOptions{
+   FromPage:   1,
+   PagesCount: 2,
+   BackgroundColor: "white",
+  },
+ }
+
+ result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+
+ if err != nil {
+  fmt.Printf("ConvertToPng error: %v\n", err)
+  return
+ }
+
+ fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+}
+```
+
+{{< /tab >}} {{< /tabs >}}

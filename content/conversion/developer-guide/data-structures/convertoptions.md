@@ -95,6 +95,7 @@ toc: True
 |verticalResolution|Desired image vertical resolution after conversion.
 |grayscale|Convert to grayscale image
 |rotateAngle|Image conversion angle
+|backgroundColor|Background color of the image after conversion (default is transparent)
 |fromPage|Start conversion from specified page number
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
@@ -110,6 +111,7 @@ toc: True
   "verticalResolution": 72,
   "grayscale": false,
   "rotateAngle": 0,
+  "backgroundColor": "white",
   "fromPage": 1,
   "pagesCount": 10,
   "pages": [2,4,6],
@@ -130,6 +132,7 @@ toc: True
 |quality|Desired image quality when converting to Jpeg
 |grayscale|Convert to grayscale image
 |rotateAngle|Image conversion angle
+|backgroundColor|Background color of the image after conversion (default is transparent)
 |fromPage|Start conversion from specified page number
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
@@ -146,6 +149,7 @@ toc: True
   "quality": 95,
   "grayscale": false,
   "rotateAngle": 0,
+  "backgroundColor": "white",
   "fromPage": 1,
   "pagesCount": 10,
   "pages": [2,4,6],
@@ -166,6 +170,7 @@ toc: True
 |compression|Tiff compression
 |grayscale|Convert to grayscale image
 |rotateAngle|Image conversion angle
+|backgroundColor|Background color of the image after conversion (default is transparent)
 |fromPage|Start conversion from specified page number
 |pagesCount|Convert pagesCount from specified page
 |pages|An array with set of pages to be converted
@@ -182,6 +187,7 @@ toc: True
   "compression": "lzw",
   "grayscale": false,
   "rotateAngle": 0,
+  "backgroundColor": "white",
   "fromPage": 1,
   "pagesCount": 10,
   "pages": [2,4,6],
