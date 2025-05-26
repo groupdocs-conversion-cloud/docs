@@ -94,7 +94,7 @@ var apiInstance = new ConvertApi(configuration);
 // Prepare convert settings
 var loadOptions = new SpreadsheetLoadOptions
 {
-    HideComments = true,
+    PrintComments = SpreadsheetLoadOptions.PrintCommentsEnum.PrintNoComments,
     OnePagePerSheet = true,
 };
 var settings = new ConvertSettings
@@ -130,9 +130,9 @@ $settings = new Model\ConvertSettings();
 $settings->setFilePath("Spreadsheet/sample.xlsx");
 $settings->setFormat("pdf");
  
-$loadOptions = new Model\SpreadsheetLoadOptions();      
-$loadOptions->setHideComments(true);
-$loadOptions->setOnePagePerSheet(true);     
+$loadOptions = new Model\SpreadsheetLoadOptions();		
+$loadOptions->setPrintComments(Model\SpreadsheetLoadOptions::PRINT_COMMENTS_PRINT_NO_COMMENTS);
+$loadOptions->setOnePagePerSheet(true);	   
  
 $settings->setLoadOptions($loadOptions);
 $settings->setOutputPath("converted");
@@ -159,7 +159,7 @@ settings.setFilePath("Spreadsheet/sample.xlsx");
 settings.setFormat("pdf");
  
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-loadOptions.setHideComments(true);
+loadOptions.setPrintComments(PrintCommentsEnum.PRINTNOCOMMENTS);
 loadOptions.setOnePagePerSheet(true);
  
 settings.setLoadOptions(loadOptions);
@@ -185,9 +185,9 @@ settings = GroupDocsConversionCloud::ConvertSettings.new
 settings.file_path = "Spreadsheet/sample.xlsx"
 settings.format = "pdf"
  
-loadOptions = GroupDocsConversionCloud::SpreadsheetLoadOptions.new
-loadOptions.hide_comments = true
-loadOptions.one_page_per_sheet = true
+loadOptions = groupdocs_conversion_cloud.SpreadsheetLoadOptions()
+loadOptions.print_comments = "PrintNoComments"
+loadOptions.one_page_per_sheet = True
  
 settings.load_options = loadOptions
 settings.output_path = "converted"
@@ -212,7 +212,7 @@ settings.filePath = "Spreadsheet/sample.xlsx";
 settings.format = "pdf";
  
 let loadOptions = new conversion_cloud.SpreadsheetLoadOptions();
-loadOptions.hideComments = true;
+loadOptions.printComments = conversion_cloud.SpreadsheetLoadOptions.PrintCommentsEnum.PrintNoComments;
 loadOptions.onePagePerSheet = true;
  
 settings.loadOptions = loadOptions;
@@ -239,7 +239,7 @@ settings.file_path = "Spreadsheet/sample.xlsx"
 settings.format = "pdf"
  
 loadOptions = groupdocs_conversion_cloud.SpreadsheetLoadOptions()
-loadOptions.hide_comments = True
+loadOptions.print_comments = "PrintNoComments"
 loadOptions.one_page_per_sheet = True
  
 settings.load_options = loadOptions
@@ -256,32 +256,32 @@ result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocument
 package spreadsheet
 
 import (
- "fmt"
+	"fmt"
 
- "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
- "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+	"github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+	"github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
 )
 
-func ConvertSpreadsheetByShowingGridLines() {
+func ConvertSpreadsheetAndHideComments() {
 
- settings := models.ConvertSettings{
-  Format:     "pdf",
-  FilePath:   "Spreadsheet/sample.xlsx",
-  OutputPath: "converted",
-  LoadOptions: &models.SpreadsheetLoadOptions{
-   ShowGridLines:   true,
-   OnePagePerSheet: true,
-  },
- }
+	settings := models.ConvertSettings{
+		Format:     "pdf",
+		FilePath:   "Spreadsheet/sample.xlsx",
+		OutputPath: "converted",
+		LoadOptions: &models.SpreadsheetLoadOptions{
+			PrintComments:   models.PrintCommentsEnumPrintNoComments,
+			OnePagePerSheet: true,
+		},
+	}
 
- result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+	result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
 
- if err != nil {
-  fmt.Printf("ConvertSpreadsheetByShowingGridLines error: %v\n", err)
-  return
- }
+	if err != nil {
+		fmt.Printf("ConvertSpreadsheetAndHideComments error: %v\n", err)
+		return
+	}
 
- fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+	fmt.Printf("Document converted successfully: %v\n", result[0].Url)
 }
 ```
 

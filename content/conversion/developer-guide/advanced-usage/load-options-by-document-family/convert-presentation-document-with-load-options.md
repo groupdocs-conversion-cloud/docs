@@ -93,7 +93,7 @@ var apiInstance = new ConvertApi(configuration);
 // Prepare convert settings
 var loadOptions = new PresentationLoadOptions
 {
-    HideComments = true
+    CommentsPosition = PresentationLoadOptions.CommentsPositionEnum.None
 };
 var settings = new ConvertSettings
 {
@@ -130,7 +130,7 @@ $settings->setFilePath("Presentation/with_notes.pptx");
 $settings->setFormat("pdf");
  
 $loadOptions = new Model\PresentationLoadOptions();
-$loadOptions->setHideComments(true);
+$loadOptions->setCommentsPosition(Model\PresentationLoadOptions::COMMENTS_POSITION_NONE);
  
 $settings->setLoadOptions($loadOptions);
 $settings->setOutputPath("converted");
@@ -157,7 +157,7 @@ settings.setFilePath("Presentation/with_notes.pptx");
 settings.setFormat("pdf");
  
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-loadOptions.setHideComments(true);
+loadOptions.setCommentsPosition(CommentsPositionEnum.NONE);
  
 settings.setLoadOptions(loadOptions);
 settings.setOutputPath("converted");
@@ -183,7 +183,7 @@ settings.file_path = "Presentation/with_notes.pptx"
 settings.format = "pdf"
  
 loadOptions = GroupDocsConversionCloud::PresentationLoadOptions.new
-loadOptions.hide_comments = true
+loadOptions.comments_position = "None"
  
 settings.load_options = loadOptions
 settings.output_path = "converted"
@@ -208,7 +208,7 @@ settings.filePath = "Presentation/with_notes.pptx";
 settings.format = "pdf";
  
 let loadOptions = new conversion_cloud.PresentationLoadOptions();
-loadOptions.hideComments = true;        
+loadOptions.commentsPosition = conversion_cloud.PresentationLoadOptions.CommentsPositionEnum.None;
  
 settings.loadOptions = loadOptions;
 settings.outputPath = "converted";
@@ -234,7 +234,7 @@ settings.file_path = "Presentation/with_notes.pptx"
 settings.format = "pdf"
  
 loadOptions = groupdocs_conversion_cloud.PresentationLoadOptions()
-loadOptions.hide_comments = True
+loadOptions.comments_position = "None"
  
 settings.load_options = loadOptions
 settings.output_path = "converted"
@@ -250,33 +250,34 @@ result = apiInstance.convert_document(groupdocs_conversion_cloud.ConvertDocument
 package presentation
 
 import (
- "fmt"
+	"fmt"
 
- "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
- "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
+	"github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
+	"github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go/models"
 )
 
-func ConvertPresentationWithHiddenSlidesIncluded() {
+func ConvertPresentationByHidingComments() {
 
- settings := models.ConvertSettings{
-  Format:     "pdf",
-  FilePath:   "Presentation/with_hidden_page.pptx",
-  OutputPath: "converted",
-  LoadOptions: &models.PresentationLoadOptions{
-   Format:           "pptx",
-   ShowHiddenSlides: true,
-  },
- }
+	settings := models.ConvertSettings{
+		Format:     "pdf",
+		FilePath:   "Presentation/with_notes.pptx",
+		OutputPath: "converted",
+		LoadOptions: &models.PresentationLoadOptions{
+			Format:           "pptx",
+			CommentsPosition: models.CommentsPositionEnumNone,
+		},
+	}
 
- result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
+	result, _, err := config.Client.ConvertApi.ConvertDocument(config.Ctx, settings)
 
- if err != nil {
-  fmt.Printf("ConvertPresentationWithHiddenSlidesIncluded error: %v\n", err)
-  return
- }
+	if err != nil {
+		fmt.Printf("ConvertPresentationByHidingComments error: %v\n", err)
+		return
+	}
 
- fmt.Printf("Document converted successfully: %v\n", result[0].Url)
+	fmt.Printf("Document converted successfully: %v\n", result[0].Url)
 }
+
 ```
 
 {{< /tab >}} {{< /tabs >}}

@@ -36,7 +36,7 @@ keywords: ""
 |convertRange|Convert specific range when converting to other than cells format. Example: "D1:F8"
 |skipEmptyRowsAndColumns|Skips empty rows and columns when converting
 |password|Password to unprotect protected document
-|hideComment|Hide comments
+|printComments|Represents the way comments are printed with the sheet. Default is PrintNoComments. Values: PrintInPlace, PrintNoComments, PrintSheetEnd, PrintWithThreadedComments.
 
 ```json
 {
@@ -48,7 +48,7 @@ keywords: ""
   "convertRange": "",
   "skipEmptyRowsAndColumns": true,
   "password": "Pass123",
-  "hideComment": true
+  "printComments": "PrintNoComments"
 }
 ```
 
@@ -168,12 +168,19 @@ keywords: ""
 
 | Properties | Description
 |---|---
-|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
-|defaultFont|Default font for rendering the presentation
-|fontSubstitutes|Substitute specific fonts when converting Slides document
-|password|Password to unprotect protected document
-|showHiddenSlides|Show hidden slides
-|hideComment|Hide comments
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accepts input file as binary stream, so the API can correctly handle LoadOptions.
+|defaultFont|Default font for rendering the presentation.
+|fontSubstitutes|Substitute specific fonts when converting Slides document.
+|password|Password to unprotect protected document.
+|showHiddenSlides|Show hidden slides.
+|commentsPosition|Represents the way comments are printed with the slide. Default is None. Values: None, Bottom, Right.
+|notesPosition|Represents the way notes are printed with the slide. Default is None. Values: None, BottomTruncated, BottomFull.
+|preserveDocumentStructure|Determines whether the document structure should be preserved when converting to PDF (default is false).
+|clearCustomDocumentProperties|Value indicating whether custom document properties should be cleared.
+|clearBuiltInDocumentProperties|Value indicating whether built-in document properties should be cleared.
+|convertOwned|Option to control whether the owned documents in the documents container must be converted.
+|convertOwner|Option to control whether the documents container itself must be converted. If this property is true, the documents container will be the first converted document. Default is true.
+|depth|Option to control how many levels in depth to perform conversion. Default: 1
 
 ```json
 {
@@ -181,7 +188,14 @@ keywords: ""
   "fontSubstitutes": [],
   "password": "Pass123",
   "showHiddenSlides": false,
-  "hideComment": true
+  "commentsPosition": "None",
+  "notesPosition": "None",
+  "preserveDocumentStructure": false,
+  "clearCustomDocumentProperties": false,
+  "clearBuiltInDocumentProperties": false,
+  "convertOwned": false,
+  "convertOwner": true,
+  "depth": 1
 }
 ```
 
