@@ -51,7 +51,7 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
         'FilePath': 'WordProcessing/with_tracked_changes.docx',
         'Format': 'pdf',
         'LoadOptions': {
-            'HideComments': true
+            'CommentDisplayMode': 'Hidden'
         },
         'OutputPath': 'Output'
     }"
@@ -93,7 +93,7 @@ var apiInstance = new ConvertApi(configuration);
 // Prepare convert settings
 var loadOptions = new WordProcessingLoadOptions
 {
-    HideComments = true
+    CommentDisplayMode = WordProcessingLoadOptions.CommentDisplayModeEnum.Hidden
 };
 var settings = new ConvertSettings
 {
@@ -129,7 +129,7 @@ $settings->setFilePath("WordProcessing/with_tracked_changes.docx");
 $settings->setFormat("pdf");
  
 $loadOptions = new Model\WordProcessingLoadOptions();       
-$loadOptions->setHideComments(true);
+$loadOptions->setCommentDisplayMode(Model\WordProcessingLoadOptions::COMMENT_DISPLAY_MODE_HIDDEN);
  
 $settings->setLoadOptions($loadOptions);
 $settings->setOutputPath("converted");
@@ -156,7 +156,7 @@ settings.setFilePath("WordProcessing/with_tracked_changes.docx");
 settings.setFormat("pdf");
  
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();            
-loadOptions.setHideComments(true);
+loadOptions.setCommentDisplayMode(CommentDisplayModeEnum.HIDDEN);
  
 settings.setLoadOptions(loadOptions);
 settings.setOutputPath("converted");
@@ -182,7 +182,7 @@ settings.file_path = "WordProcessing/with_tracked_changes.docx"
 settings.format = "pdf"
  
 loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new
-loadOptions.hide_comments = true
+loadOptions.comment_display_mode = "Hidden"
  
 settings.load_options = loadOptions
 settings.output_path = "converted"
@@ -207,7 +207,7 @@ settings.filePath = "WordProcessing/with_tracked_changes.docx";
 settings.format = "pdf";
  
 let loadOptions = new conversion_cloud.WordProcessingLoadOptions();
-loadOptions.hideComments = true;
+loadOptions.commentDisplayMode = conversion_cloud.WordProcessingLoadOptions.CommentDisplayModeEnum.Hidden;
  
 settings.loadOptions = loadOptions;
 settings.outputPath = "converted";
@@ -233,7 +233,7 @@ settings.file_path = "WordProcessing/with_tracked_changes.docx"
 settings.format = "pdf"
  
 loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
-loadOptions.hide_comments = True
+loadOptions.comment_display_mode = "Hidden"
  
 settings.load_options = loadOptions
 settings.output_path = "converted"
@@ -262,7 +262,7 @@ func ConvertWordProcessingByHidingTrackedChanges() {
   FilePath:   "WordProcessing/with_tracked_changes.docx",
   OutputPath: "converted",
   LoadOptions: &models.WordProcessingLoadOptions{
-   HideWordTrackedChanges: true,
+   CommentDisplayMode: models.CommentDisplayModeEnumHidden,
   },
  }
 

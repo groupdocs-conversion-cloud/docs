@@ -220,22 +220,54 @@ keywords: ""
 
 | Properties | Description
 |---|---
-|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accept input file as binary stream, and, because of that, API can correctly handle LoadOptions.
-|defaultFont|Default font for Words document
-|fontSubstitutes|Substitute specific fonts when converting Words document
-|autoFontSubstitution|Enable or disable auto font substitution
-|password|Password to unprotect protected document
-|hideWordTrackedChanges|Hide markup and track changes for Word documents
-|hideComment|Hide comments
+|format|The format of input file, ("docx", for example). This field must be filled with correct input file format when using ConvertDirect method, which accepts input file as binary stream, so the API can correctly handle LoadOptions.
+|defaultFont|Default font for Words document.
+|fontSubstitutes|Substitute specific fonts when converting Words document.
+|password|Password to unprotect protected document.
+|hideWordTrackedChanges|Hide markup and track changes for Word documents.
+|clearCustomDocumentProperties|Clear custom document properties. Default is false.
+|clearBuiltInDocumentProperties|Clear built-in document properties. Default is false.
+|depth|Option to control how many levels in depth to perform conversion. Default: 1.
+|convertOwned|Option to control whether the owned documents in the documents container must be converted.
+|convertOwner|Option to control whether the documents container itself must be converted. If this property is true, the documents container will be the first converted document. Default is true.
+|pageNumbering|Enable or disable generation of page numbering in converted document. Default: false.
+|skipExternalResources|If true, all external resources will not be loaded. Default is true.
+|useTextShaper|Specifies whether to use a text shaper for better kerning display. Default is false.
+|preserveFormFields|Specifies whether to preserve Microsoft Word form fields as form fields in PDF or convert them to text. Default is false.
+|commentDisplayMode|Specifies how comments should be displayed in the output document. Default is Balloon.
+|keepDateFieldOriginalValue|Keep original value of date field. Default: false.
+|updateFields|Update fields after loading. Default: false.
+|updatePageLayout|Update page layout after loading. Default: false.
+|embedTrueTypeFonts|If true, GroupDocs.Conversion Cloud embeds true type fonts in the output document. Default: true.
+|fontInfoSubstitutionEnabled|Automatically substitutes missing fonts based on FontInfo in the document. Default: false.
+|fontConfigSubstitutionEnabled|Automatically substitutes missing fonts based on FontConfig in the system. Default: false.
+|fontNameSubstitutionEnabled|Automatically substitutes missing fonts based on the font name. Default: false.
+|showFullCommenterName|Show full commenter name in comments. Default is false.
 
 ```json
 {
   "defaultFont": "Arial",
   "fontSubstitutes": [],
-  "autoFontSubstitution": true,
   "password": "Pass123",
-  "hideWordTrackedChanges": true
-  "hideComment": true
+  "hideWordTrackedChanges": true,
+  "clearCustomDocumentProperties": false,
+  "clearBuiltInDocumentProperties": false,
+  "depth": 1,
+  "convertOwned": false,
+  "convertOwner": true,
+  "pageNumbering": false,
+  "skipExternalResources": true,
+  "useTextShaper": false,
+  "preserveFormFields": false,
+  "commentDisplayMode": "Balloon",
+  "keepDateFieldOriginalValue": false,
+  "updateFields": false,
+  "updatePageLayout": false,
+  "embedTrueTypeFonts": true,
+  "fontInfoSubstitutionEnabled": false,
+  "fontConfigSubstitutionEnabled": false,
+  "fontNameSubstitutionEnabled": false,
+  "showFullCommenterName": false
 }
 ```
 
