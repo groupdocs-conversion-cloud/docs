@@ -25,215 +25,194 @@ GroupDocs Cloud SDK is written in different languages, all you need to get start
 
 ## Make an API request from the SDK of your choice
 
-Use the the **Client Id** and the **Client Secret** from the API app client you created in step one and replace it in the corresponding code. Below is an example demonstrating using the Formats API to get all supported file formats in GroupDocs.Conversion Cloud.
+Use the the **Client Id** and the **Client Secret** from the API app client you created in step one and replace it in the corresponding code. Below is an example demonstrating conversion docx document to pdf.
 
 {{< alert style="info" >}}
 The GitHub repository for [GroupDocs.Conversion Cloud](https://github.com/groupdocs-conversion-cloud) has a complete set of examples, demonstrating our API capabilities.
 {{< /alert >}}
 
-{{< tabs "example1">}} {{< tab "C#" >}}
+{{< tabs "example2">}} {{< tab "C#" >}}
 
 ```csharp
-using System;
-using GroupDocs.Conversion.Cloud.Sdk.Api;
-using GroupDocs.Conversion.Cloud.Sdk.Client;
-using GroupDocs.Conversion.Cloud.Sdk.Model.Requests;
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-dotnet-samples
+string MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+string MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+  
+var configuration = new Configuration(MyClientId, MyClientSecret);
+  
+// Create necessary API instances
+var apiInstance = new ConvertApi(configuration);
 
-namespace GroupDocs.Conversion.Cloud.Examples.CSharp
-{
-    // Get All Supported Formats
-    class Get_All_Supported_Formats
-    {
-        public static void Run()
-        {
-            var configuration = new Configuration(Common.MyAppSid, Common.MyAppKey);
+// Prepare request
+var fileStream = File.Open("..\\..\\..\\Resources\\WordProcessing\\password-protected.docx", FileMode.Open);
+var loadOptions = new DocxLoadOptions();
+loadOptions.Format = "docx";
+loadOptions.Password = "password";
+var request = new ConvertDocumentDirectRequest("pdf", fileStream, null, null, loadOptions);
 
-            var apiInstance = new InfoApi(configuration);
-
-            try
-            {
-                // Get supported file formats
-                var response = apiInstance.GetSupportedConversionTypes(new GetSupportedConversionTypesRequest());
-
-                foreach (var entry in response)
-                {
-                    foreach (var formats in entry.TargetFormats)
-                    {
-                        Console.WriteLine(string.Format("{0} TO {1}", entry.SourceFormat, string.Join(",", formats)));
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception while calling InfoApi: " + e.Message);
-            }
-        }
-    }
-}
-```
-
-{{< /tab >}} {{< tab "PHP" >}}
-
-```php
-<?php
-
-include(dirname(__DIR__) . '\CommonUtils.php');
-
-try {
-    $infoApi = CommonUtils::GetInfoApiInstance();
-
-    $request = new GroupDocs\Conversion\Model\Requests\GetSupportedConversionTypesRequest();
-    $response = $infoApi->getSupportedConversionTypes($request);
-
-    echo '<b>Supported file formats<br /></b>';
-    foreach($response as $key => $format) {
-      echo $format->getSourceFormat(), "<br />";
-    }
-} catch (Exception $e) {
-    echo "Something went wrong: ", $e->getMessage(), "\n";
-}
+// Convert to specified format
+var response = apiInstance.ConvertDocumentDirect(request);
+Console.WriteLine("Document converted successfully: " + response.Length);
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
 
 ```java
-package examples.Supported_File_Formats;
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-java-samples
+String MyClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+String MyClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+  
+Configuration configuration = new Configuration(MyClientId, MyClientSecret);
+  
+// Create API instance
+ConvertApi apiInstance = new ConvertApi(configuration);
 
-import com.groupdocs.cloud.conversion.client.*;
-import com.groupdocs.cloud.conversion.model.*;
-import com.groupdocs.cloud.conversion.model.requests.*;
-import java.util.List;
+File file = new File("examples\\src\\main\\resources\\WordProcessing\\password-protected.docx");
+DocxLoadOptions loadOptions = new DocxLoadOptions();
+loadOptions.setFormat("docx");
+loadOptions.setPassword("password");
 
-import com.groupdocs.cloud.conversion.api.*;
-import examples.Utils;
+ConvertDocumentDirectRequest request = new ConvertDocumentDirectRequest("pdf", file, 1, 0, loadOptions, null); // all pages
 
-public class Conversion_Java_Get_Supported_Formats {
+File result = apiInstance.convertDocumentDirect(request);
 
-    public static void main(String[] args) {
-
-        InfoApi apiInstance = new InfoApi(Utils.AppSID, Utils.AppKey);
-        try {
-            GetSupportedConversionTypesRequest request = new GetSupportedConversionTypesRequest();
-            List<SupportedFormat> response = apiInstance.getSupportedConversionTypes(request);
-
-            for (SupportedFormat entry : response) {
-                for (String formats : entry.getTargetFormats()) {
-                    System.out.println(entry.getSourceFormat() + " TO " + formats);
-                }
-            }
-        } catch (ApiException e) {
-            System.err.println("Exception while calling InfoApi:");
-            e.printStackTrace();
-        }
-    }
-}
+System.out.println("Document converted: " + result.length());
 ```
 
-{{< /tab >}} {{< tab "Ruby" >}}
+{{< /tab >}} {{< tab "PHP" >}}
 
-```ruby
-# Load the gem
-require 'groupdocs_conversion_cloud'
-require 'common_utilities/Utils.rb'
+```php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model;
+use GroupDocs\Conversion\Model\Requests;
 
-class File_Formats
-  def self.Conversion_Ruby_Get_All_Supported_Formats()
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+  
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 
-    # Getting instance of the API
-    api = Common_Utilities.Get_InfoApi_Instance()
+$apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
 
-    $request = GroupDocsConversionCloud::GetSupportedConversionTypesRequest.new()
+// Prepare request
+$filePath = dirname(realpath(__DIR__)) . '\Resources\WordProcessing\password-protected.docx';
+$loadOptions = new Model\DocxLoadOptions();
+$loadOptions->setFormat("docx");
+$loadOptions->setPassword("password");        
+$request = new Requests\ConvertDocumentDirectRequest("pdf", $filePath, null, null, $loadOptions);
 
-    # Retrieve supported file-formats
-    $response = api.get_supported_conversion_types($request)
+// Convert
+$result = $apiInstance->convertDocumentDirect($request);
 
-    # Print out supported file-formats
-    puts("Supported file-formats:")
-    $response.each do |format|
-      puts("#{format.source_format} to [#{format.target_formats.join(', ')}]")
-    end
-  end
-end
+// Done
+echo "Document converted: " . $result->getSize();
 ```
 
 {{< /tab >}} {{< tab "Node.js" >}}
 
 ```js
-"use strict";
-class Conversion_Node_Get_All_Supported_Formats {
-    static Run() {
-        // retrieve supported file-formats
-        var request = new groupdocs_conversion_cloud_1.GetSupportedConversionTypesRequest();
-        infoApi.getSupportedConversionTypes(request)
-            .then(function (response) {
-                console.log("Supported file-formats:");
-                response.forEach(function (format) {
-                    console.log(format.sourceFormat + " - To - " + format.targetFormats + "\n");
-                });
-            })
-            .catch(function (error) {
-                console.log("Error: " + error.message);
-            });
-    }
-}
-module.exports = Conversion_Node_Get_All_Supported_Formats;
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-node-samples
+global.conversion_cloud = require("groupdocs-conversion-cloud");
+
+global.clientId = "XXXX-XXXX-XXXX-XXXX"; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+global.clientSecret = "XXXXXXXXXXXXXXXX"; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+  
+global.convertApi = conversion_cloud.ConvertApi.fromKeys(clientId, clientSecret);
+
+let file = fs.readFileSync('./Resources/WordProcessing/password-protected.docx');
+let loadOptions = new conversion_cloud.DocxLoadOptions();
+loadOptions.format = "docx";
+loadOptions.password = "password";
+let request = new conversion_cloud.ConvertDocumentDirectRequest("pdf", file, undefined, undefined, loadOptions);
+
+let result = await convertApi.convertDocumentDirect(request);
+
+console.log("Document converted: " + result.length);
 ```
 
 {{< /tab >}} {{< tab "Python" >}}
 
 ```python
-# Import modules
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-python-samples
 import groupdocs_conversion_cloud
-from Common_Utilities.Utils import Common_Utilities
 
-class Conversion_Python_Get_All_Supported_Formats:
-    
-    @classmethod
-    def Run(self):
-        # Create instance of the API
-        api = Common_Utilities.Get_InfoApi_Instance()
-        
-        try:
-            # Retrieve supported conversion types
-            request = groupdocs_conversion_cloud.GetSupportedConversionTypesRequest()
-            response = api.get_supported_conversion_types(request)
-            
-            # Print out supported conversion types
-            print("Supported conversion types:")
-            for fileformat in response:
-                print('{0} to [{1}]'.format(fileformat.source_format, ', '.join(fileformat.target_formats))) 
-        except groupdocs_conversion_cloud.ApiException as e:
-            print("Exception when calling get_supported_conversion_types: {0}".format(e.message))
+client_id = "XXXX-XXXX-XXXX-XXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+  
+# Create necessary API instances
+apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.client_id, Common.client_secret)
+
+# Prepare request
+load_options = groupdocs_conversion_cloud.DocxLoadOptions()
+load_options.format = "docx"
+load_options.password = "password"
+request = groupdocs_conversion_cloud.ConvertDocumentDirectRequest("pdf", "Resources\\WordProcessing\\password-protected.docx", None, None, load_options)
+
+# Convert
+result = apiInstance.convert_document_direct(request)
+
+print("Document converted: " + result)
+```
+
+{{< /tab >}} {{< tab "Ruby" >}}
+
+```ruby
+# For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples
+require 'groupdocs_conversion_cloud'
+
+$client_id = "XXXX-XXXX-XXXX-XXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+  
+# Create necessary API instances
+apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($client_id, $client_secret)
+
+# Prepare request
+file = File.open("Resources\\WordProcessing\\password-protected.docx", "r")
+load_options = GroupDocsConversionCloud::DocxLoadOptions.new
+load_options.format = "docx"
+load_options.password = "password"
+request = GroupDocsConversionCloud::ConvertDocumentDirectRequest.new("pdf", file, nil, nil, load_options)
+
+# Convert
+result = apiInstance.convert_document_direct(request)
+
+puts("Document converted: " + (result.length).to_s)
 ```
 
 {{< /tab >}} {{< tab "Go" >}}
 
 ```go
-//  For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
-package info
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples
+package convert
 
 import (
  "fmt"
+ "os"
 
- "github.com/antihax/optional"
- conversion "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go"
  "github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-go-samples/config"
 )
 
-func GetSupportedConversions() {
+func ConvertToPdfDirect() {
 
- opts := &conversion.InfoApiGetSupportedConversionTypesOpts{
-  Format: optional.NewString("docx"),
+ path := "./Resources/WordProcessing/four-pages.docx"
+ localFile, err := os.Open(path)
+ if err != nil {
+  fmt.Printf("Failed to open file %s: %v\n", path, err)
+  return
  }
+ defer localFile.Close()
 
- response, _, err := config.Client.InfoApi.GetSupportedConversionTypes(config.Ctx, opts)
+ result, _, err := config.Client.ConvertApi.ConvertDocumentDirect(config.Ctx, "pdf", localFile, nil)
 
  if err != nil {
-  fmt.Printf("GetSupportedConversions error: %v\n", err)
+  fmt.Printf("ConvertToPdfDirect error: %v\n", err)
   return
  }
 
- fmt.Printf("response.length: %v\n", len(response))
+ fi, _ := result.Stat()
+
+ fmt.Printf("Document converted successfully: %v\n", fi.Size())
 }
 ```
 
