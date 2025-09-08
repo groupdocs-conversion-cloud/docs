@@ -77,7 +77,7 @@ var apiInstance = new ConvertApi(configuration);
 
 // Prepare request
 var fileStream = File.Open("..\\..\\..\\Resources\\WordProcessing\\password-protected.docx", FileMode.Open);
-var loadOptions = new DocxLoadOptions();
+var loadOptions = new WordProcessingLoadOptions();
 loadOptions.Format = "docx";
 loadOptions.Password = "password";
 var request = new ConvertDocumentDirectRequest("pdf", fileStream, null, null, loadOptions);
@@ -100,7 +100,7 @@ Configuration configuration = new Configuration(MyClientId, MyClientSecret);
 ConvertApi apiInstance = new ConvertApi(configuration);
 
 File file = new File("examples\\src\\main\\resources\\WordProcessing\\password-protected.docx");
-DocxLoadOptions loadOptions = new DocxLoadOptions();
+WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setFormat("docx");
 loadOptions.setPassword("password");
 
@@ -129,7 +129,7 @@ $apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
 
 // Prepare request
 $filePath = dirname(realpath(__DIR__)) . '\Resources\WordProcessing\password-protected.docx';
-$loadOptions = new Model\DocxLoadOptions();
+$loadOptions = new Model\WordProcessingLoadOptions();
 $loadOptions->setFormat("docx");
 $loadOptions->setPassword("password");        
 $request = new Requests\ConvertDocumentDirectRequest("pdf", $filePath, null, null, $loadOptions);
@@ -153,7 +153,7 @@ global.clientSecret = "XXXXXXXXXXXXXXXX"; // Get ClientId and ClientSecret from 
 global.convertApi = conversion_cloud.ConvertApi.fromKeys(clientId, clientSecret);
 
 let file = fs.readFileSync('./Resources/WordProcessing/password-protected.docx');
-let loadOptions = new conversion_cloud.DocxLoadOptions();
+let loadOptions = new conversion_cloud.WordProcessingLoadOptions();
 loadOptions.format = "docx";
 loadOptions.password = "password";
 let request = new conversion_cloud.ConvertDocumentDirectRequest("pdf", file, undefined, undefined, loadOptions);
@@ -176,7 +176,7 @@ client_secret = "XXXXXXXXXXXXXXXX" # Get ClientId and ClientSecret from https://
 apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.client_id, Common.client_secret)
 
 # Prepare request
-load_options = groupdocs_conversion_cloud.DocxLoadOptions()
+load_options = groupdocs_conversion_cloud.WordProcessingLoadOptions()
 load_options.format = "docx"
 load_options.password = "password"
 request = groupdocs_conversion_cloud.ConvertDocumentDirectRequest("pdf", "Resources\\WordProcessing\\password-protected.docx", None, None, load_options)
@@ -201,7 +201,7 @@ apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($client_id, $client
 
 # Prepare request
 file = File.open("Resources\\WordProcessing\\password-protected.docx", "r")
-load_options = GroupDocsConversionCloud::DocxLoadOptions.new
+load_options = GroupDocsConversionCloud::WordProcessingLoadOptions.new
 load_options.format = "docx"
 load_options.password = "password"
 request = GroupDocsConversionCloud::ConvertDocumentDirectRequest.new("pdf", file, nil, nil, load_options)

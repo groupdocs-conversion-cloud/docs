@@ -24,7 +24,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 {{< tabs "example1">}} {{< tab "Request" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \"converted/topdf\"}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \"converted/topdf\"}"
 
 ```
 
@@ -73,7 +73,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/password-protected.docx",
                     Format = "pdf",
-                    LoadOptions = new DocxLoadOptions() { Password = "password" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "password" },
                     ConvertOptions = new PdfConvertOptions()
                     {
                         BookmarksOutlineLevel = 1,
@@ -130,7 +130,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("pdf");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -202,7 +202,7 @@ public class Conversion_Java_Convert_To_Pdf {
             settings.setFilePath("conversions\\password-protected.docx");
             settings.setFormat("pdf");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("password");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -268,7 +268,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/password-protected.docx"
     $settings.format = "pdf"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.password = "password"
 
     $settings.load_options = $loadOptions;
@@ -319,7 +319,7 @@ class Conversion_Node_Convert_To_Pdf {
         settings.filePath = "conversions/password-protected.docx";
         settings.format = "pdf";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.password = "password";
 
         settings.loadOptions = loadOptions;
@@ -384,7 +384,7 @@ class Conversion_Python_Convert_To_Pdf:
             settings.file_path = "conversions\\password-protected.docx"
             settings.format = "jpeg"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.password = "password"
             
             settings.load_options = loadOptions;
@@ -469,7 +469,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 {{< tabs "example3">}} {{< tab "Request" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \""}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \""}"
 
 ```
 
@@ -515,7 +515,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/password-protected.docx",
                     Format = "pdf",
-                    LoadOptions = new DocxLoadOptions() { Password = "password" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "password" },
                     ConvertOptions = new PdfConvertOptions()
                     {
                         BookmarksOutlineLevel = 1,
@@ -572,7 +572,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("pdf");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -645,7 +645,7 @@ public class Conversion_Java_Convert_To_Pdf_Stream {
             settings.setFilePath("conversions\\password-protected.docx");
             settings.setFormat("pdf");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("password");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -710,7 +710,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/password-protected.docx"
     $settings.format = "pdf"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.password = "password"
 
     $settings.load_options = $loadOptions;
@@ -761,7 +761,7 @@ class Conversion_Node_Convert_To_Pdf_Stream {
         settings.filePath = "conversions/password-protected.docx";
         settings.format = "pdf";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.password = "password";
 
         settings.loadOptions = loadOptions;
@@ -826,7 +826,7 @@ class Conversion_Python_Convert_To_Pdf_Stream:
             settings.file_path = "conversions\\password-protected.docx"
             settings.format = "jpeg"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.password = "password"
             
             settings.load_options = loadOptions;
@@ -998,7 +998,7 @@ var settings = new ConvertSettings
 {
     FilePath = "WordProcessing/password-protected.docx",
     Format = "pdf",
-    LoadOptions = new DocxLoadOptions { Password = "password" },
+    LoadOptions = new WordProcessingLoadOptions { Password = "password" },
     ConvertOptions = new PdfConvertOptions
     {
         CenterWindow = true,
@@ -1041,7 +1041,7 @@ ConvertSettings settings = new ConvertSettings();
 settings.setFilePath("WordProcessing/password-protected.docx");
 settings.setFormat("pdf");
  
-DocxLoadOptions loadOptions = new DocxLoadOptions();
+WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setPassword("password");
  
 settings.setLoadOptions(loadOptions);
@@ -1090,7 +1090,7 @@ $apiInstance = new GroupDocs\Conversion\ConvertApi($configuration);
 $settings = new Model\ConvertSettings();
 $settings->setFilePath("WordProcessing/password-protected.docx");
 $settings->setFormat("pdf");
-$loadOptions = new Model\DocxLoadOptions();
+$loadOptions = new Model\WordProcessingLoadOptions();
 $loadOptions->setPassword("password");
 $settings->setLoadOptions($loadOptions);
  
@@ -1136,7 +1136,7 @@ settings = GroupDocsConversionCloud::ConvertSettings.new
 settings.file_path = "WordProcessing/password-protected.docx"
 settings.format = "pdf"
  
-loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new
+loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new
 loadOptions.password = "password"
 convertOptions = GroupDocsConversionCloud::PdfConvertOptions.new
 convertOptions.center_window = true
@@ -1179,7 +1179,7 @@ let settings = new conversion_cloud.ConvertSettings();
 settings.filePath = "WordProcessing/password-protected.docx";
 settings.format = "pdf";
  
-let loadOptions = new conversion_cloud.DocxLoadOptions();
+let loadOptions = new conversion_cloud.WordProcessingLoadOptions();
 loadOptions.password = "password";
  
 settings.loadOptions = loadOptions;
@@ -1223,7 +1223,7 @@ settings = groupdocs_conversion_cloud.ConvertSettings()
 settings.file_path = "WordProcessing/password-protected.docx"
 settings.format = "pdf"
  
-loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
 loadOptions.password = "password"
 convertOptions = groupdocs_conversion_cloud.PdfConvertOptions()
 convertOptions.center_window = True

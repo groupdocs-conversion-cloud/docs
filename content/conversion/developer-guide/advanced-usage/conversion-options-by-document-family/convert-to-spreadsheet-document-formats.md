@@ -72,7 +72,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/password-protected.docx",
                     Format = "xlsx",
-                    LoadOptions = new DocxLoadOptions() { Password = "password" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "password" },
                     ConvertOptions = new XlsxConvertOptions() { FromPage = 1, PagesCount = 1, Password = "password", UsePdf = false },
                     OutputPath = "converted/tocells"
                 };
@@ -107,7 +107,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\sample.docx");
         $settings->setFormat("xlsx");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("");
         $loadOptions->setHideWordTrackedChanges(true);
 
@@ -158,7 +158,7 @@ public class Conversion_Java_Convert_To_Cells {
             settings.setFilePath("conversions\\password-protected.docx");
             settings.setFormat("xlsx");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("password");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -204,7 +204,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/password-protected.docx"
     $settings.format = "xlsx"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.password = "password"
 
     $settings.load_options = $loadOptions;
@@ -238,7 +238,7 @@ class Conversion_Node_Convert_To_Cells {
         settings.filePath = "conversions/password-protected.docx";
         settings.format = "xlsx";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.password = "password";
 
         settings.loadOptions = loadOptions;
@@ -286,7 +286,7 @@ class Conversion_Python_Convert_To_Cells:
             settings.file_path = "conversions\\password-protected.docx"
             settings.format = "xlsx"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.password = "password"
             
             settings.load_options = loadOptions;
@@ -400,7 +400,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/password-protected.docx",
                     Format = "xlsx",
-                    LoadOptions = new DocxLoadOptions() { Password = "password" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "password" },
                     ConvertOptions = new XlsxConvertOptions() { FromPage = 1, PagesCount = 1, Password = "password", UsePdf = false },
                     OutputPath = null // set OutputPath as null will result the output as document IOStream
                 };
@@ -435,7 +435,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\sample.docx");
         $settings->setFormat("xlsx");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("");
         $loadOptions->setHideWordTrackedChanges(true);
 
@@ -487,7 +487,7 @@ public class Conversion_Java_Convert_To_Cells_Stream {
             settings.setFilePath("conversions\\password-protected.docx");
             settings.setFormat("xlsx");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("password");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -534,7 +534,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/password-protected.docx"
     $settings.format = "xlsx"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.password = "password"
 
     $settings.load_options = $loadOptions;
@@ -568,7 +568,7 @@ class Conversion_Node_Convert_To_Cells_Stream {
         settings.filePath = "conversions/password-protected.docx";
         settings.format = "xlsx";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.password = "password";
 
         settings.loadOptions = loadOptions;
@@ -616,7 +616,7 @@ class Conversion_Python_Convert_To_Cells_Stream:
             settings.file_path = "conversions\\password-protected.docx"
             settings.format = "xlsx"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.password = "password"
             
             settings.load_options = loadOptions;

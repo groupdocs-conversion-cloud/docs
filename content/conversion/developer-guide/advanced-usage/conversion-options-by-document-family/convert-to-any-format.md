@@ -25,7 +25,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
--H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \"converted/topAny Format\"}"
+-H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \"converted/topAny Format\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}
@@ -109,7 +109,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("xlsx");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -161,7 +161,7 @@ public class Conversion_Java_Convert_To_Any_Format {
         settings.setFilePath("conversions\\password-protected.docx");
         settings.setFormat("xlsx");
 
-        DocxLoadOptions loadOptions = new DocxLoadOptions();
+        WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
         loadOptions.setPassword("password");
         loadOptions.setHideWordTrackedChanges(true);
         loadOptions.setDefaultFont("Arial");
@@ -334,7 +334,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
--H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \""}"
+-H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \""}"
 
 ```
 
@@ -416,7 +416,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("xlsx");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -469,7 +469,7 @@ public class Conversion_Java_Convert_To_Any_Format_Stream {
         settings.setFilePath("conversions\\password-protected.docx");
         settings.setFormat("xlsx");
 
-        DocxLoadOptions loadOptions = new DocxLoadOptions();
+        WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
         loadOptions.setPassword("password");
         loadOptions.setHideWordTrackedChanges(true);
         loadOptions.setDefaultFont("Arial");

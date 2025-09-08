@@ -24,7 +24,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 {{< tabs "example1">}} {{< tab "Request" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \"converted/topjpg\"}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \"converted/topjpg\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}
@@ -77,7 +77,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/password-protected.docx",
                     Format = "jpeg",
-                    LoadOptions = new DocxLoadOptions() { Password = "password" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "password" },
                     ConvertOptions = new JpegConvertOptions() { Grayscale = false, FromPage = 1, PagesCount = 1, Quality = 100, RotateAngle = 90, UsePdf = false },
                     OutputPath = "converted/tojpeg"
                 };
@@ -112,7 +112,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("jpeg");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -170,7 +170,7 @@ public class Conversion_Java_Convert_To_Images {
             settings.setFilePath("conversions\\password-protected.docx");
             settings.setFormat("jpeg");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("password");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -219,7 +219,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/password-protected.docx"
     $settings.format = "jpeg"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.password = "password"
 
     $settings.load_options = $loadOptions;
@@ -255,7 +255,7 @@ class Conversion_Node_Convert_To_Images {
         settings.filePath = "conversions/password-protected.docx";
         settings.format = "jpeg";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.password = "password";
 
         settings.loadOptions = loadOptions;
@@ -305,7 +305,7 @@ class Conversion_Python_Convert_To_Images:
             settings.file_path = "conversions\\password-protected.docx"
             settings.format = "jpeg"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.password = "password"
             
             settings.load_options = loadOptions;
@@ -380,7 +380,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 {{< tabs "example3">}} {{< tab "Request" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \""}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \""}"
 
 ```
 
@@ -426,7 +426,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/password-protected.docx",
                     Format = "jpeg",
-                    LoadOptions = new DocxLoadOptions() { Password = "password" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "password" },
                     ConvertOptions = new JpegConvertOptions() { Grayscale = false, FromPage = 1, PagesCount = 1, Quality = 100, RotateAngle = 90, UsePdf = false },
                     OutputPath = null // set OutputPath as null will result the output as document IOStream
                 };
@@ -461,7 +461,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("jpeg");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -520,7 +520,7 @@ public class Conversion_Java_Convert_To_Images_Stream {
             settings.setFilePath("conversions\\password-protected.docx");
             settings.setFormat("jpeg");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("password");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -570,7 +570,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/password-protected.docx"
     $settings.format = "jpeg"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.password = "password"
 
     $settings.load_options = $loadOptions;
@@ -606,7 +606,7 @@ class Conversion_Node_Convert_To_Images_Stream {
         settings.filePath = "conversions/password-protected.docx";
         settings.format = "jpeg";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.password = "password";
 
         settings.loadOptions = loadOptions;
@@ -656,7 +656,7 @@ class Conversion_Python_Convert_To_Images_Stream:
             settings.file_path = "conversions\\password-protected.docx"
             settings.format = "jpeg"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.password = "password"
             
             settings.load_options = loadOptions;
@@ -846,7 +846,7 @@ ConvertSettings settings = new ConvertSettings();
 settings.setFilePath("WordProcessing/four-pages.docx");
 settings.setFormat("jpg");
  
-HtmlConvertOptions convertOptions = new JpgConvertOptions();
+WebConvertOptions convertOptions = new JpgConvertOptions();
 convertOptions.setFromPage(1);
 convertOptions.setPagesCount(2);
  

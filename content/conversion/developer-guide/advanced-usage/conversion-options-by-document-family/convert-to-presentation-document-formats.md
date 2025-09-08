@@ -24,7 +24,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 {{< tabs "example1">}} {{< tab "Request" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \"converted/toslides\"}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \"converted/toslides\"}"
 
 ```
 
@@ -73,7 +73,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/sample.docx",
                     Format = "pptx",
-                    LoadOptions = new DocxLoadOptions() { Password = "", HideWordTrackedChanges = true, DefaultFont = "Arial" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "", HideWordTrackedChanges = true, DefaultFont = "Arial" },
                     ConvertOptions = new PptxConvertOptions() { FromPage = 1, PagesCount = 2, Zoom = 1 },
                     OutputPath = "converted/toslides"
                 };
@@ -108,7 +108,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("pptx");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -161,7 +161,7 @@ public class Conversion_Java_Convert_To_Slides {
             settings.setFilePath("conversions\\sample.docx");
             settings.setFormat("pptx");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -205,7 +205,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/sample.docx"
     $settings.format = "pptx"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.hide_word_tracked_changes = true
     $loadOptions.default_font = "Arial"
 
@@ -239,7 +239,7 @@ class Conversion_Node_Convert_To_Slides {
         settings.filePath = "conversions/sample.docx";
         settings.format = "pptx";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.hideWordTrackedChanges = true;
         loadOptions.defaultFont = "Arial";
 
@@ -287,7 +287,7 @@ class Conversion_Python_Convert_To_Slides:
             settings.file_path = "conversions\\sample.docx"
             settings.format = "pptx"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.hide_word_tracked_changes = True
             loadOptions.default_font = "Arial"
             
@@ -356,7 +356,7 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 {{< tabs "example3">}} {{< tab "Request" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"DocxLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \""}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \""}"
 
 ```
 
@@ -402,7 +402,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     StorageName = Common.MyStorage,
                     FilePath = "conversions/sample.docx",
                     Format = "pptx",
-                    LoadOptions = new DocxLoadOptions() { Password = "", HideWordTrackedChanges = true, DefaultFont = "Arial" },
+                    LoadOptions = new WordProcessingLoadOptions() { Password = "", HideWordTrackedChanges = true, DefaultFont = "Arial" },
                     ConvertOptions = new PptxConvertOptions() { FromPage = 1, PagesCount = 2, Zoom = 1 },
                     OutputPath = null // set OutputPath as null will result the output as document IOStream
                 };
@@ -437,7 +437,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("pptx");
 
-        $loadOptions = new GroupDocs\Conversion\Model\DocxLoadOptions();
+        $loadOptions = new GroupDocs\Conversion\Model\WordProcessingLoadOptions();
         $loadOptions->setPassword("password");
         $loadOptions->setHideWordTrackedChanges(true);
         $loadOptions->setDefaultFont("Arial");
@@ -491,7 +491,7 @@ public class Conversion_Java_Convert_To_Slides_Stream {
             settings.setFilePath("conversions\\sample.docx");
             settings.setFormat("pptx");
 
-            DocxLoadOptions loadOptions = new DocxLoadOptions();
+            WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
             loadOptions.setPassword("");
             loadOptions.setHideWordTrackedChanges(true);
             loadOptions.setDefaultFont("Arial");
@@ -536,7 +536,7 @@ class Working_With_Conversions
     $settings.file_path = "conversions/sample.docx"
     $settings.format = "pptx"
 
-    $loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new()
+    $loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new()
     $loadOptions.hide_word_tracked_changes = true
     $loadOptions.default_font = "Arial"
 
@@ -570,7 +570,7 @@ class Conversion_Node_Convert_To_Slides_Stream {
         settings.filePath = "conversions/sample.docx";
         settings.format = "pptx";
 
-        var loadOptions = new groupdocs_conversion_cloud_1.DocxLoadOptions();
+        var loadOptions = new groupdocs_conversion_cloud_1.WordProcessingLoadOptions();
         loadOptions.hideWordTrackedChanges = true;
         loadOptions.defaultFont = "Arial";
 
@@ -618,7 +618,7 @@ class Conversion_Python_Convert_To_Slides_Stream:
             settings.file_path = "conversions\\sample.docx"
             settings.format = "pptx"
             
-            loadOptions = groupdocs_conversion_cloud.DocxLoadOptions()
+            loadOptions = groupdocs_conversion_cloud.WordProcessingLoadOptions()
             loadOptions.hide_word_tracked_changes = True
             loadOptions.default_font = "Arial"
             
