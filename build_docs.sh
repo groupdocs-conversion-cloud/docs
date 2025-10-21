@@ -5,4 +5,4 @@ git submodule foreach 'git fetch origin; git checkout $(git rev-parse --abbrev-r
 rm -rf docs-cloud-common/content/conversion
 cp -R content docs-cloud-common
 cd docs-cloud-common
-hugo server
+hugo server --config=config-geekdoc.toml
