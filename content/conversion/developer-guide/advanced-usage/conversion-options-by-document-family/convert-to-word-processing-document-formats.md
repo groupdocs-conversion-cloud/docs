@@ -77,7 +77,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     FilePath = "conversions/sample.pdf",
                     Format = "docx",
                     LoadOptions = new PdfLoadOptions() { Password = "", HidePdfAnnotations = true, RemoveEmbeddedFiles = false, FlattenAllFields = true },
-                    ConvertOptions = new DocxConvertOptions() { FromPage = 1, PagesCount = 2, Zoom = 100, Dpi = 300 },
+                    ConvertOptions = new WordProcessingConvertOptions() { FromPage = 1, PagesCount = 2, Zoom = 100, Dpi = 300 },
                     OutputPath = "converted/towords"
                 };
 
@@ -119,7 +119,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
 
         $settings->setLoadOptions($loadOptions);
 
-        $convertOptions = new GroupDocs\Conversion\Model\DocxConvertOptions();
+        $convertOptions = new GroupDocs\Conversion\Model\WordProcessingConvertOptions();
         $convertOptions->setFromPage(1);
         $convertOptions->setPagesCount(2);
         $convertOptions->setZoom(100);
@@ -174,7 +174,7 @@ public class Conversion_Java_Convert_To_Words {
 
             settings.setLoadOptions(loadOptions);
 
-            DocxConvertOptions convertOptions = new DocxConvertOptions();
+            WordProcessingConvertOptions convertOptions = new WordProcessingConvertOptions();
             convertOptions.setFromPage(1);
             convertOptions.setPagesCount(2);
             convertOptions.setZoom(100);
@@ -220,7 +220,7 @@ class Working_With_Conversions
 
     $settings.load_options = $loadOptions
 
-    $convertOptions = GroupDocsConversionCloud::DocxConvertOptions.new()
+    $convertOptions = GroupDocsConversionCloud::WordProcessingConvertOptions.new()
     $convertOptions.from_page = 1
     $convertOptions.pages_count = 1
 
@@ -255,7 +255,7 @@ class Conversion_Node_Convert_To_Words {
 
         settings.loadOptions = loadOptions;
 
-        var convertOptions = new groupdocs_conversion_cloud_1.DocxConvertOptions();
+        var convertOptions = new groupdocs_conversion_cloud_1.WordProcessingConvertOptions();
         convertOptions.fromPage = 1;
         convertOptions.pagesCount = 1;
 
@@ -304,7 +304,7 @@ class Conversion_Python_Convert_To_Words:
 
             settings.load_options = loadOptions
 
-            convertOptions = groupdocs_conversion_cloud.DocxConvertOptions()
+            convertOptions = groupdocs_conversion_cloud.WordProcessingConvertOptions()
             convertOptions.from_page = 1
             convertOptions.pages_count = 1
     
@@ -415,7 +415,7 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
                     FilePath = "conversions/sample.pdf",
                     Format = "docx",
                     LoadOptions = new PdfLoadOptions() { Password = "", HidePdfAnnotations = true, RemoveEmbeddedFiles = false, FlattenAllFields = true },
-                    ConvertOptions = new DocxConvertOptions() { FromPage = 1, PagesCount = 2, Zoom = 100, Dpi = 300 },
+                    ConvertOptions = new WordProcessingConvertOptions() { FromPage = 1, PagesCount = 2, Zoom = 100, Dpi = 300 },
                     OutputPath = null // set OutputPath as null will result the output as document IOStream
                 };
 
@@ -465,7 +465,7 @@ public class Conversion_Java_Convert_To_Words_Stream {
 
             settings.setLoadOptions(loadOptions);
 
-            DocxConvertOptions convertOptions = new DocxConvertOptions();
+            WordProcessingConvertOptions convertOptions = new WordProcessingConvertOptions();
             convertOptions.setFromPage(1);
             convertOptions.setPagesCount(2);
             convertOptions.setZoom(100);
@@ -511,7 +511,7 @@ include(dirname(__DIR__) . '\CommonUtils.php');
 
         $settings->setLoadOptions($loadOptions);
 
-        $convertOptions = new GroupDocs\Conversion\Model\DocxConvertOptions();
+        $convertOptions = new GroupDocs\Conversion\Model\WordProcessingConvertOptions();
         $convertOptions->setFromPage(1);
         $convertOptions->setPagesCount(2);
         $convertOptions->setZoom(100);
@@ -560,7 +560,7 @@ class Working_With_Conversions
 
     $settings.load_options = $loadOptions
 
-    $convertOptions = GroupDocsConversionCloud::DocxConvertOptions.new()
+    $convertOptions = GroupDocsConversionCloud::WordProcessingConvertOptions.new()
     $convertOptions.from_page = 1
     $convertOptions.pages_count = 1
 
@@ -595,7 +595,7 @@ class Conversion_Node_Convert_To_Words_Stream {
 
         settings.loadOptions = loadOptions;
 
-        var convertOptions = new groupdocs_conversion_cloud_1.DocxConvertOptions();
+        var convertOptions = new groupdocs_conversion_cloud_1.WordProcessingConvertOptions();
         convertOptions.fromPage = 1;
         convertOptions.pagesCount = 1;
 
@@ -644,7 +644,7 @@ class Conversion_Python_Convert_To_Words_Stream:
 
             settings.load_options = loadOptions
 
-            convertOptions = groupdocs_conversion_cloud.DocxConvertOptions()
+            convertOptions = groupdocs_conversion_cloud.WordProcessingConvertOptions()
             convertOptions.from_page = 1
             convertOptions.pages_count = 1
     
@@ -790,7 +790,7 @@ var settings = new ConvertSettings
     FilePath = "Pdf/sample.pdf",
     Format = "docx",
     LoadOptions = new PdfLoadOptions { Password = "", HidePdfAnnotations = true, RemoveEmbeddedFiles = false, FlattenAllFields = true },
-    ConvertOptions = new DocxConvertOptions(),
+    ConvertOptions = new WordProcessingConvertOptions(),
     OutputPath = "converted"
 };
  
@@ -822,7 +822,7 @@ loadOptions.setRemoveEmbeddedFiles(false);
 loadOptions.setFlattenAllFields(true);
  
 settings.setLoadOptions(loadOptions);
-settings.setConvertOptions(new DocxConvertOptions());
+settings.setConvertOptions(new WordProcessingConvertOptions());
 settings.setOutputPath("converted");
  
 List<StoredConvertedResult> result = apiInstance.convertDocument(new ConvertDocumentRequest(settings));
@@ -855,7 +855,7 @@ $loadOptions->setRemoveEmbeddedFiles(false);
 $loadOptions->setFlattenAllFields(true);
  
 $settings->setLoadOptions($loadOptions);
-$settings->setConvertOptions(new Model\DocxConvertOptions());
+$settings->setConvertOptions(new Model\WordProcessingConvertOptions());
 $settings->setOutputPath("converted");
  
 // Convert
@@ -886,7 +886,7 @@ loadOptions.remove_embedded_files = false
 loadOptions.flatten_all_fields = true
  
 settings.load_options = loadOptions
-settings.convert_options = GroupDocsConversionCloud::DocxConvertOptions.new
+settings.convert_options = GroupDocsConversionCloud::WordProcessingConvertOptions.new
 settings.output_path = "converted"
  
 # Convert
@@ -915,7 +915,7 @@ loadOptions.removeEmbeddedFiles = false;
 loadOptions.flattenAllFields = true;
  
 settings.loadOptions = loadOptions;
-settings.convertOptions = new conversion_cloud.DocxConvertOptions();
+settings.convertOptions = new conversion_cloud.WordProcessingConvertOptions();
 settings.outputPath = "converted";
  
 let result = await convertApi.convertDocument(new conversion_cloud.ConvertDocumentRequest(settings));
@@ -945,7 +945,7 @@ loadOptions.remove_embedded_files = False
 loadOptions.flatten_all_fields = True
  
 settings.load_options = loadOptions
-settings.convert_options = groupdocs_conversion_cloud.DocxConvertOptions()
+settings.convert_options = groupdocs_conversion_cloud.WordProcessingConvertOptions()
 settings.output_path = "converted"
  
 # Convert

@@ -817,7 +817,7 @@ var settings = new ConvertSettings
 {
     FilePath = "WordProcessing/four-pages.docx",
     Format = "jpg",
-    ConvertOptions = new JpgConvertOptions
+    ConvertOptions = new ImageConvertOptions
     {
         FromPage = 1,
         PagesCount = 2
@@ -846,7 +846,7 @@ ConvertSettings settings = new ConvertSettings();
 settings.setFilePath("WordProcessing/four-pages.docx");
 settings.setFormat("jpg");
  
-WebConvertOptions convertOptions = new JpgConvertOptions();
+WebConvertOptions convertOptions = new ImageConvertOptions();
 convertOptions.setFromPage(1);
 convertOptions.setPagesCount(2);
  
@@ -877,7 +877,7 @@ $settings = new Model\ConvertSettings();
 $settings->setFilePath("WordProcessing/four-pages.docx");
 $settings->setFormat("jpg");
  
-$convertOptions = new Model\JpgConvertOptions();
+$convertOptions = new Model\ImageConvertOptions();
 $convertOptions->setFromPage(1);
 $convertOptions->setPagesCount(2);
  
@@ -904,7 +904,7 @@ apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($app_sid, $app_key)
 settings = GroupDocsConversionCloud::ConvertSettings.new
 settings.file_path = "WordProcessing/four-pages.docx"
 settings.format = "jpg"
-convertOptions = GroupDocsConversionCloud::JpgConvertOptions.new
+convertOptions = GroupDocsConversionCloud::ImageConvertOptions.new
 convertOptions.from_page = 1
 convertOptions.pages_count = 2
 settings.convert_options = convertOptions
@@ -929,7 +929,7 @@ let settings = new conversion_cloud.ConvertSettings();
 settings.filePath = "WordProcessing/four-pages.docx";
 settings.format = "jpg";
  
-let convertOptions = new conversion_cloud.JpgConvertOptions();
+let convertOptions = new conversion_cloud.ImageConvertOptions();
 convertOptions.fromPage = 1;
 convertOptions.pagesCount = 2;
  
@@ -955,7 +955,7 @@ apiInstance = groupdocs_conversion_cloud.ConvertApi.from_keys(Common.app_sid, Co
 settings = groupdocs_conversion_cloud.ConvertSettings()
 settings.file_path = "WordProcessing/four-pages.docx"
 settings.format = "jpg"
-convertOptions = groupdocs_conversion_cloud.JpgConvertOptions() 
+convertOptions = groupdocs_conversion_cloud.ImageConvertOptions() 
 convertOptions.from_page = 1
 convertOptions.pages_count = 2     
 settings.convert_options = convertOptions
