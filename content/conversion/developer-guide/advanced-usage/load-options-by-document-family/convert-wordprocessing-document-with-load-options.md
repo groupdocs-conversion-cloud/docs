@@ -29,33 +29,85 @@ Swagger UI lets you call this REST API directly from the browser.
 
 ## cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-
 # First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+# Place Client Id in $CLIENT_ID and Client Secret in $CLIENT_SECRET environment variables.
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
 
 # cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
-        'FilePath': 'WordProcessing/with_tracked_changes.docx',
-        'Format': 'pdf',
-        'LoadOptions': {
-            'CommentDisplayMode': 'Hidden'
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
+        "FilePath": "WordProcessing/with_tracked_changes.docx",
+        "Format": "pdf",
+        "LoadOptions": {
+            "CommentDisplayMode": "Hidden"
         },
-        'OutputPath': 'Output'
-    }"
+        "OutputPath": "Output"
+    }'
+```
 
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# First get JSON Web Token
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+# Place Client Id in $env:CLIENT_ID and Client Secret in $env:CLIENT_SECRET environment variables.
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# cURL example to convert document
+curl.exe -v "https://api.groupdocs.cloud/v2.0/conversion" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d '{
+        "FilePath": "WordProcessing/with_tracked_changes.docx",
+        "Format": "pdf",
+        "LoadOptions": {
+            "CommentDisplayMode": "Hidden"
+        },
+        "OutputPath": "Output"
+    }'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+rem First get JSON Web Token
+rem Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+rem Place Client Id in %CLIENT_ID% and Client Secret in %CLIENT_SECRET% environment variables.
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+rem cURL example to convert document
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{ \"FilePath\": \"WordProcessing/with_tracked_changes.docx\", \"Format\": \"pdf\", \"LoadOptions\": { \"CommentDisplayMode\": \"Hidden\" }, \"OutputPath\": \"Output\" }"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}

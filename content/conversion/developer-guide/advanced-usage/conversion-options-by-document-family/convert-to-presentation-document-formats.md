@@ -21,13 +21,73 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
-
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \"converted/toslides\"}"
-
+# Convert a document to PPTX
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/sample.docx",
+    "Format": "pptx",
+    "LoadOptions": {
+      "WordProcessingLoadOptions": {
+        "Password": "",
+        "HideWordTrackedChanges": "true",
+        "DefaultFont": "Arial"
+      }
+    },
+    "ConvertOptions": {
+      "Password": "",
+      "FromPage": "1",
+      "PagesCount": "2",
+      "Zoom": "1"
+    },
+    "OutputPath": "converted/toslides"
+  }'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Convert a document to PPTX
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/sample.docx',
+    'Format': 'pptx',
+    'LoadOptions': {
+      'WordProcessingLoadOptions': {
+        'Password': '',
+        'HideWordTrackedChanges': 'true',
+        'DefaultFont': 'Arial'
+      }
+    },
+    'ConvertOptions': {
+      'Password': '',
+      'FromPage': '1',
+      'PagesCount': '2',
+      'Zoom': '1'
+    },
+    'OutputPath': 'converted/toslides'
+  }"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+rem Convert a document to PPTX
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.docx\",\"Format\":\"pptx\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"\",\"HideWordTrackedChanges\":\"true\",\"DefaultFont\":\"Arial\"}},\"ConvertOptions\":{\"Password\":\"\",\"FromPage\":\"1\",\"PagesCount\":\"2\",\"Zoom\":\"1\"},\"OutputPath\":\"converted/toslides\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
@@ -353,13 +413,73 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example3">}} {{< tab "Request" >}}
-
+{{< tabs "example3">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\",   \"HideWordTrackedChanges\":\"true\",   \"DefaultFont\":\"Arial\"   }},  \"ConvertOptions\": { \"Password\": \"\",      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"1\"  },  \"OutputPath\": \""}"
-
+# Convert a document to PPTX (alternative example)
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/sample.docx",
+    "Format": "pptx",
+    "LoadOptions": {
+      "WordProcessingLoadOptions": {
+        "Password": "",
+        "HideWordTrackedChanges": "true",
+        "DefaultFont": "Arial"
+      }
+    },
+    "ConvertOptions": {
+      "Password": "",
+      "FromPage": "1",
+      "PagesCount": "2",
+      "Zoom": "1"
+    },
+    "OutputPath": "converted/toslides"
+  }'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Convert a document to PPTX (alternative example)
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/sample.docx',
+    'Format': 'pptx',
+    'LoadOptions': {
+      'WordProcessingLoadOptions': {
+        'Password': '',
+        'HideWordTrackedChanges': 'true',
+        'DefaultFont': 'Arial'
+      }
+    },
+    'ConvertOptions': {
+      'Password': '',
+      'FromPage': '1',
+      'PagesCount': '2',
+      'Zoom': '1'
+    },
+    'OutputPath': 'converted/toslides'
+  }"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+rem Convert a document to PPTX (alternative example)
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.docx\",\"Format\":\"pptx\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"\",\"HideWordTrackedChanges\":\"true\",\"DefaultFont\":\"Arial\"}},\"ConvertOptions\":{\"Password\":\"\",\"FromPage\":\"1\",\"PagesCount\":\"2\",\"Zoom\":\"1\"},\"OutputPath\":\"converted/toslides\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
@@ -706,36 +826,71 @@ HTTP POST ~/conversion
 
 ### cURL example
 
-{{< tabs "example5">}} {{< tab "Request" >}}
-
+{{< tabs "example5">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
+# Step 1: Obtain JWT token
+curl -X POST "https://api.groupdocs.cloud/connect/token" \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
 
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
-curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-
-# cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
-        'FilePath': 'WordProcessing/four-pages.docx',
-        'Format': 'ppt',
-        'ConvertOptions': {
-            'FromPage': 2,
-            'PagesCount': 1
-        },
-        'OutputPath': 'Output'
-    }"
-
+# Step 2: Convert document to PPT
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
+    "FilePath": "WordProcessing/four-pages.docx",
+    "Format": "ppt",
+    "ConvertOptions": {
+      "FromPage": 2,
+      "PagesCount": 1
+    },
+    "OutputPath": "Output"
+  }'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Step 1: Obtain JWT token
+curl.exe -X POST "https://api.groupdocs.cloud/connect/token" `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# Step 2: Convert document to PPT
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+    'FilePath': 'WordProcessing/four-pages.docx',
+    'Format': 'ppt',
+    'ConvertOptions': {
+      'FromPage': 2,
+      'PagesCount': 1
+    },
+    'OutputPath': 'Output'
+  }"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+rem Step 1: Obtain JWT token
+curl -X POST "https://api.groupdocs.cloud/connect/token" ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+rem Step 2: Convert document to PPT
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FilePath\":\"WordProcessing/four-pages.docx\",\"Format\":\"ppt\",\"ConvertOptions\":{\"FromPage\":2,\"PagesCount\":1},\"OutputPath\":\"Output\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json

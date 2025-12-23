@@ -21,13 +21,102 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
-
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \"converted/topdf\"}"
-
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/password-protected.docx",
+    "Format": "pptx",
+    "LoadOptions": {
+      "WordProcessingLoadOptions": {
+        "Password": "password"
+      }
+    },
+    "ConvertOptions": {
+      "PdfConvertOptions": {
+        "BookmarksOutlineLevel": "1",
+        "CenterWindow": "true",
+        "CompressImages": "false",
+        "DisplayDocTitle": "true",
+        "Dpi": "1024",
+        "ExpandedOutlineLevels": "1",
+        "FitWindow": "false",
+        "FromPage": "1",
+        "Grayscale": "false",
+        "HeadingsOutlineLevels": "1",
+        "ImageQuality": "100",
+        "Linearize": "false",
+        "MarginTop": "5",
+        "MarginLeft": "5",
+        "Password": "password",
+        "UnembedFonts": "true",
+        "RemoveUnusedStreams": "true",
+        "RemoveUnusedObjects": "true",
+        "RemovePdfaCompliance": "false",
+        "Height": "1024"
+      }
+    },
+    "OutputPath": "converted/topdf"
+  }'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/password-protected.docx',
+    'Format': 'pptx',
+    'LoadOptions': {
+      'WordProcessingLoadOptions': {
+        'Password': 'password'
+      }
+    },
+    'ConvertOptions': {
+      'PdfConvertOptions': {
+        'BookmarksOutlineLevel': '1',
+        'CenterWindow': 'true',
+        'CompressImages': 'false',
+        'DisplayDocTitle': 'true',
+        'Dpi': '1024',
+        'ExpandedOutlineLevels': '1',
+        'FitWindow': 'false',
+        'FromPage': '1',
+        'Grayscale': 'false',
+        'HeadingsOutlineLevels': '1',
+        'ImageQuality': '100',
+        'Linearize': 'false',
+        'MarginTop': '5',
+        'MarginLeft': '5',
+        'Password': 'password',
+        'UnembedFonts': 'true',
+        'RemoveUnusedStreams': 'true',
+        'RemoveUnusedObjects': 'true',
+        'RemovePdfaCompliance': 'false',
+        'Height': '1024'
+      }
+    },
+    'OutputPath': 'converted/topdf'
+  }"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/password-protected.docx\",\"Format\":\"pptx\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"password\"}},\"ConvertOptions\":{\"PdfConvertOptions\":{\"BookmarksOutlineLevel\":\"1\",\"CenterWindow\":\"true\",\"CompressImages\":\"false\",\"DisplayDocTitle\":\"true\",\"Dpi\":\"1024\",\"ExpandedOutlineLevels\":\"1\",\"FitWindow\":\"false\",\"FromPage\":\"1\",\"Grayscale\":\"false\",\"HeadingsOutlineLevels\":\"1\",\"ImageQuality\":\"100\",\"Linearize\":\"false\",\"MarginTop\":\"5\",\"MarginLeft\":\"5\",\"Password\":\"password\",\"UnembedFonts\":\"true\",\"RemoveUnusedStreams\":\"true\",\"RemoveUnusedObjects\":\"true\",\"RemovePdfaCompliance\":\"false\",\"Height\":\"1024\"}},\"OutputPath\":\"converted/topdf\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
@@ -466,13 +555,102 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example3">}} {{< tab "Request" >}}
-
+{{< tabs "example3">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"pptx\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"password\"  }},  \"ConvertOptions\": {\"PdfConvertOptions\": {\"BookmarksOutlineLevel\": \"1\",                        \"CenterWindow\" :\"true\",  \"CompressImages\": \"false\",   \"DisplayDocTitle\":  \"true\", \"Dpi\":\"1024\",  \"ExpandedOutlineLevels\": \"1\",   \"FitWindow\": \"false\",\"FromPage\" \"1\",   \"Grayscale\": \"false\",  \"HeadingsOutlineLevels\": \"1\",   \"ImageQuality\": \"100\",                        \"Linearize\": \"false\",   \"MarginTop\": \"5\",   \"MarginLeft\": \"5\", \"Password\": \"password\",  \"UnembedFonts\": \"true\",  \"RemoveUnusedStreams\": \"true\",  \"RemoveUnusedObjects\": \"true\", \"RemovePdfaCompliance\": \"false\", \"Height\": \"1024\"}  },  \"OutputPath\": \""}"
-
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/password-protected.docx",
+    "Format": "pptx",
+    "LoadOptions": {
+      "WordProcessingLoadOptions": {
+        "Password": "password"
+      }
+    },
+    "ConvertOptions": {
+      "PdfConvertOptions": {
+        "BookmarksOutlineLevel": "1",
+        "CenterWindow": "true",
+        "CompressImages": "false",
+        "DisplayDocTitle": "true",
+        "Dpi": "1024",
+        "ExpandedOutlineLevels": "1",
+        "FitWindow": "false",
+        "FromPage": "1",
+        "Grayscale": "false",
+        "HeadingsOutlineLevels": "1",
+        "ImageQuality": "100",
+        "Linearize": "false",
+        "MarginTop": "5",
+        "MarginLeft": "5",
+        "Password": "password",
+        "UnembedFonts": "true",
+        "RemoveUnusedStreams": "true",
+        "RemoveUnusedObjects": "true",
+        "RemovePdfaCompliance": "false",
+        "Height": "1024"
+      }
+    },
+    "OutputPath": ""
+  }'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/password-protected.docx',
+    'Format': 'pptx',
+    'LoadOptions': {
+      'WordProcessingLoadOptions': {
+        'Password': 'password'
+      }
+    },
+    'ConvertOptions': {
+      'PdfConvertOptions': {
+        'BookmarksOutlineLevel': '1',
+        'CenterWindow': 'true',
+        'CompressImages': 'false',
+        'DisplayDocTitle': 'true',
+        'Dpi': '1024',
+        'ExpandedOutlineLevels': '1',
+        'FitWindow': 'false',
+        'FromPage': '1',
+        'Grayscale': 'false',
+        'HeadingsOutlineLevels': '1',
+        'ImageQuality': '100',
+        'Linearize': 'false',
+        'MarginTop': '5',
+        'MarginLeft': '5',
+        'Password': 'password',
+        'UnembedFonts': 'true',
+        'RemoveUnusedStreams': 'true',
+        'RemoveUnusedObjects': 'true',
+        'RemovePdfaCompliance': 'false',
+        'Height': '1024'
+      }
+    },
+    'OutputPath': ''
+  }"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/password-protected.docx\",\"Format\":\"pptx\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"password\"}},\"ConvertOptions\":{\"PdfConvertOptions\":{\"BookmarksOutlineLevel\":\"1\",\"CenterWindow\":\"true\",\"CompressImages\":\"false\",\"DisplayDocTitle\":\"true\",\"Dpi\":\"1024\",\"ExpandedOutlineLevels\":\"1\",\"FitWindow\":\"false\",\"FromPage\":\"1\",\"Grayscale\":\"false\",\"HeadingsOutlineLevels\":\"1\",\"ImageQuality\":\"100\",\"Linearize\":\"false\",\"MarginTop\":\"5\",\"MarginLeft\":\"5\",\"Password\":\"password\",\"UnembedFonts\":\"true\",\"RemoveUnusedStreams\":\"true\",\"RemoveUnusedObjects\":\"true\",\"RemovePdfaCompliance\":\"false\",\"Height\":\"1024\"}},\"OutputPath\":\"\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```log
@@ -929,38 +1107,81 @@ HTTP POST ~/conversion
 
 ### cURL example
 
-{{< tabs "example5">}} {{< tab "Request" >}}
-
+{{< tabs "example5">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+# Get JWT token
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
+  -X POST \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json" \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET"
 
-# cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
-        'FilePath': 'WordProcessing/password-protected.docx',
-        'Format': 'pdf',
-        'LoadOptions': {'Password': 'password'},
-        'ConvertOptions': {
-            'FromPage': 1,
-            'Dpi': 1024,
-            'UnembedFonts': true
-        },
-        'OutputPath': 'Output'
-    }"
-
+# Convert document
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
+    "FilePath": "WordProcessing/password-protected.docx",
+    "Format": "pdf",
+    "LoadOptions": { "Password": "password" },
+    "ConvertOptions": {
+        "FromPage": 1,
+        "Dpi": 1024,
+        "UnembedFonts": true
+    },
+    "OutputPath": "Output"
+  }'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Get JWT token
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json" `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET"
+
+# Convert document
+curl.exe -v "https://api.groupdocs.cloud/v2.0/conversion" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+    'FilePath': 'WordProcessing/password-protected.docx',
+    'Format': 'pdf',
+    'LoadOptions': { 'Password': 'password' },
+    'ConvertOptions': {
+        'FromPage': 1,
+        'Dpi': 1024,
+        'UnembedFonts': true
+    },
+    'OutputPath': 'Output'
+  }"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+:: Get JWT token
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json" ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%"
+
+:: Convert document
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FilePath\":\"WordProcessing/password-protected.docx\",\"Format\":\"pdf\",\"LoadOptions\":{\"Password\":\"password\"},\"ConvertOptions\":{\"FromPage\":1,\"Dpi\":1024,\"UnembedFonts\":true},\"OutputPath\":\"Output\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json

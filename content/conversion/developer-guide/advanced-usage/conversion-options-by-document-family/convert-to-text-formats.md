@@ -21,12 +21,74 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
--H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \"converted/toptext\"}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/sample.docx",
+    "Format": "txt",
+    "LoadOptions": {
+      "WordProcessingLoadOptions": {
+        "Password": "",
+        "HideWordTrackedChanges": "true",
+        "DefaultFont": "Arial"
+      }
+    },
+    "ConvertOptions": {
+      "TxtConvertOptions": {
+        "FromPage": "1",
+        "PagesCount": "2"
+      }
+    },
+    "OutputPath": "converted/toptext"
+  }'
+```
 
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/sample.docx',
+    'Format': 'txt',
+    'LoadOptions': {
+        'WordProcessingLoadOptions': {
+            'Password': '',
+            'HideWordTrackedChanges': 'true',
+            'DefaultFont': 'Arial'
+        }
+    },
+    'ConvertOptions': {
+        'TxtConvertOptions': {
+            'FromPage': '1',
+            'PagesCount': '2'
+        }
+    },
+    'OutputPath': 'converted/toptext'
+  }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.docx\",\"Format\":\"txt\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"\",\"HideWordTrackedChanges\":\"true\",\"DefaultFont\":\"Arial\"}},\"ConvertOptions\":{\"TxtConvertOptions\":{\"FromPage\":\"1\",\"PagesCount\":\"2\"}},\"OutputPath\":\"converted/toptext\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}
@@ -347,12 +409,76 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example3">}} {{< tab "Request" >}}
+{{< tabs "example3">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
--H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"txt\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\", \"HideWordTrackedChanges\": \"true\",  \"DefaultFont\": \"Arial\"}},\"ConvertOptions\": {\"TxtConvertOptions\": {\"FromPage\": \"1\", \"PagesCount\": \"2\",  }},  \"OutputPath\": \""}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/sample.docx",
+    "Format": "txt",
+    "LoadOptions": {
+      "WordProcessingLoadOptions": {
+        "Password": "",
+        "HideWordTrackedChanges": "true",
+        "DefaultFont": "Arial"
+      }
+    },
+    "ConvertOptions": {
+      "TxtConvertOptions": {
+        "FromPage": "1",
+        "PagesCount": "2"
+      }
+    },
+    "OutputPath": "converted/toptext"
+  }'
 ```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/sample.docx',
+    'Format': 'txt',
+    'LoadOptions': {
+        'WordProcessingLoadOptions': {
+            'Password': '',
+            'HideWordTrackedChanges': 'true',
+            'DefaultFont': 'Arial'
+        }
+    },
+    'ConvertOptions': {
+        'TxtConvertOptions': {
+            'FromPage': '1',
+            'PagesCount': '2'
+        }
+    },
+    'OutputPath': 'converted/toptext'
+  }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.docx\",\"Format\":\"txt\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"\",\"HideWordTrackedChanges\":\"true\",\"DefaultFont\":\"Arial\"}},\"ConvertOptions\":{\"TxtConvertOptions\":{\"FromPage\":\"1\",\"PagesCount\":\"2\"}},\"OutputPath\":\"converted/toptext\"}"
+```
+
 {{< /tab >}} {{< tab "Response" >}}
 
 ```log

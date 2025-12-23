@@ -16,12 +16,28 @@ The following GroupDocs.conversion Cloud REST API resource has been used in the 
 
 ## cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
-
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 ```curl
-curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
+curl -X GET 'https://api.groupdocs.cloud/v2.0/conversion/formats' \
+  -H 'accept: application/json' \
+  -H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```curl
+curl.exe -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```curl
+curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
@@ -302,12 +318,28 @@ The following GroupDocs.conversion Cloud REST API resource has been used in the 
 
 ## cURL example
 
-{{< tabs "example3">}} {{< tab "Request" >}}
-
+{{< tabs "example3">}} {{< tab "Linux/MacOS/Bash" >}}
 ```curl
-curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]"
+curl -X GET 'https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx' \
+  -H 'accept: application/json' \
+  -H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```curl
+curl.exe -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```curl
+curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/formats?format#docx" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json

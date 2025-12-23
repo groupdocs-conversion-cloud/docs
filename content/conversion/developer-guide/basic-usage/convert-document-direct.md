@@ -30,26 +30,67 @@ Method parameters:
 
 ## cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
-
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-// First get JSON Web Token
-// Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
-curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type=client_credentials&client_id=xxxx&client_secret=xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-  
-// cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X PUT \
--H "Content-Type: multipart/form-data" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
---data-binary "@path/to/file"
-```
+# First, obtain a JSON Web Token
+# Ensure your Client Id and Client Secret are stored in the environment variables CLIENT_ID and CLIENT_SECRET.
+curl -v 'https://api.groupdocs.cloud/connect/token' \
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Accept: application/json'
 
+# Convert a document
+# Make sure the JWT token is available in the environment variable JWT_TOKEN.
+curl -v 'https://api.groupdocs.cloud/v2.0/conversion' \
+  -X PUT \
+  -H 'Content-Type: multipart/form-data' \
+  -H 'Accept: application/json' \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  --data-binary '@path/to/file'
+```
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+```powershell
+# First, obtain a JSON Web Token
+# Ensure your Client Id and Client Secret are stored in the environment variables CLIENT_ID and CLIENT_SECRET.
+curl.exe -v 'https://api.groupdocs.cloud/connect/token' `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H 'Content-Type: application/x-www-form-urlencoded' `
+  -H 'Accept: application/json'
+
+# Convert a document
+# Make sure the JWT token is available in the environment variable JWT_TOKEN.
+curl.exe -v 'https://api.groupdocs.cloud/v2.0/conversion' `
+  -X PUT `
+  -H 'Content-Type: multipart/form-data' `
+  -H 'Accept: application/json' `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  --data-binary '@path\to\file'
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+rem First, obtain a JSON Web Token
+rem Ensure your Client Id and Client Secret are stored in the environment variables CLIENT_ID and CLIENT_SECRET.
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+rem Convert a document
+rem Make sure the JWT token is available in the environment variable JWT_TOKEN.
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -X PUT ^
+  -H "Content-Type: multipart/form-data" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  --data-binary "@path\to\file"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json

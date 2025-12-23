@@ -29,25 +29,52 @@ Swagger UI lets you call this REST API directly from the browser. 
 
 ## cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
-
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+# Get JWT token
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
 
-# cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
+# Convert document
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
+        "FilePath": "Email/sample.msg",
+        "Format": "pdf",
+        "LoadOptions": {
+            "DisplayHeader": false,
+            "DisplayFromEmailAddress": false,
+            "DisplayToEmailAddress": false,
+            "DisplayEmailAddress": false,
+            "DisplayCcEmailAddress": false,
+            "DisplayBccEmailAddress": false
+        },
+        "OutputPath": "Output"
+      }'
+```
+{{< /tab >}}
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Get JWT token
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# Convert document
+curl.exe -v "https://api.groupdocs.cloud/v2.0/conversion" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
         'FilePath': 'Email/sample.msg',
         'Format': 'pdf',
         'LoadOptions': {
@@ -59,10 +86,26 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
             'DisplayBccEmailAddress': false
         },
         'OutputPath': 'Output'
-    }"
-
+      }"
 ```
+{{< /tab >}}
+{{< tab "Windows CMD" >}}
+```cmd
+:: Get JWT token
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
 
+:: Convert document
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FilePath\":\"Email/sample.msg\",\"Format\":\"pdf\",\"LoadOptions\":{\"DisplayHeader\":false,\"DisplayFromEmailAddress\":false,\"DisplayToEmailAddress\":false,\"DisplayEmailAddress\":false,\"DisplayCcEmailAddress\":false,\"DisplayBccEmailAddress\":false},\"OutputPath\":\"Output\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json

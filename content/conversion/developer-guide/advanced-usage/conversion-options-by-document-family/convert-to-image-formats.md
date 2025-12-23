@@ -21,10 +21,81 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in the�
 
 ### cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \"converted/topjpg\"}"
+# Convert document (Linux / macOS / Bash)
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "Storage": "MyStorage",
+        "FilePath": "conversions/sample.docx",
+        "Format": "jpg",
+        "LoadOptions": {
+          "WordProcessingLoadOptions": {
+            "Password": ""
+          }
+        },
+        "ConvertOptions": {
+          "JpegConvertOptions": {
+            "Grayscale": "false",
+            "FromPage": "1",
+            "PagesCount": "2",
+            "Quality": "100",
+            "RotateAngle": "90",
+            "UsePdf": "false"
+          }
+        },
+        "OutputPath": "converted/topjpg"
+      }'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# Convert document (Windows PowerShell)
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+        'Storage': 'MyStorage',
+        'FilePath': 'conversions/sample.docx',
+        'Format': 'jpg',
+        'LoadOptions': {
+            'WordProcessingLoadOptions': {
+                'Password': ''
+            }
+        },
+        'ConvertOptions': {
+            'JpegConvertOptions': {
+                'Grayscale': 'false',
+                'FromPage': '1',
+                'PagesCount': '2',
+                'Quality': '100',
+                'RotateAngle': '90',
+                'UsePdf': 'false'
+            }
+        },
+        'OutputPath': 'converted/topjpg'
+      }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: Convert document (Windows CMD)
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.docx\",\"Format\":\"jpg\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"\"}},\"ConvertOptions\":{\"JpegConvertOptions\":{\"Grayscale\":\"false\",\"FromPage\":\"1\",\"PagesCount\":\"2\",\"Quality\":\"100\",\"RotateAngle\":\"90\",\"UsePdf\":\"false\"}},\"OutputPath\":\"converted/topjpg\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}
@@ -377,11 +448,81 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in the�
 
 ### cURL example
 
-{{< tabs "example3">}} {{< tab "Request" >}}
+{{< tabs "example3">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.docx\",  \"Format\": \"jpg\",  \"LoadOptions\": {\"WordProcessingLoadOptions\": {\"Password\": \"\"}},\"ConvertOptions\": {\"JpegConvertOptions\": {\"Grayscale\": \"false\", \"FromPage\": \"1\", \"PagesCount\": \"2\", \"Quality\": \"100\",\"RotateAngle\": \"90\", \"UsePdf\": \"false\" }},  \"OutputPath\": \""}"
+# Convert document (Linux / macOS / Bash) – corrected JSON
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "Storage": "MyStorage",
+        "FilePath": "conversions/sample.docx",
+        "Format": "jpg",
+        "LoadOptions": {
+          "WordProcessingLoadOptions": {
+            "Password": ""
+          }
+        },
+        "ConvertOptions": {
+          "JpegConvertOptions": {
+            "Grayscale": "false",
+            "FromPage": "1",
+            "PagesCount": "2",
+            "Quality": "100",
+            "RotateAngle": "90",
+            "UsePdf": "false"
+          }
+        },
+        "OutputPath": ""
+      }'
+```
 
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# Convert document (Windows PowerShell) – corrected JSON
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+        'Storage': 'MyStorage',
+        'FilePath': 'conversions/sample.docx',
+        'Format': 'jpg',
+        'LoadOptions': {
+            'WordProcessingLoadOptions': {
+                'Password': ''
+            }
+        },
+        'ConvertOptions': {
+            'JpegConvertOptions': {
+                'Grayscale': 'false',
+                'FromPage': '1',
+                'PagesCount': '2',
+                'Quality': '100',
+                'RotateAngle': '90',
+                'UsePdf': 'false'
+            }
+        },
+        'OutputPath': ''
+      }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: Convert document (Windows CMD) – corrected JSON
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.docx\",\"Format\":\"jpg\",\"LoadOptions\":{\"WordProcessingLoadOptions\":{\"Password\":\"\"}},\"ConvertOptions\":{\"JpegConvertOptions\":{\"Grayscale\":\"false\",\"FromPage\":\"1\",\"PagesCount\":\"2\",\"Quality\":\"100\",\"RotateAngle\":\"90\",\"UsePdf\":\"false\"}},\"OutputPath\":\"\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}
@@ -744,25 +885,48 @@ HTTP POST ~/conversion
 
 ### cURL example
 
-{{< tabs "example5">}} {{< tab "Request" >}}
+{{< tabs "example5">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
+# Step 1 – obtain JWT token
+curl -s -X POST "https://api.groupdocs.cloud/connect/token" \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
 
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
-curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
+# Step 2 – convert document
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "FilePath": "WordProcessing/four-pages.docx",
+        "Format": "jpg",
+        "ConvertOptions": {
+          "FromPage": 1,
+          "PagesCount": 2
+        },
+        "OutputPath": "Output"
+      }'
+```
 
-# cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# Step 1 – obtain JWT token
+curl.exe -s -X POST "https://api.groupdocs.cloud/connect/token" `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# Step 2 – convert document
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
         'FilePath': 'WordProcessing/four-pages.docx',
         'Format': 'jpg',
         'ConvertOptions': {
@@ -770,8 +934,26 @@ curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
             'PagesCount': 2
         },
         'OutputPath': 'Output'
-    }"
+      }"
+```
 
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: Step 1 – obtain JWT token
+curl -s -X POST "https://api.groupdocs.cloud/connect/token" ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+:: Step 2 – convert document
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"FilePath\":\"WordProcessing/four-pages.docx\",\"Format\":\"jpg\",\"ConvertOptions\":{\"FromPage\":1,\"PagesCount\":2},\"OutputPath\":\"Output\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}

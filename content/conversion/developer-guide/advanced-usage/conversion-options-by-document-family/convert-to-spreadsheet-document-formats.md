@@ -20,11 +20,64 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"xlsx\",  \"LoadOptions\": {\"Password\": \"password\"},  \"ConvertOptions\": {     \"FromPage\": \"1\",     \"PagesCount\": \"1\",     \"UsePdf\": \"false\"  },  \"OutputPath\": \"converted/tocells\"}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/password-protected.docx",
+    "Format": "xlsx",
+    "LoadOptions": {
+      "Password": "password"
+    },
+    "ConvertOptions": {
+      "FromPage": "1",
+      "PagesCount": "1",
+      "UsePdf": "false"
+    },
+    "OutputPath": "converted/tocells"
+  }'
+```
 
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/password-protected.docx',
+    'Format': 'xlsx',
+    'LoadOptions': {
+      'Password': 'password'
+    },
+    'ConvertOptions': {
+      'FromPage': '1',
+      'PagesCount': '1',
+      'UsePdf': 'false'
+    },
+    'OutputPath': 'converted/tocells'
+  }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/password-protected.docx\",\"Format\":\"xlsx\",\"LoadOptions\":{\"Password\":\"password\"},\"ConvertOptions\":{\"FromPage\":\"1\",\"PagesCount\":\"1\",\"UsePdf\":\"false\"},\"OutputPath\":\"converted/tocells\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}
@@ -351,11 +404,64 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in theÂ
 
 ### cURL example
 
-{{< tabs "example3">}} {{< tab "Request" >}}
+{{< tabs "example3">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token]" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/password-protected.docx\",  \"Format\": \"xlsx\",  \"LoadOptions\": {\"Password\": \"password\"},  \"ConvertOptions\": {     \"FromPage\": \"1\",     \"PagesCount\": \"1\",     \"UsePdf\": \"false\"  },  \"OutputPath\": \""}"
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "Storage": "MyStorage",
+    "FilePath": "conversions/password-protected.docx",
+    "Format": "xlsx",
+    "LoadOptions": {
+      "Password": "password"
+    },
+    "ConvertOptions": {
+      "FromPage": "1",
+      "PagesCount": "1",
+      "UsePdf": "false"
+    },
+    "OutputPath": "converted/tocells"
+  }'
+```
 
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/password-protected.docx',
+    'Format': 'xlsx',
+    'LoadOptions': {
+      'Password': 'password'
+    },
+    'ConvertOptions': {
+      'FromPage': '1',
+      'PagesCount': '1',
+      'UsePdf': 'false'
+    },
+    'OutputPath': 'converted/tocells'
+  }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/password-protected.docx\",\"Format\":\"xlsx\",\"LoadOptions\":{\"Password\":\"password\"},\"ConvertOptions\":{\"FromPage\":\"1\",\"PagesCount\":\"1\",\"UsePdf\":\"false\"},\"OutputPath\":\"converted/tocells\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}
@@ -704,35 +810,83 @@ HTTP POST ~/conversion
 
 ### cURL example
 
-{{< tabs "example5">}} {{< tab "Request" >}}
+{{< tabs "example5">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+# Get JSON Web Token
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
 
-# cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
-        'FilePath': 'WordProcessing/four-pages.docx',
-        'Format': 'xlsx',
-        'ConvertOptions': {
-            'FromPage': 2,
-            'PagesCount': 1,
-            'Zoom': 150
-        },
-        'OutputPath': 'Output'
-    }"
+# Convert document
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
+    "FilePath": "WordProcessing/four-pages.docx",
+    "Format": "xlsx",
+    "ConvertOptions": {
+      "FromPage": 2,
+      "PagesCount": 1,
+      "Zoom": 150
+    },
+    "OutputPath": "Output"
+  }'
+```
 
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# Get JSON Web Token
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# Convert document
+curl.exe -v "https://api.groupdocs.cloud/v2.0/conversion" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+    'FilePath': 'WordProcessing/four-pages.docx',
+    'Format': 'xlsx',
+    'ConvertOptions': {
+      'FromPage': 2,
+      'PagesCount': 1,
+      'Zoom': 150
+    },
+    'OutputPath': 'Output'
+  }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: Get JSON Web Token
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+:: Convert document
+curl -v "https://api.groupdocs.cloud/v2.0/conversion" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FilePath\":\"WordProcessing/four-pages.docx\",\"Format\":\"xlsx\",\"ConvertOptions\":{\"FromPage\":2,\"PagesCount\":1,\"Zoom\":150},\"OutputPath\":\"Output\"}"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}

@@ -16,10 +16,32 @@ The following GroupDocs.Conversion Cloud REST API resource has been used in the 
 
 ## cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/info?FilePath#words/four-pages.docx" -H "accept: application/json" -H "authorization: Bearer [Access Token]"
+curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/info?FilePath#words/four-pages.docx" \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+curl.exe -X GET "https://api.groupdocs.cloud/v2.0/conversion/info?FilePath#words/four-pages.docx" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+curl -X GET "https://api.groupdocs.cloud/v2.0/conversion/info?FilePath#words/four-pages.docx" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%"
 ```
 
 {{< /tab >}} {{< tab "Response" >}}

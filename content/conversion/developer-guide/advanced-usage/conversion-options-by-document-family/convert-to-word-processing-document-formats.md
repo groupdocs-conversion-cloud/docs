@@ -25,12 +25,75 @@ HTTP POST ~/conversion
 
 ### cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
-
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token}" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.pdf\",  \"Format\": \"docx\",  \"LoadOptions\": {\"PdfLoadOptions\": {\"Password\": \"\",   \"HidePdfAnnotations\":\"true\",   \"RemoveEmbeddedFiles\":\"false\",   \"FlattenAllFields\":\"true\"}},  \"ConvertOptions\": {      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"100\", \"Dpi\": \"300\"  },  \"OutputPath\": \"converted/towords\"}"
+# Convert PDF to DOCX
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+-H "accept: application/json" \
+-H "authorization: Bearer $JWT_TOKEN" \
+-H "Content-Type: application/json" \
+-d '{
+  "Storage": "MyStorage",
+  "FilePath": "conversions/sample.pdf",
+  "Format": "docx",
+  "LoadOptions": {
+    "PdfLoadOptions": {
+      "Password": "",
+      "HidePdfAnnotations": "true",
+      "RemoveEmbeddedFiles": "false",
+      "FlattenAllFields": "true"
+    }
+  },
+  "ConvertOptions": {
+    "FromPage": "1",
+    "PagesCount": "2",
+    "Zoom": "100",
+    "Dpi": "300"
+  },
+  "OutputPath": "converted/towords"
+}'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Convert PDF to DOCX
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN" `
+-H "Content-Type: application/json" `
+-d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/sample.pdf',
+    'Format': 'docx',
+    'LoadOptions': {
+        'PdfLoadOptions': {
+            'Password': '',
+            'HidePdfAnnotations': 'true',
+            'RemoveEmbeddedFiles': 'false',
+            'FlattenAllFields': 'true'
+        }
+    },
+    'ConvertOptions': {
+        'FromPage': '1',
+        'PagesCount': '2',
+        'Zoom': '100',
+        'Dpi': '300'
+    },
+    'OutputPath': 'converted/towords'
+}"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+:: Convert PDF to DOCX
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%" ^
+-H "Content-Type: application/json" ^
+-d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.pdf\",\"Format\":\"docx\",\"LoadOptions\":{\"PdfLoadOptions\":{\"Password\":\"\",\"HidePdfAnnotations\":\"true\",\"RemoveEmbeddedFiles\":\"false\",\"FlattenAllFields\":\"true\"}},\"ConvertOptions\":{\"FromPage\":\"1\",\"PagesCount\":\"2\",\"Zoom\":\"100\",\"Dpi\":\"300\"},\"OutputPath\":\"converted/towords\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
@@ -364,13 +427,75 @@ HTTP POST ~/conversion
 
 ## cURL example
 
-{{< tabs "example3">}} {{< tab "Request" >}}
-
+{{< tabs "example3">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" -H  "accept: application/json" -H  "authorization: Bearer [Access Token}" -H  "Content-Type: application/json" -d "{  \"Storage\": \"MyStorage\",  \"FilePath\": \"conversions/sample.pdf\",  \"Format\": \"docx\",  \"LoadOptions\": {\"PdfLoadOptions\": {\"Password\": \"\",   \"HidePdfAnnotations\":\"true\",   \"RemoveEmbeddedFiles\":\"false\",   \"FlattenAllFields\":\"true\"}},  \"ConvertOptions\": {      \"FromPage\": \"1\",     \"PagesCount\": \"2\",     \"Zoom\": \"100\", \"Dpi\": \"300\"  },  \"OutputPath\": \""}"
-
+# Convert PDF to DOCX (alternative example)
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+-H "accept: application/json" \
+-H "authorization: Bearer $JWT_TOKEN" \
+-H "Content-Type: application/json" \
+-d '{
+  "Storage": "MyStorage",
+  "FilePath": "conversions/sample.pdf",
+  "Format": "docx",
+  "LoadOptions": {
+    "PdfLoadOptions": {
+      "Password": "",
+      "HidePdfAnnotations": "true",
+      "RemoveEmbeddedFiles": "false",
+      "FlattenAllFields": "true"
+    }
+  },
+  "ConvertOptions": {
+    "FromPage": "1",
+    "PagesCount": "2",
+    "Zoom": "100",
+    "Dpi": "300"
+  },
+  "OutputPath": "converted/towords"
+}'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Convert PDF to DOCX (alternative example)
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN" `
+-H "Content-Type: application/json" `
+-d "{
+    'Storage': 'MyStorage',
+    'FilePath': 'conversions/sample.pdf',
+    'Format': 'docx',
+    'LoadOptions': {
+        'PdfLoadOptions': {
+            'Password': '',
+            'HidePdfAnnotations': 'true',
+            'RemoveEmbeddedFiles': 'false',
+            'FlattenAllFields': 'true'
+        }
+    },
+    'ConvertOptions': {
+        'FromPage': '1',
+        'PagesCount': '2',
+        'Zoom': '100',
+        'Dpi': '300'
+    },
+    'OutputPath': 'converted/towords'
+}"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+:: Convert PDF to DOCX (alternative example)
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%" ^
+-H "Content-Type: application/json" ^
+-d "{\"Storage\":\"MyStorage\",\"FilePath\":\"conversions/sample.pdf\",\"Format\":\"docx\",\"LoadOptions\":{\"PdfLoadOptions\":{\"Password\":\"\",\"HidePdfAnnotations\":\"true\",\"RemoveEmbeddedFiles\":\"false\",\"FlattenAllFields\":\"true\"}},\"ConvertOptions\":{\"FromPage\":\"1\",\"PagesCount\":\"2\",\"Zoom\":\"100\",\"Dpi\":\"300\"},\"OutputPath\":\"converted/towords\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```log
@@ -723,36 +848,74 @@ HTTP POST ~/conversion
 
 ### cURL example
 
-{{< tabs "example5">}} {{< tab "Request" >}}
-
+{{< tabs "example5">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
-curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
+# Step 1: Get JWT token
+curl -X POST "https://api.groupdocs.cloud/connect/token" \
 -H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
+-d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET"
 
-# cURL example to convert document
-curl -v "https://api.groupdocs.cloud/v2.0/conversion/conversion" \
--X POST \
+# (Store the returned access_token in the JWT_TOKEN environment variable before running the next step)
+
+# Step 2: Convert document
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" \
+-H "accept: application/json" \
+-H "authorization: Bearer $JWT_TOKEN" \
 -H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
-        'FilePath': 'Pdf/sample.pdf',
-        'Format': 'docx',
-        'ConvertOptions': {
-            'FromPage': 1,
-            'PagesCount': 2
-        },
-        'OutputPath': 'Output'
-    }"
-
+-d '{
+  "FilePath": "Pdf/sample.pdf",
+  "Format": "docx",
+  "ConvertOptions": {
+    "FromPage": 1,
+    "PagesCount": 2
+  },
+  "OutputPath": "Output"
+}'
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# Step 1: Get JWT token
+curl.exe -X POST "https://api.groupdocs.cloud/connect/token" `
+-H "Content-Type: application/x-www-form-urlencoded" `
+-d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET"
+
+# (Store the returned access_token in $env:JWT_TOKEN before the next step)
+
+# Step 2: Convert document
+curl.exe -X POST "https://api.groupdocs.cloud/v2.0/conversion" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN" `
+-H "Content-Type: application/json" `
+-d "{ 
+    'FilePath': 'Pdf/sample.pdf',
+    'Format': 'docx',
+    'ConvertOptions': {
+        'FromPage': 1,
+        'PagesCount': 2
+    },
+    'OutputPath': 'Output'
+}"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+:: Step 1: Get JWT token
+curl -X POST "https://api.groupdocs.cloud/connect/token" ^
+-H "Content-Type: application/x-www-form-urlencoded" ^
+-d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%"
+
+:: (Store the returned access_token in %JWT_TOKEN% before the next step)
+
+:: Step 2: Convert document
+curl -X POST "https://api.groupdocs.cloud/v2.0/conversion" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%" ^
+-H "Content-Type: application/json" ^
+-d "{\"FilePath\":\"Pdf/sample.pdf\",\"Format\":\"docx\",\"ConvertOptions\":{\"FromPage\":1,\"PagesCount\":2},\"OutputPath\":\"Output\"}"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json

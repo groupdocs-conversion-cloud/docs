@@ -23,17 +23,34 @@ You can find more information about Self-hosted version at [How to self-host Gr
 
 ## cURL example
 
-{{< tabs "example1">}} {{< tab "Request" >}}
-
+{{< tabs "example1">}} {{< tab "Linux/MacOS/Bash" >}}
 ```bash
-
 # cURL example to get metered license information
-curl -v "http://<base url>/v2.0/conversion/license" \
--X GET \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
+curl -v "https://api.groupdocs.cloud/v2.0/conversion/license" \
+  -X GET \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+# cURL example to get metered license information (PowerShell)
+curl.exe -v "https://api.groupdocs.cloud/v2.0/conversion/license" `
+  -X GET `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+:: cURL example to get metered license information (CMD)
+curl -v "https://api.groupdocs.cloud/v2.0/conversion/license" ^
+  -X GET ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}} {{< tab "Response" >}}
 
 ```json
