@@ -159,14 +159,16 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetFolderApiInstance();
+        $apiInstance = new GroupDocs\Conversion\FolderApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\GetFilesListRequest("conversions", CommonUtils::$MyStorage);
+        $request = new GroupDocs\Conversion\Model\Requests\GetFilesListRequest("conversions", null);
         $response = $apiInstance->getFilesList($request);
         
         echo "Expected response type is FilesList.", "<br />";
@@ -177,7 +179,6 @@ include(dirname(__DIR__) . '\CommonUtils.php');
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -394,21 +395,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetFolderApiInstance();
+        $apiInstance = new GroupDocs\Conversion\FolderApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\CreateFolderRequest("conversions", CommonUtils::$MyStorage);
+        $request = new GroupDocs\Conversion\Model\Requests\CreateFolderRequest("conversions", null);
         $apiInstance->createFolder($request);
         
         echo "Expected response type is Void: 'conversions' folder created.", "<br />";
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -617,21 +619,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetFolderApiInstance();
+        $apiInstance = new GroupDocs\Conversion\FolderApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\DeleteFolderRequest("conversions1\\conversions1", CommonUtils::$MyStorage, true);
+        $request = new GroupDocs\Conversion\Model\Requests\DeleteFolderRequest("conversions1\\conversions1", null, true);
         $apiInstance->deleteFolder($request);
         
         echo "Expected response type is Void: 'conversions1/conversions' folder deleted recusrsively.", "<br />";
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -845,21 +848,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetFolderApiInstance();
+        $apiInstance = new GroupDocs\Conversion\FolderApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\CopyFolderRequest("conversions", "conversions1", CommonUtils::$MyStorage, CommonUtils::$MyStorage);
+        $request = new GroupDocs\Conversion\Model\Requests\CopyFolderRequest("conversions", "conversions1", null, null);
         $apiInstance->copyFolder($request);
         
         echo "Expected response type is Void: 'conversions' folder copied as 'conversions1'.", "<br />";
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -1069,21 +1073,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetFolderApiInstance();
+        $apiInstance = new GroupDocs\Conversion\FolderApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\MoveFolderRequest("conversions1", "conversions1\\conversions1", CommonUtils::$MyStorage, CommonUtils::$MyStorage, true);
+        $request = new GroupDocs\Conversion\Model\Requests\MoveFolderRequest("conversions1", "conversions1\\conversions1", null, null, true);
         $apiInstance->moveFolder($request);
         
         echo "Expected response type is Void: 'conversions1' folder moved to 'conversions/conversions1'.", "<br />";
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}

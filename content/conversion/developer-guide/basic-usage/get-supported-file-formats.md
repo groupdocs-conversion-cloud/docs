@@ -146,14 +146,16 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 try {
-    $infoApi = CommonUtils::GetInfoApiInstance();
+    $infoApi = new GroupDocs\Conversion\InfoApi($configuration);
 
-    $request = new GroupDocs\Conversion\Model\Requests\GetSupportedConversionTypesRequest("conversions\\sample.docx", CommonUtils::$MyStorage, null);
+    $request = new GroupDocs\Conversion\Model\Requests\GetSupportedConversionTypesRequest("conversions\\sample.docx", null, null);
     $response = $infoApi->getSupportedConversionTypes($request);
 
     echo '<b>Supported file formats<br /></b>';
@@ -449,12 +451,14 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 try {
-    $infoApi = CommonUtils::GetInfoApiInstance();
+    $infoApi = new GroupDocs\Conversion\InfoApi($configuration);
 
     $request = new GroupDocs\Conversion\Model\Requests\GetSupportedConversionTypesRequest(null, null, "xlsx");
     $response = $infoApi->getSupportedConversionTypes($request);

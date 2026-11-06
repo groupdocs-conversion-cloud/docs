@@ -104,21 +104,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 try {
-    $apiInstance = CommonUtils::GetStorageApiInstance();
+    $apiInstance = new GroupDocs\Conversion\StorageApi($configuration);
 
-    $request = new GroupDocs\Conversion\Model\Requests\StorageExistsRequest(CommonUtils::$MyStorage);
+    $request = new GroupDocs\Conversion\Model\Requests\StorageExistsRequest(null);
         $response = $apiInstance->storageExists($request);
         
         echo "Expected response type is StorageExist: ", $response;
 } catch (Exception $e) {
     echo "Something went wrong: ", $e->getMessage(), "\n";
 }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -340,21 +341,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetStorageApiInstance();
+        $apiInstance = new GroupDocs\Conversion\StorageApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\ObjectExistsRequest("conversions\one-page.docx", CommonUtils::$MyStorage);
+        $request = new GroupDocs\Conversion\Model\Requests\ObjectExistsRequest("conversions\one-page.docx", null);
         $response = $apiInstance->objectExists($request);
         
         echo "Expected response type is ObjectExist: ", $response;
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -572,21 +574,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetStorageApiInstance();
+        $apiInstance = new GroupDocs\Conversion\StorageApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\GetDiscUsageRequest(CommonUtils::$MyStorage);
+        $request = new GroupDocs\Conversion\Model\Requests\GetDiscUsageRequest(null);
         $response = $apiInstance->getDiscUsage($request);
             
         echo "Expected response type is DiscUsage: ", $response;
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -817,21 +820,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
     try {
-        $apiInstance = CommonUtils::GetStorageApiInstance();
+        $apiInstance = new GroupDocs\Conversion\StorageApi($configuration);
 
-        $request = new GroupDocs\Conversion\Model\Requests\GetFileVersionsRequest("conversions\one-page.docx", CommonUtils::$MyStorage);
+        $request = new GroupDocs\Conversion\Model\Requests\GetFileVersionsRequest("conversions\one-page.docx", null);
         $response = $apiInstance->getFileVersions($request);
         
         echo "Expected response type is FileVersions: ", $response;
     } catch (Exception $e) {
         echo "Something went wrong: ", $e->getMessage(), "\n";
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}

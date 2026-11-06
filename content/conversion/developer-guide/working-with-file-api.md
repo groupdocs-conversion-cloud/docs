@@ -107,21 +107,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model\Requests;
 
-include(dirname(__DIR__) . '\CommonUtils.php');
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
- try {
-  $apiInstance = CommonUtils::GetFileApiInstance();
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 
-  $request = new GroupDocs\Conversion\Model\Requests\DownloadFileRequest("conversions\\one-page.docx", CommonUtils::$MyStorage, null);
-  $response = $apiInstance->downloadFile($request);
-  
-  echo "Expected response type is File: ", strlen($response);
- } catch (Exception $e) {
-  echo "Something went wrong: ", $e->getMessage(), "\n";
- }
-?>
+$apiInstance = new GroupDocs\Conversion\FileApi($configuration);
+
+$request = new Requests\DownloadFileRequest("conversions/one-page.docx");
+$result = $apiInstance->downloadFile($request);
+
+echo "File downloaded. Size: " . $result->getSize();
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -374,22 +375,24 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model\Requests;
 
-include(dirname(__DIR__) . '\CommonUtils.php');
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
- try {
-  $apiInstance = CommonUtils::GetFileApiInstance();
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 
-  $fileStream = readfile("..\\resources\\conversions\\one-page.docx");
-  $request = new GroupDocs\Conversion\Model\Requests\UploadFileRequest("conversions\\one-page1.docx", $fileStream, CommonUtils::$MyStorage, null);
-  $response = $apiInstance->downloadFile($request);
-  
-  echo "Expected response type is FilesUploadResult: ", $response;
- } catch (Exception $e) {
-  echo "Something went wrong: ", $e->getMessage(), "\n";
- }
-?>
+$apiInstance = new GroupDocs\Conversion\FileApi($configuration);
+
+$filePath = dirname(realpath(__DIR__)) . '/Resources/conversions/one-page.docx';
+$file = new SplFileObject($filePath, 'r');
+$request = new Requests\UploadFileRequest("conversions/one-page1.docx", $file);
+$apiInstance->uploadFile($request);
+
+echo "File uploaded successfully.";
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -624,21 +627,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model\Requests;
 
-include(dirname(__DIR__) . '\CommonUtils.php');
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
- try {
-  $apiInstance = CommonUtils::GetFileApiInstance();
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 
-  $request = new GroupDocs\Conversion\Model\Requests\DeleteFileRequest("conversions1\\one-page-copied.docx", CommonUtils::$MyStorage);
-  $apiInstance->deleteFile($request);
-  
-  echo "Expected response type is Void: 'conversions1/one-page-copied.docx' file deleted.";
- } catch (Exception $e) {
-  echo "Something went wrong: ", $e->getMessage(), "\n";
- }
-?>
+$apiInstance = new GroupDocs\Conversion\FileApi($configuration);
+
+$request = new Requests\DeleteFileRequest("conversions1/one-page-copied.docx");
+$apiInstance->deleteFile($request);
+
+echo "File deleted successfully.";
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -851,21 +855,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model\Requests;
 
-include(dirname(__DIR__) . '\CommonUtils.php');
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
- try {
-  $apiInstance = CommonUtils::GetFileApiInstance();
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 
-  $request = new GroupDocs\Conversion\Model\Requests\CopyFileRequest("conversions\\one-page.docx", "conversions\\one-page-copied.docx", CommonUtils::$MyStorage, CommonUtils::$MyStorage);
-  $apiInstance->copyFile($request);
-  
-  echo "Expected response type is Void: 'conversions/one-page.docx' file copied as 'conversions/one-page-copied.docx'.";
- } catch (Exception $e) {
-  echo "Something went wrong: ", $e->getMessage(), "\n";
- }
-?>
+$apiInstance = new GroupDocs\Conversion\FileApi($configuration);
+
+$request = new Requests\CopyFileRequest("conversions/one-page.docx", "conversions/one-page-copied.docx");
+$apiInstance->copyFile($request);
+
+echo "File copied successfully.";
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -1083,21 +1088,22 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+// For complete examples and data files, please go to https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-php-samples
+use GroupDocs\Conversion\Model\Requests;
 
-include(dirname(__DIR__) . '\CommonUtils.php');
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
- try {
-  $apiInstance = CommonUtils::GetFileApiInstance();
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 
-  $request = new GroupDocs\Conversion\Model\Requests\MoveFileRequest("conversions\\one-page.docx", "conversions1\\one-page-copied.docx", CommonUtils::$MyStorage, CommonUtils::$MyStorage);
-  $apiInstance->moveFile($request);
-  
-  echo "Expected response type is Void: 'conversions/one-page.docx' file moved as 'conversions1/one-page-copied.docx'.";
- } catch (Exception $e) {
-  echo "Something went wrong: ", $e->getMessage(), "\n";
- }
-?>
+$apiInstance = new GroupDocs\Conversion\FileApi($configuration);
+
+$request = new Requests\MoveFileRequest("conversions/one-page.docx", "conversions1/one-page-copied.docx");
+$apiInstance->moveFile($request);
+
+echo "File moved successfully.";
 ```
 
 {{< /tab >}} {{< tab "Java" >}}

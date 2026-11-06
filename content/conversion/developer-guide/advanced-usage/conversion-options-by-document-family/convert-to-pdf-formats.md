@@ -205,17 +205,19 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
-    $convertApi = CommonUtils::GetConvertApiInstance();
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
+    $convertApi = new GroupDocs\Conversion\ConvertApi($configuration);
 
     try 
     {
         $settings = new GroupDocs\Conversion\Model\ConvertSettings();
 
-        $settings->setStorageName(CommonUtils::$MyStorage);
+        $settings->setStorageName(null);
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("pdf");
 
@@ -263,7 +265,6 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         echo  "Something went wrong: ",  $e->getMessage(), "<br />";
         PHP_EOL;
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}
@@ -736,17 +737,19 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
-    $convertApi = CommonUtils::GetConvertApiInstance();
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
+    $convertApi = new GroupDocs\Conversion\ConvertApi($configuration);
 
     try 
     {
         $settings = new GroupDocs\Conversion\Model\ConvertSettings();
 
-        $settings->setStorageName(CommonUtils::$MyStorage);
+        $settings->setStorageName(null);
         $settings->setFilePath("conversions\\password-protected.docx");
         $settings->setFormat("pdf");
 
@@ -795,7 +798,6 @@ include(dirname(__DIR__) . '\CommonUtils.php');
         echo  "Something went wrong: ",  $e->getMessage(), "<br />";
         PHP_EOL;
     }
-?>
 ```
 
 {{< /tab >}} {{< tab "Java" >}}

@@ -115,15 +115,17 @@ namespace GroupDocs.Conversion.Cloud.Examples.CSharp
 {{< /tab >}} {{< tab "PHP" >}}
 
 ```php
-<?php
+$ClientId = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
+$ClientSecret = ""; // Get ClientId and ClientSecret from https://dashboard.groupdocs.cloud
 
-include(dirname(__DIR__) . '\CommonUtils.php');
-
+$configuration = new GroupDocs\Conversion\Configuration();
+$configuration->setAppSid($ClientId);
+$configuration->setAppKey($ClientSecret);
 try {
-    $infoApi = CommonUtils::GetInfoApiInstance();
+    $infoApi = new GroupDocs\Conversion\InfoApi($configuration);
 
     $request = new GroupDocs\Conversion\Model\Requests\GetDocumentMetadataRequest();
-    $request->setStorageName(CommonUtils::$MyStorage);
+    $request->setStorageName(null);
     $request->setFilePath("conversions\\sample.docx");
         
     $response = $infoApi->getDocumentMetadata($request);
