@@ -8,11 +8,13 @@ keywords: ""
 toc: True
 ---
 
-This example demonstrates how to convert document that use custom font, or non-standard font. Fonts should be uploaded into cloud storage before conversion. Then put path to fonts into conversion options.
+This example demonstrates how to convert a document that uses a custom or non-standard font. Upload the document and the font files to cloud storage before conversion.
+
+`FontsPath` is the path to a single cloud storage folder containing the fonts to use. It is a folder path, not a font filename or a list of paths. To use more than one custom font, upload all required font files to the same folder and set `FontsPath` to that folder. For example, if `Brand-Regular.ttf` and `Brand-Bold.ttf` are in `font/ttf`, set `FontsPath` to `font/ttf`.
 
 There are steps that usage of GroupDocs.Conversion Cloud consists of:
 
-1. Upload input document and fonts into cloud storage
+1. Upload the input document and all required font files into cloud storage. Put the font files in one folder.
 1. Convert document
 1. Download converted document from storage
 
