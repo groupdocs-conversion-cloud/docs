@@ -206,7 +206,7 @@ settings.format = "pdf";
 
 let operationId = await asyncApi.startConvertAndSave(new conversion_cloud.StartConvertAndSaveRequest(settings));
 
-console.log("Operaion ID: " + operationId);
+console.log("Operation ID: " + operationId);
 
 while (true) {
   await (async function() {
@@ -256,7 +256,7 @@ $settings->setOutputPath("converted");
 // Convert
 $operationId = $apiInstance->startConvertAndSave(new Requests\StartConvertAndSaveRequest($settings));
 $operationId = trim($operationId, '"');
-echo "Operaion ID: " . $operationId;
+echo "Operation ID: " . $operationId;
 echo "\n";
 
 while (true) {
@@ -276,7 +276,7 @@ while (true) {
     }
     else
     {
-        echo "Operation status: " . $result.getStatus();
+        echo "Operation status: " . $result->getStatus();
     }
 }
 ```
@@ -301,7 +301,7 @@ settings.output_path = "converted"
 
 # Convert
 operation_id = apiInstance.start_convert_and_save(groupdocs_conversion_cloud.StartConvertAndSaveRequest(settings))
-print("Operaion ID: " + operation_id)
+print("Operation ID: " + operation_id)
 
 while (True):
     time.sleep(1)
